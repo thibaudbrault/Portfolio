@@ -1,14 +1,14 @@
-import React from 'react'
-import PokéInfo from './PokéInfo/Modals.PokéInfo'
-import Portfolio from './Portfolio/Modals.Portfolio'
+import React from 'react';
+import PokéInfo from './PokéInfo/Modals.PokéInfo';
+import Portfolio from './Portfolio/Modals.Portfolio';
 
 function Modals() {
-    return (
-        <>
-            <PokéInfo />
-            <Portfolio />
-        </>
-    )
+	return (
+		<>
+			<PokéInfo />
+			<Portfolio />
+		</>
+	);
 }
 
-export default Modals
+export default Modals;

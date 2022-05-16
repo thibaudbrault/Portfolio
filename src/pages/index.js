@@ -8,15 +8,15 @@ import Layout from '../components/Layout/Layout';
 import Modals from '../components/Modals/Modals';
 
 function IndexPage() {
-  return (
-    <Layout>
-      <Header />
-      <Projects />
-      <Socials />
-      <Footer />
-      <Modals />
-    </Layout>
-  )
+	return (
+		<Layout>
+			<Header />
+			<Projects />
+			<Socials />
+			<Footer />
+			<Modals />
+		</Layout>
+	);
 }
 
-export default IndexPage
+export default IndexPage;
