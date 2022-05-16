@@ -9,6 +9,10 @@ module.exports = {
       "name": "images",
       "path": "./src/images/"
     },
+    resolve: 'gatsby-plugin-html-attributes',
+    options: {
+      lang: 'fr'
+    },
     __key: "images"
   }]
 };
