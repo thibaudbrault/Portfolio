@@ -8,7 +8,7 @@ function Projects() {
 			transition={{ duration: 2 }}
 			animate={{ opacity: 1 }}
 		>
-			<a href='#pokeinfo'>PokéInfo</a>
+			<a href='#pokeref'>PokéRef</a>
 			<a href='#portfolio'>Portfolio</a>
 			<a href='#'>🔜 Bientôt 🔜</a>
 		</ProjectsSection>

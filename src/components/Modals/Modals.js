@@ -1,11 +1,11 @@
 import React from 'react';
-import PokéInfo from './PokéInfo/Modals.PokéInfo';
+import PokéRef from './PokéRef/Modals.PokéRef';
 import Portfolio from './Portfolio/Modals.Portfolio';
 
 function Modals() {
 	return (
 		<>
-			<PokéInfo />
+			<PokéRef />
 			<Portfolio />
 		</>
 	);

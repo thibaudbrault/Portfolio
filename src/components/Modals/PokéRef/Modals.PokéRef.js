@@ -7,10 +7,10 @@ import {
 	ModalsList,
 } from '../Styled.Modals';
 
-function PokéInfo() {
+function PokéRef() {
 	return (
-		<ModalsSection id='pokeinfo'>
-			<h2>PokéInfo</h2>
+		<ModalsSection id='pokeref'>
+			<h2>PokéRef</h2>
 			<h3>Encyclopédie Pokémon</h3>
 			<ModalsList>
 				<ul>
@@ -36,12 +36,12 @@ function PokéInfo() {
 				<li>PokéApi</li>
 			</ModalsTech>
 			<ModalsLink>
-				<a href='#pokeinfo'>Live (bientôt)</a>
-				<a href='https://github.com/thibaudbrault/PokeInfo'>Github</a>
+				<a href='https://pokeref.app/'>Live</a>
+				<a href='https://github.com/thibaudbrault/PokeRef'>Github</a>
 			</ModalsLink>
 			<ModalsClose href='#'>&times;</ModalsClose>
 		</ModalsSection>
 	);
 }
 
-export default PokéInfo;
+export default PokéRef;
