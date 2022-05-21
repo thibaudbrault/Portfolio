@@ -19,6 +19,7 @@ function PokéRef() {
 					<li>Plusieurs filtres et autocomplete</li>
 					<li>Light / dark mode</li>
 					<li>Infinite scrolling</li>
+					<li>Responsive</li>
 				</ul>
 				<ul>
 					<h4>A venir</h4>
