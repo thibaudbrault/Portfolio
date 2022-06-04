@@ -4,7 +4,6 @@ import {
 	ModalsClose,
 	ModalsLink,
 	ModalsTech,
-	ModalsList,
 } from '../Styled.Modals';
 
 function PokéRef() {
@@ -12,29 +11,17 @@ function PokéRef() {
 		<ModalsSection id='pokeref'>
 			<h2>PokéRef</h2>
 			<h3>Encyclopédie Pokémon</h3>
-			<ModalsList>
-				<ul>
-					<h4>Déjà fait</h4>
-					<li>Page pour chaque pokémon, attaque, talent, objet, ...</li>
-					<li>Plusieurs filtres et autocomplete</li>
-					<li>Light / dark mode</li>
-					<li>Infinite scrolling</li>
-					<li>Responsive</li>
-				</ul>
-				<ul>
-					<h4>A venir</h4>
-					<li>Créer des animations avec Framer Motion</li>
-					<li>Utiliser le Service Worker de PokéApi</li>
-					<li>
-						Page "Créer son équipe" avec possibilité de créer un compte pour
-						sauvegarder son équipe
-					</li>
-				</ul>
-			</ModalsList>
+			<h4>Bien plus qu'un pokédex</h4>
+			<p>Dans le but d'apprendre à utiliser des API, j'ai choisi d'utiliser pleinement PokéApi. <br /> Ce projet est passé par plusierus phases et m'a permis d'approfondir mes connaisances en React et d'apprendre à utiliser Styled-Components et Firebase. <br /> Parti avec la volonté d'utiliser toutes les informations disponibles avec l'Api, je me suis ajouté des objectifs au fur et à mesure de l'avancée de ce projet tel que l'implémentation de <span>filtres</span>, d'un <span>infinite scroll</span>, l'ajout d'un <span>mode nuit</span>, l'utilisation d'un <span>service worker</span> ou encore l'ajout de <span>l'authentification</span> avec Firebase. </p>
 			<ModalsTech>
 				<li>React JS</li>
 				<li>Styled-Components</li>
 				<li>PokéApi</li>
+			</ModalsTech>
+			<ModalsTech>
+				<li>Netlfiy</li>
+				<li>Cloudflare</li>
+				<li>Firebase</li>
 			</ModalsTech>
 			<ModalsLink>
 				<a href='https://pokeref.app/'>Live</a>

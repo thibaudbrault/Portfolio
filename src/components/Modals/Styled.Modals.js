@@ -28,6 +28,27 @@ export const ModalsSection = styled.section`
 	& h3 {
 		font-size: 3rem;
 		color: ${({ theme }) => theme.gold};
+		margin-bottom: 5rem;
+	}
+
+	& h4 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	& p {
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto 5rem;
+		font-size: 1.7rem;
+		line-height: 1.4;
+		text-align: center;
+
+		& span {
+			font-weight: 700;
+			color: ${({ theme }) => theme.gold};
+		}
 	}
 `;
 
@@ -53,6 +74,10 @@ export const ModalsTech = styled.ul`
 		color: ${({ theme }) => theme.gold};
 		text-align: center;
 	}
+
+	&:first-of-type {
+		margin-bottom: 3rem;
+	}
 `;
 
 export const ModifiedModalsTech = styled(ModalsTech)`
@@ -76,29 +101,5 @@ export const ModalsLink = styled.div`
 		&:hover {
 			border-bottom: 1px solid ${({ theme }) => theme.secondary};
 		}
-	}
-`;
-
-export const ModalsList = styled.div`
-	width: 90%;
-	margin: 5rem auto;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: 2rem;
-	justify-items: center;
-	line-height: 1.3;
-
-	& h4 {
-		margin-bottom: 1rem;
-		font-size: 2.5rem;
-	}
-
-	& li {
-		font-size: 1.5rem;
-		list-style-type: '- ';
-	}
-
-	@media screen and (min-width: 890px) {
-		width: 70%;
 	}
 `;

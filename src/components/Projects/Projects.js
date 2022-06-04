@@ -10,7 +10,6 @@ function Projects() {
 		>
 			<a href='#pokeref'>PokéRef</a>
 			<a href='#portfolio'>Portfolio</a>
-			<a href='#'>🔜 Bientôt 🔜</a>
 		</ProjectsSection>
 	);
 }
