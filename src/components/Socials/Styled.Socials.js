@@ -3,7 +3,7 @@ import { motion } from 'framer-motion/dist/framer-motion';
 
 export const SocialsSection = styled.section`
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 5rem;
 	display: flex;
