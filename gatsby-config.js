@@ -1,7 +1,11 @@
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
 	siteMetadata: {
 		title: `portfolio`,
-		siteUrl: `https://www.yourdomain.tld`,
+		siteUrl: `https://thibaudbrault.dev`,
 	},
 	plugins: [
 		'gatsby-plugin-styled-components',
