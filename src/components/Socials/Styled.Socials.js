@@ -23,7 +23,8 @@ export const SocialsAnchor = styled(motion.a)`
 `;
 
 export const SocialsText = styled(motion.p)`
-	font-size: 2.3rem;
+	margin: 0 1rem;
+	font-size: 2rem;
 	text-align: center;
 	line-height: 1.2;
 

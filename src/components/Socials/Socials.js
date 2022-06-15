@@ -37,7 +37,7 @@ function Socials() {
 			>
 				Bon <span>{weekday()}</span>
 				<br />
-				Il fait actuellement <span>{weather?.main?.temp?.toFixed(1)}°C</span> à Nantes
+				Il fait <span>{weather?.main?.temp?.toFixed(1)}°C</span> à Nantes
 			</SocialsText>
 			<SocialsAnchor
 				href='https://www.linkedin.com/in/thibaud-brault/'
