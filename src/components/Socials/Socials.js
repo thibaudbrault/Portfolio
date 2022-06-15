@@ -35,7 +35,9 @@ function Socials() {
 				transition={{ duration: 2 }}
 				animate={{ y: 0 }}
 			>
-				Bon <span>{weekday()}</span> ! Il fait actuellement <span>{weather.main.temp}°C</span> à Nantes
+				Bon <span>{weekday()}</span>
+				<br />
+				Il fait actuellement <span>{weather?.main?.temp?.toFixed(1)}°C</span> à Nantes
 			</SocialsText>
 			<SocialsAnchor
 				href='https://www.linkedin.com/in/thibaud-brault/'
