@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -22,63 +21,51 @@ export const GlobalStyles = createGlobalStyle`
         font: inherit;
         vertical-align: baseline;
     }
-
     html {
         font-size: 10px;
         cursor: default;
         scroll-behavior: smooth;
     }
-
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
-
     body {
         line-height: 1;
     }
-
     a {
         color: inherit;
         text-decoration: none;
         cursor: pointer;
     }
-
     button {
         cursor: pointer;
     }
-
     ol, ul {
         list-style: none;
     }
-
     blockquote, q {
         quotes: none;
     }
-
     blockquote:before, blockquote:after,
     q:before, q:after {
         content: '';
         content: none;
     }
-
     table {
         border-collapse: collapse;
         border-spacing: 0;
     }
-
     @media(max-width: 890px) {
         html {
             font-size: 9px;
         }
     }
-
     @media(max-width: 650px) {
         html {
             font-size: 8px;
         }
     }
-
     @media(max-width: 400px) {
         html {
             font-size: 7px;
