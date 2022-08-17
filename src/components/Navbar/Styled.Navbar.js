@@ -2,11 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const NavbarSection = styled.nav`
-	width: calc(100% - 6rem);
-	position: absolute;
-	top: 3rem;
-	left: 6rem;
-	margin-left: -3rem;
+	width: 95%;
+	height: 10vh;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

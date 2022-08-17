@@ -9,7 +9,7 @@ function Projects({ themeToggler, theme }) {
 			transition={{ duration: 2 }}
 			animate={{ opacity: 1 }}
 		>
-			<Link to='/pokeref' themeToggler={themeToggler} theme={theme}>PokéRef</Link>
+			<Link to='/pokeref'>PokéRef</Link>
 			<Link>Portfolio</Link>
 		</ProjectsSection>
 	);
