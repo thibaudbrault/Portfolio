@@ -12,6 +12,12 @@ export const MainPage = styled.div`
 	overflow: hidden;
 `
 
+export const MainProject = styled.div`
+	width: 95%;
+	min-height: 90vh;
+	margin: 0 auto;
+`
+
 function IndexPage() {
   return (
 	<Layout>

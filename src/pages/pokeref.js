@@ -1,11 +1,11 @@
 import React from 'react'
-import { MainPage } from '.'
+import { MainProject } from '.'
 import Layout from '../components/Layout/Layout'
 
 function pokeref() {
     return (
         <Layout>
-            <MainPage>
+            <MainProject>
                 <h1>PokéRef</h1>
                 <p>Encyclopédie pokémon contenant plein d'informations sur tous les pokémon, les attaques, les talents, les items et bien plus</p>
                 <ul>
@@ -22,7 +22,7 @@ function pokeref() {
                 <section>
                     <h2>Améliorations à venir</h2>
                 </section>
-            </MainPage>
+            </MainProject>
         </Layout>
     )
 }
