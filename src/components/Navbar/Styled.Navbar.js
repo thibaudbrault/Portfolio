@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const NavbarSection = styled.nav`
-	width: 95%;
+	width: 90%;
 	height: 10vh;
 	margin: 0 auto;
 	display: flex;

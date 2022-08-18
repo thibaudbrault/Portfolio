@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Layout from '../components/Layout/Layout'
 import Header from '../components/Header/Header';
-import Projects from '../components/Projects/Projects';
 import Socials from '../components/Socials/Socials';
 import Footer from '../components/Footer/Footer';
 
@@ -23,7 +22,6 @@ function IndexPage() {
 	<Layout>
 		<MainPage>
 			<Header />
-			<Projects />
 			<Socials />
 			<Footer />
 		</MainPage>

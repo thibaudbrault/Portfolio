@@ -51,6 +51,10 @@ function Layout({ children }) {
 					href='https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap'
 					rel='stylesheet'
 				/>
+				<link 
+					href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" 
+					rel="stylesheet" 
+				/>
 
 				<title>Thibaud Brault | Développeur front-end</title>
 			</Helmet>
