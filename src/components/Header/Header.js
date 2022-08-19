@@ -19,7 +19,7 @@ function Header() {
 					animate={{ opacity: 1 }}
 				>
 					<HeaderTitle>Thibaud Brault</HeaderTitle>
-					<HeaderSubtitle>Développeur front-end</HeaderSubtitle>
+					<HeaderSubtitle>Développeur front-end nantais</HeaderSubtitle>
 				</HeaderContainer>
 			</HeaderSection>
 			<LinksSection
