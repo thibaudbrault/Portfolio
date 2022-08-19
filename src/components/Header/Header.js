@@ -6,7 +6,7 @@ import {
 	HeaderSection,
 	HeaderSubtitle,
 	HeaderTitle,
-	LinksSection
+	LinksSection,
 } from './Styled.Header';
 
 function Header() {

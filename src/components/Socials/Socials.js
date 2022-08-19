@@ -4,7 +4,6 @@ import { SocialsAnchor, SocialsSection, SocialsText } from './Styled.Socials';
 import weekday from '../../helpers/Days';
 
 function Socials() {
-
 	const key = process.env.GATSBY_WEATHER_API_KEY;
 	const url = `https://api.openweathermap.org/data/2.5/weather?lat=47.2186371&lon=-1.5541362&units=metric&appid=${key}`;
 
@@ -12,7 +11,7 @@ function Socials() {
 
 	useEffect(() => {
 		axios.get(url).then((response) => {
-		setWeather(response.data);
+			setWeather(response.data);
 		});
 	}, [url]);
 

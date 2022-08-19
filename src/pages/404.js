@@ -9,6 +9,6 @@ function NotFoundPage() {
 			<Link to='/index'>Retour au site</Link>
 		</main>
 	);
-};
+}
 
 export default NotFoundPage;

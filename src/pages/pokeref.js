@@ -1,16 +1,16 @@
-import React from 'react'
-import { MainProject } from '.'
-import Layout from '../components/Layout/Layout'
-import PokerefProject from '../components/Projects/PokerefProject'
+import React from 'react';
+import { MainProject } from '.';
+import Layout from '../components/Layout/Layout';
+import PokerefProject from '../components/Projects/PokerefProject';
 
 function pokeref() {
-    return (
-        <Layout>
-            <MainProject>
-                <PokerefProject />
-            </MainProject>
-        </Layout>
-    )
+	return (
+		<Layout>
+			<MainProject>
+				<PokerefProject />
+			</MainProject>
+		</Layout>
+	);
 }
 
-export default pokeref
+export default pokeref;
