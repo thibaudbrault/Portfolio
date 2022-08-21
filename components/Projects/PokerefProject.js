@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import React from 'react';
 
 import { SiReact, SiStyledcomponents, SiGithub } from 'react-icons/si';
@@ -127,10 +127,12 @@ function PokerefProject() {
 					</span>
 					Site
 				</a>
-				<Link to='/'>
-					<span>
-						<TbHome />
-					</span>
+				<Link passHref href={'/'}>
+					<a>
+						<span>
+							<TbHome />
+						</span>
+					</a>
 				</Link>
 				<a
 					href='https://github.com/thibaudbrault/PokeRef'

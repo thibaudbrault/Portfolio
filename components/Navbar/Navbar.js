@@ -7,7 +7,11 @@ function Navbar({ themeToggler, theme }) {
 
 	return (
 		<NavbarSection>
-			<NavbarLogo to='/'>{logo}</NavbarLogo>
+			<NavbarLogo passHref href={'/'}>
+				<a>
+					{logo}
+				</a>	
+			</NavbarLogo>
 			<NavbarButton onClick={themeToggler} aria-label='Theme'>
 				{theme === 'dark' ? <BsSun /> : <BsMoon />}
 			</NavbarButton>

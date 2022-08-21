@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion/dist/framer-motion';
+import { motion } from 'framer-motion';
 
 export const SocialsSection = styled.section`
 	width: 100%;
@@ -26,7 +26,6 @@ export const SocialsText = styled(motion.p)`
 	margin: 0 1rem;
 	font-size: 2rem;
 	text-align: center;
-	line-height: 1.2;
 
 	& span {
 		font-weight: 700;

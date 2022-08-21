@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 export const NavbarSection = styled.nav`
 	width: 90%;
@@ -10,7 +9,7 @@ export const NavbarSection = styled.nav`
 	justify-content: space-between;
 `;
 
-export const NavbarLogo = styled(Link)`
+export const NavbarLogo = styled.a`
 	font-weight: 700;
 	font-size: 3rem;
 `;

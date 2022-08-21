@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from '../BaseStyles/GlobalStyles';
@@ -34,30 +34,9 @@ function Layout({ children }) {
 
 	return (
 		<>
-			<Helmet>
-				<meta charSet='utf-8' />
-				<meta
-					name='description'
-					content="Salut ! Moi c'est Thibaud, développeur front-end nantais"
-				/>
-
-				<link rel='preconnect' href='https://fonts.googleapis.com' />
-				<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
-				<link
-					href='https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'
-					rel='stylesheet'
-				/>
-				<link
-					href='https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap'
-					rel='stylesheet'
-				/>
-				<link
-					href='https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap'
-					rel='stylesheet'
-				/>
-
+			<Head>
 				<title>Thibaud Brault | Développeur front-end</title>
-			</Helmet>
+			</Head>
 			<ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
 				<GlobalStyles />
 				<Main>

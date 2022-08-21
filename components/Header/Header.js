@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import {
 	HeaderContainer,
@@ -27,8 +27,12 @@ function Header() {
 				transition={{ duration: 2 }}
 				animate={{ opacity: 1 }}
 			>
-				<Link to='/pokeref'>PokéRef</Link>
-				<Link>Portfolio</Link>
+				<Link passHref href={'/pokeref'}>
+					<a>
+						PokéRef
+					</a>	
+				</Link>
+				<Link href={'/'}>Portfolio</Link>
 			</LinksSection>
 		</>
 	);

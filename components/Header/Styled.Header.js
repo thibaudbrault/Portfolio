@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion/dist/framer-motion';
+import { motion } from 'framer-motion';
 
 export const HeaderSection = styled.section`
 	width: 100%;
