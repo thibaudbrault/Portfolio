@@ -3,19 +3,24 @@ import React from 'react';
 
 import { SiReact, SiStyledcomponents, SiGithub } from 'react-icons/si';
 import {
-	TbApi,
-	TbExternalLink,
-	TbHome,
+	TbFilter,
+	TbInfinity,
+	TbDeviceMobile,
 	TbColorPicker,
 	TbList,
+	TbMoon,
 	TbRocket,
 	TbArrowBigUpLine,
 	TbLogin,
+	TbApi,
+	TbExternalLink,
+	TbArrowBigLeftLine,
 } from 'react-icons/tb';
 
 import {
 	ProjectTitle,
 	ProjectSubtitle,
+	ProjectLinks,
 	ProjectList,
 	ProjectSection,
 	ProjectFooter,
@@ -31,6 +36,24 @@ function PokerefProject() {
 					📚
 				</span>
 			</ProjectSubtitle>
+			<ProjectLinks>
+				<a href='https://pokeref.app/' target='_blank' rel='noreferrer'>
+					<span>
+						<TbExternalLink />
+					</span>
+					Site
+				</a>
+				<a
+					href='https://github.com/thibaudbrault/PokeRef'
+					target='_blank'
+					rel='noreferrer'
+				>
+					<span>
+						<SiGithub />
+					</span>
+					Github
+				</a>
+			</ProjectLinks>
 			<ProjectList>
 				<li>
 					<span>
@@ -53,6 +76,38 @@ function PokerefProject() {
 			</ProjectList>
 			<ProjectSection>
 				<h2>Description</h2>
+				<div>
+					<span>
+						<TbFilter />
+					</span>
+					<p>
+						Utilisation de plusieurs filtres et de barres de recherche afin ne
+						montrer que les informations pertinentes à l'utilisateur et de
+						réduire le temps passé à rechercher une information précise.
+						<br />
+						Utilisation, sur la page principale, d'une barre de recherche avec
+						un autocomplete afin de
+					</p>
+				</div>
+				<div>
+					<span>
+						<TbInfinity />
+					</span>
+					<p>
+						Infinite scrolling pour afficher la liste de pokémon afin de réduire
+						le temps de chargement et d'éviter à l'utilisateur d'avoir à cliquer
+						pour changer de page.
+					</p>
+				</div>
+				<div>
+					<span>
+						<TbDeviceMobile />
+					</span>
+					<p>
+						Site entiérement responsive afin de pouvoir l'utiliser sur n'importe
+						quel appareil.
+					</p>
+				</div>
 			</ProjectSection>
 			<ProjectSection>
 				<h2>Design</h2>
@@ -60,7 +115,16 @@ function PokerefProject() {
 					<span>
 						<TbColorPicker />
 					</span>
-					<p></p>
+					<p>
+						J'ai choisi une palette de couleurs classique (noir clair / blanc
+						gris / rouge) puisque le site sert d'encyclopédie et l'attention de
+						l'utilisateur ne doit donc pas être retenue par le design du site
+						mais par les informations qu'il délivre.
+						<br />
+						De plus, je voulais que le site ait un design minimaliste malgré le
+						nombre d'informations délivrées ce qui fait que je devais donc
+						limiter le nombre de coleurs utilisées.
+					</p>
 				</div>
 				<div>
 					<span>
@@ -80,8 +144,16 @@ function PokerefProject() {
 					</p>
 				</div>
 				<div>
-					<span></span>
-					<p></p>
+					<span>
+						<TbMoon />
+					</span>
+					<p>
+						Mode nuit par défaut mais possiblité de passer au mode jour.
+						<br />
+						J'ai choisi de mettre le mode nuit par défaut afin de rendre le site
+						plus agréable pour les yeux et de faire ressortir certaines
+						informations avec la couleur or utilisée seulement en mode nuit.
+					</p>
 				</div>
 			</ProjectSection>
 			<ProjectSection>
@@ -121,29 +193,14 @@ function PokerefProject() {
 				</div>
 			</ProjectSection>
 			<ProjectFooter>
-				<a href='https://pokeref.app/' target='_blank' rel='noreferrer'>
-					<span>
-						<TbExternalLink />
-					</span>
-					Site
-				</a>
 				<Link passHref href={'/'}>
 					<a>
 						<span>
-							<TbHome />
+							<TbArrowBigLeftLine />
 						</span>
+						Retour au portfolio
 					</a>
 				</Link>
-				<a
-					href='https://github.com/thibaudbrault/PokeRef'
-					target='_blank'
-					rel='noreferrer'
-				>
-					<span>
-						<SiGithub />
-					</span>
-					Github
-				</a>
 			</ProjectFooter>
 		</>
 	);

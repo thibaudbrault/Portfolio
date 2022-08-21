@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from '../BaseStyles/GlobalStyles';

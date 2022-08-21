@@ -28,9 +28,7 @@ function Header() {
 				animate={{ opacity: 1 }}
 			>
 				<Link passHref href={'/pokeref'}>
-					<a>
-						PokéRef
-					</a>	
+					<a>PokéRef</a>
 				</Link>
 				<Link href={'/'}>Portfolio</Link>
 			</LinksSection>

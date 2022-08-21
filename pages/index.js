@@ -13,7 +13,7 @@ export const MainPage = styled.div`
 
 export const MainProject = styled.div`
 	position: relative;
-	width: 95%;
+	width: 90%;
 	min-height: 90vh;
 	margin: 0 auto;
 `;

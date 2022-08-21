@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsSun, BsMoon } from 'react-icons/bs';
+import { BsSun, BsMoonStars } from 'react-icons/bs';
 import { NavbarButton, NavbarLogo, NavbarSection } from './Styled.Navbar';
 
 function Navbar({ themeToggler, theme }) {
@@ -8,12 +8,10 @@ function Navbar({ themeToggler, theme }) {
 	return (
 		<NavbarSection>
 			<NavbarLogo passHref href={'/'}>
-				<a>
-					{logo}
-				</a>	
+				<a>{logo}</a>
 			</NavbarLogo>
 			<NavbarButton onClick={themeToggler} aria-label='Theme'>
-				{theme === 'dark' ? <BsSun /> : <BsMoon />}
+				{theme === 'dark' ? <BsSun /> : <BsMoonStars />}
 			</NavbarButton>
 		</NavbarSection>
 	);

@@ -12,6 +12,11 @@ export const NavbarSection = styled.nav`
 export const NavbarLogo = styled.a`
 	font-weight: 700;
 	font-size: 3rem;
+	transition: 0.3s ease-in-out;
+
+	&:hover {
+		color: ${({ theme }) => theme.gold};
+	}
 `;
 
 export const NavbarButton = styled.button`
@@ -20,8 +25,4 @@ export const NavbarButton = styled.button`
 	border: none;
 	color: ${({ theme }) => theme.gold};
 	font-size: 3rem;
-
-	&::before {
-		content: '${({ theme }) => theme.toggle}';
-	}
 `;

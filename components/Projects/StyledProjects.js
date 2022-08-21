@@ -10,9 +10,35 @@ export const ProjectTitle = styled.h1`
 `;
 
 export const ProjectSubtitle = styled.p`
-	margin: 3rem 0 6rem;
+	margin: 3rem 0 4rem;
 	text-align: center;
 	font-size: 2.5rem;
+`;
+
+export const ProjectLinks = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 4rem;
+
+	& a {
+		display: flex;
+		align-items: center;
+		padding: 1rem 2rem;
+		font-size: 2rem;
+		border: 1px solid ${({ theme }) => theme.secondary};
+		transition: 0.3s ease-in-out;
+
+		&:hover {
+			color: ${({ theme }) => theme.main};
+			background: ${({ theme }) => theme.secondary};
+		}
+
+		& span {
+			margin-right: 0.5rem;
+			font-size: 2.5rem;
+		}
+	}
 `;
 
 export const ProjectList = styled.ul`
@@ -75,16 +101,16 @@ export const ProjectSection = styled.section`
 			margin-top: 4rem;
 		}
 	}
+
+	@media (max-width: 890px) {
+		div {
+			width: 90%;
+		}
+	}
 `;
 
-export const ProjectFooter = styled.section`
-	width: 100%;
-	position: fixed;
-	left: 0;
-	bottom: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
+export const ProjectFooter = styled.footer`
+	padding: 2rem 0 5rem;
 
 	& a {
 		display: flex;
@@ -99,13 +125,6 @@ export const ProjectFooter = styled.section`
 		& span {
 			margin-right: 0.5rem;
 			font-size: 2.5rem;
-		}
-
-		&:nth-of-type(even) {
-			& span {
-				margin-right: 0;
-				font-size: 3rem;
-			}
 		}
 	}
 `;
