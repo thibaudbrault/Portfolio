@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
 						name='description'
 						content="Salut ! Moi c'est Thibaud, développeur front-end nantais"
 					/>
+					<meta name="google-site-verification" content="7jYfoTUFvNWLCDFkdgEtkwIp3AexqXFZQbwI-TtwO64" />
 
 					<link rel='shortcut icon' href='/favicon.ico' />
 					<link rel='preconnect' href='https://fonts.googleapis.com' />
