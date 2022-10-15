@@ -1,21 +1,24 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { SiReact, SiStyledcomponents, SiGithub } from 'react-icons/si';
-import {
-	TbFilter,
-	TbInfinity,
-	TbDeviceMobile,
-	TbColorPicker,
-	TbList,
-	TbMoon,
-	TbRocket,
-	TbArrowBigUpLine,
-	TbLogin,
-	TbApi,
-	TbExternalLink,
-	TbArrowBigLeftLine,
-} from 'react-icons/tb';
+import SiGithub from '@meronex/icons/si/SiGithub';
+import SiReact from '@meronex/icons/si/SiReact';
+import SiStyledComponents from '@meronex/icons/si/SiStyledComponents';
+
+import CgColorPicker from '@meronex/icons/cg/CgColorPicker';
+import CgPerformance from '@meronex/icons/cg/CgPerformance';
+import CgMoon from '@meronex/icons/cg/CgMoon';
+
+import MdcLinkVariant from '@meronex/icons/mdc/MdcLinkVariant';
+import MdcApi from '@meronex/icons/mdc/MdcApi';
+import MdcFilterOutline from '@meronex/icons/mdc/MdcFilterOutline';
+import MdcFormatListBulleted from '@meronex/icons/mdc/MdcFormatListBulleted';
+import MdcRocketLaunchOutline from '@meronex/icons/mdc/MdcRocketLaunchOutline';
+import MdcArrowUpThick from '@meronex/icons/mdc/MdcArrowUpThick';
+import MdcAnimationPlayOutline from '@meronex/icons/mdc/MdcAnimationPlayOutline';
+import MdcArrowLeftThick from '@meronex/icons/mdc/MdcArrowLeftThick';
+
+import VscDeviceMobile from '@meronex/icons/vsc/VscDeviceMobile';
 
 import {
 	ProjectTitle,
@@ -39,7 +42,7 @@ function PokerefProject() {
 			<ProjectLinks>
 				<a href='https://pokeref.app/' target='_blank' rel='noreferrer'>
 					<span>
-						<TbExternalLink />
+						<MdcLinkVariant />
 					</span>
 					Site
 				</a>
@@ -63,13 +66,13 @@ function PokerefProject() {
 				</li>
 				<li>
 					<span>
-						<SiStyledcomponents />
+						<SiStyledComponents />
 					</span>{' '}
 					Styled-Components
 				</li>
 				<li>
 					<span>
-						<TbApi />
+						<MdcApi />
 					</span>{' '}
 					PokéAPI
 				</li>
@@ -78,33 +81,33 @@ function PokerefProject() {
 				<h2>Description</h2>
 				<div>
 					<span>
-						<TbFilter />
+						<MdcFilterOutline />
 					</span>
 					<p>
-						Utilisation de plusieurs filtres et de barres de recherche afin ne
+						Utilisation de plusieurs filtres et de barres de recherche afin de ne
 						montrer que les informations pertinentes à l'utilisateur et de
 						réduire le temps passé à rechercher une information précise.
 						<br />
 						Utilisation, sur la page principale, d'une barre de recherche avec
-						un autocomplete afin de
+						un auto-complete afin de trouver plus rapidement l'information recherchée par l'utilisateur.
 					</p>
 				</div>
 				<div>
 					<span>
-						<TbInfinity />
+						<CgPerformance />
 					</span>
 					<p>
-						Infinite scrolling pour afficher la liste de pokémon afin de réduire
-						le temps de chargement et d'éviter à l'utilisateur d'avoir à cliquer
-						pour changer de page.
+						Utilisation de React-Query pour gérer facilement l'état des données en les cachant et en empêchant une nouvelle récupération de celle-ci puisqu'elles ne sont pas amenées à changer souvent.
+						<br />
+						Utilisation de plusieurs fonctionnalitées de Next JS tel que l'optimisation des images avec le composant Image et l'import dynamique des composants.
 					</p>
 				</div>
 				<div>
 					<span>
-						<TbDeviceMobile />
+						<VscDeviceMobile />
 					</span>
 					<p>
-						Site entiérement responsive afin de pouvoir l'utiliser sur n'importe
+						Site entièrement responsive afin de pouvoir l'utiliser sur n'importe
 						quel appareil.
 					</p>
 				</div>
@@ -113,7 +116,7 @@ function PokerefProject() {
 				<h2>Design</h2>
 				<div>
 					<span>
-						<TbColorPicker />
+						<CgColorPicker />
 					</span>
 					<p>
 						J'ai choisi une palette de couleurs classique (noir clair / blanc
@@ -123,32 +126,32 @@ function PokerefProject() {
 						<br />
 						De plus, je voulais que le site ait un design minimaliste malgré le
 						nombre d'informations délivrées ce qui fait que je devais donc
-						limiter le nombre de coleurs utilisées.
+						limiter le nombre de couleurs utilisées.
 					</p>
 				</div>
 				<div>
 					<span>
-						<TbList />
+						<MdcFormatListBulleted />
 					</span>
 					<p>
 						J'ai choisi de limiter le nombre de pokémon à 4 par lignes afin de
-						ne pas saturer l'utilisateur avec les information disponibles et de
-						laisser le site 'respirer'.
+						ne pas saturer l'utilisateur avec les informations disponibles et de
+						laisser le site "respirer".
 						<br />
 						Pour les autres pages, j'ai choisi de faire des listes afin de
 						donner les informations principales directement sans avoir à ouvrir
 						aller sur la page.
 						<br />
-						Enfin chaque page de details contient des informations classées des
+						Enfin chaque page de détails contient des informations classées des
 						plus importantes aux moins importantes (avec quelques exceptions).
 					</p>
 				</div>
 				<div>
 					<span>
-						<TbMoon />
+						<CgMoon />
 					</span>
 					<p>
-						Mode nuit par défaut mais possiblité de passer au mode jour.
+						Mode nuit par défaut mais possibilité de passer au mode jour.
 						<br />
 						J'ai choisi de mettre le mode nuit par défaut afin de rendre le site
 						plus agréable pour les yeux et de faire ressortir certaines
@@ -160,19 +163,19 @@ function PokerefProject() {
 				<h2>Améliorations futures</h2>
 				<div>
 					<span>
-						<TbRocket />
+						<MdcRocketLaunchOutline />
 					</span>
 					<p>
 						Améliorer les performances et en particulier le temps de chargement
-						des pages qui contiennent beucoup d'informations et qui sont donc
+						des pages qui contiennent beaucoup d'informations et qui sont donc
 						longues à charger.
 						<br />
-						Eventuelles pistes : virtualiser les pages de listes
+						Eventuelles pistes : virtualiser les pages de listes / implémenter SSG de Next JS / transformer le site en PWA et ajouter un service worker
 					</p>
 				</div>
 				<div>
 					<span>
-						<TbArrowBigUpLine />
+						<MdcArrowUpThick />
 					</span>
 					<p>
 						Une amélioration du design via l'ajout d'animations afin de rendre
@@ -184,11 +187,10 @@ function PokerefProject() {
 				</div>
 				<div>
 					<span>
-						<TbLogin />
+						<MdcAnimationPlayOutline />
 					</span>
 					<p>
-						La possibilité de créer une équipe pokémon et de la sauvegarder avec
-						une authentification Firebase
+						Ajouter quelques animations lors du scroll (sans tomber dans l'excès) afin de rendre le site plus "vivant".
 					</p>
 				</div>
 			</ProjectSection>
@@ -196,7 +198,7 @@ function PokerefProject() {
 				<Link passHref href={'/'}>
 					<a>
 						<span>
-							<TbArrowBigLeftLine />
+							<MdcArrowLeftThick />
 						</span>
 						Retour au portfolio
 					</a>

@@ -83,7 +83,7 @@ export const ProjectSection = styled.section`
 	}
 
 	& div {
-		width: 50%;
+		width: 70%;
 		margin: 2rem 0 2rem 2rem;
 		display: flex;
 

@@ -32,7 +32,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang='fr'>
 				<Head>
-					<meta charSet='utf-8' />
 					<meta
 						name='description'
 						content="Salut ! Moi c'est Thibaud, développeur front-end nantais"
