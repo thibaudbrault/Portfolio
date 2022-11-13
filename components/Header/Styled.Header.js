@@ -40,6 +40,7 @@ export const LinksSection = styled(motion.section)`
 		background: none;
 		border: 1px solid ${({ theme }) => theme.secondary};
 		color: ${({ theme }) => theme.secondary};
+		border-radius: 4px;
 		font-size: 3rem;
 		font-weight: 700;
 		transition: 0.3s ease-in-out;

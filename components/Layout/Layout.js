@@ -8,7 +8,7 @@ import { lightTheme, darkTheme } from '../BaseStyles/Themes';
 import Navbar from '../Navbar/Navbar';
 import Frame from '../Frame/Frame';
 
-const Main = styled.main`
+const Main = styled.div`
 	background: ${({ theme }) => theme.main};
 	color: ${({ theme }) => theme.secondary};
 	font-family: 'Karla', sans-serif;

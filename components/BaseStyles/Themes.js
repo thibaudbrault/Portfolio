@@ -7,5 +7,5 @@ export const darkTheme = {
 export const lightTheme = {
 	main: '#c4c4c4',
 	secondary: '#161616',
-	gold: '#8a1212',
+	gold: '#161616',
 };

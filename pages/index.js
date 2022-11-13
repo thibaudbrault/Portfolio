@@ -6,12 +6,12 @@ import Header from '../components/Header/Header';
 import Socials from '../components/Socials/Socials';
 import Footer from '../components/Footer/Footer';
 
-export const MainPage = styled.div`
+export const MainPage = styled.main`
 	height: 90vh;
 	overflow: hidden;
 `;
 
-export const MainProject = styled.div`
+export const MainProject = styled.main`
 	position: relative;
 	width: 90%;
 	min-height: 90vh;

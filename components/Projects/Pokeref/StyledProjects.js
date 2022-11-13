@@ -27,6 +27,7 @@ export const ProjectLinks = styled.div`
 		padding: 1rem 2rem;
 		font-size: 2rem;
 		border: 1px solid ${({ theme }) => theme.secondary};
+		border-radius: 4px;
 		transition: 0.3s ease-in-out;
 
 		&:hover {
