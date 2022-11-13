@@ -84,12 +84,13 @@ function PokerefProject() {
 						<MdcFilterOutline />
 					</span>
 					<p>
-						Utilisation de plusieurs filtres et de barres de recherche afin de ne
-						montrer que les informations pertinentes à l'utilisateur et de
+						Utilisation de plusieurs filtres et de barres de recherche afin de
+						ne montrer que les informations pertinentes à l'utilisateur et de
 						réduire le temps passé à rechercher une information précise.
 						<br />
 						Utilisation, sur la page principale, d'une barre de recherche avec
-						un auto-complete afin de trouver plus rapidement l'information recherchée par l'utilisateur.
+						un auto-complete afin de trouver plus rapidement l'information
+						recherchée par l'utilisateur.
 					</p>
 				</div>
 				<div>
@@ -97,9 +98,13 @@ function PokerefProject() {
 						<CgPerformance />
 					</span>
 					<p>
-						Utilisation de React-Query pour gérer facilement l'état des données en les cachant et en empêchant une nouvelle récupération de celle-ci puisqu'elles ne sont pas amenées à changer souvent.
+						Utilisation de React-Query pour gérer facilement l'état des données
+						en les cachant et en empêchant une nouvelle récupération de celle-ci
+						puisqu'elles ne sont pas amenées à changer souvent.
 						<br />
-						Utilisation de plusieurs fonctionnalitées de Next JS tel que l'optimisation des images avec le composant Image et l'import dynamique des composants.
+						Utilisation de plusieurs fonctionnalitées de Next JS tel que
+						l'optimisation des images avec le composant Image et l'import
+						dynamique des composants.
 					</p>
 				</div>
 				<div>
@@ -170,7 +175,9 @@ function PokerefProject() {
 						des pages qui contiennent beaucoup d'informations et qui sont donc
 						longues à charger.
 						<br />
-						Eventuelles pistes : virtualiser les pages de listes / implémenter SSG de Next JS / transformer le site en PWA et ajouter un service worker
+						Eventuelles pistes : virtualiser les pages de listes / implémenter
+						SSG de Next JS / transformer le site en PWA et ajouter un service
+						worker
 					</p>
 				</div>
 				<div>
@@ -190,7 +197,8 @@ function PokerefProject() {
 						<MdcAnimationPlayOutline />
 					</span>
 					<p>
-						Ajouter quelques animations lors du scroll (sans tomber dans l'excès) afin de rendre le site plus "vivant".
+						Ajouter quelques animations lors du scroll (sans tomber dans
+						l'excès) afin de rendre le site plus "vivant".
 					</p>
 				</div>
 			</ProjectSection>
