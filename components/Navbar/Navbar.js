@@ -1,59 +1,31 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
-import CgMoon from '@meronex/icons/cg/CgMoon';
-import CgSun from '@meronex/icons/cg/CgSun';
-import BisChevronDown from '@meronex/icons/bi/BisChevronDown';
-import BisChevronUp from '@meronex/icons/bi/BisChevronUp';
+import FaHome from '@meronex/icons/fa/FaHome';
+import SiAboutDotMe from '@meronex/icons/si/SiAboutDotMe';
+import FaTools from '@meronex/icons/fa/FaTools';
+import { NavbarContainer } from './Styled.Navbar';
 
-import { NavbarButton, NavbarDropdown, NavbarLinks, NavbarLogo, NavbarSection } from './Styled.Navbar';
-
-function Navbar({ themeToggler, theme }) {
-	const logo = '{TB}';
-
-	const [open, setOpen] = useState(false);
-	const [btnValue, setBtnValue] = useState('Page')
-
-	const handleOpen = () => {
-		setOpen(!open)
-	}
-
-	return (
-		<NavbarSection>
-			<NavbarLogo passHref href={'/'}>
-				<a>{logo}</a>
-			</NavbarLogo>
-			<NavbarLinks>
-				<NavbarDropdown>
-					<button onClick={handleOpen}>
-						{btnValue}
-						{open ? <BisChevronUp /> : <BisChevronDown />}
-					</button>
-					{open &&
-						<ul>
-							<li>
-								<Link href="/" onClick={() => {
-									setBtnValue('Home')
-								}}>
-									/
-								</Link>
-							</li>
-							<li>
-								<Link href="/" onClick={() => {
-									setBtnValue('About')
-								}}>
-									/about
-								</Link>
-							</li>
-						</ul>
-					}
-				</NavbarDropdown>
-				<NavbarButton onClick={themeToggler} aria-label='Theme'>
-					{theme === 'dark' ? <CgSun /> : <CgMoon />}
-				</NavbarButton>
-			</NavbarLinks>
-		</NavbarSection>
-	);
+function Navbar() {
+    return (
+        <NavbarContainer>
+            <Link href='/' passHref>
+                <a>
+                    <FaHome />
+                </a>
+            </Link>
+            <Link href='/about' passHref>
+                <a>
+                    <SiAboutDotMe />
+                </a>
+            </Link>
+            <Link href='/tools' passHref>
+                <a>
+                    <FaTools />
+                </a>
+            </Link>
+        </NavbarContainer>
+    )
 }
 
-export default Navbar;
+export default Navbar

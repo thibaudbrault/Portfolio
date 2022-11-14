@@ -5,8 +5,9 @@ import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../BaseStyles/GlobalStyles';
 import { lightTheme, darkTheme } from '../BaseStyles/Themes';
 
-import Navbar from '../Navbar/Navbar';
 import Frame from '../Frame/Frame';
+import Topbar from '../Topbar/Topbar';
+import Navbar from '../Navbar/Navbar';
 
 const Main = styled.div`
 	background: ${({ theme }) => theme.main};
@@ -40,8 +41,9 @@ function Layout({ children }) {
 			<ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
 				<GlobalStyles />
 				<Main>
-					<Navbar themeToggler={themeToggler} theme={theme} />
+					<Topbar themeToggler={themeToggler} theme={theme} />
 					{children}
+					<Navbar />
 					<Frame />
 				</Main>
 			</ThemeProvider>

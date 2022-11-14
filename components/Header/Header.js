@@ -1,12 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
-
 import {
 	HeaderContainer,
 	HeaderSection,
+	HeaderSocials,
 	HeaderSubtitle,
 	HeaderTitle,
-	LinksSection,
 } from './Styled.Header';
 
 function Header() {
@@ -20,18 +18,16 @@ function Header() {
 				>
 					<HeaderTitle>Thibaud Brault</HeaderTitle>
 					<HeaderSubtitle>Développeur front-end nantais</HeaderSubtitle>
+					<HeaderSocials>
+						<a href='https://www.linkedin.com/in/thibaud-brault/' target="_blank">
+							Github
+						</a>
+						<a href='https://github.com/thibaudbrault' target="_blank">
+							Linkedin
+						</a>
+					</HeaderSocials>
 				</HeaderContainer>
 			</HeaderSection>
-			<LinksSection
-				initial={{ opacity: 0 }}
-				transition={{ duration: 2 }}
-				animate={{ opacity: 1 }}
-			>
-				<Link passHref href={'/pokeref'}>
-					<a>PokéRef</a>
-				</Link>
-				<Link href={'/'}>Portfolio</Link>
-			</LinksSection>
 		</>
 	);
 }

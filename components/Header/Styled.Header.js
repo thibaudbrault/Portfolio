@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const HeaderSection = styled.section`
 	width: 100%;
-	height: 55vh;
+	height: 45vh;
 `;
 
 export const HeaderContainer = styled(motion.div)`
@@ -26,37 +26,20 @@ export const HeaderSubtitle = styled.h2`
 	color: ${({ theme }) => theme.gold};
 `;
 
-export const LinksSection = styled(motion.section)`
-	width: 75%;
-	margin: 0 auto;
+export const HeaderSocials = styled.div`
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-
+	align-items: center;
+	justify-content: center;
+	gap: 5rem;
+	margin-top: 2rem;
+	
 	& a {
-		padding: 1rem 2rem;
-		margin: 2rem;
-		background: none;
-		border: 1px solid ${({ theme }) => theme.secondary};
-		color: ${({ theme }) => theme.secondary};
-		border-radius: 4px;
-		font-size: 3rem;
-		font-weight: 700;
+		font-size: 1.7rem;
+		border-bottom: 1px solid transparent;
 		transition: 0.3s ease-in-out;
-
+	
 		&:hover {
-			background: ${({ theme }) => theme.secondary};
-			border: 1px solid ${({ theme }) => theme.main};
-			color: ${({ theme }) => theme.main};
-		}
-
-		&:first-of-type {
-			margin-left: 0;
-		}
-
-		&:last-of-type {
-			margin-right: 0;
+			border-bottom: 1px solid ${({ theme }) => theme.gold};
 		}
 	}
 `;
