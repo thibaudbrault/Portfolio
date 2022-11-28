@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout/Layout';
 import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import Projects from '../components/Projects/Projects';
 
 export const MainPage = styled.main`
@@ -24,7 +23,6 @@ function IndexPage() {
 			<MainPage>
 				<Header />
 				<Projects />
-				<Footer />
 			</MainPage>
 		</Layout>
 	);

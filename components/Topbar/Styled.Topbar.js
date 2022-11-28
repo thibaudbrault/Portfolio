@@ -5,7 +5,7 @@ export const TopbarSection = styled.nav`
 	height: 10vh;
 	margin: 0 auto;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-between;
 `;
 

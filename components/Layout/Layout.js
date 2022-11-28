@@ -8,6 +8,7 @@ import { lightTheme, darkTheme } from '../BaseStyles/Themes';
 import Frame from '../Frame/Frame';
 import Topbar from '../Topbar/Topbar';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const Main = styled.div`
 	background: ${({ theme }) => theme.main};
@@ -44,6 +45,7 @@ function Layout({ children }) {
 					<Topbar themeToggler={themeToggler} theme={theme} />
 					{children}
 					<Navbar />
+					<Footer />
 					<Frame />
 				</Main>
 			</ThemeProvider>

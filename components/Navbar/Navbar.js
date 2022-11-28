@@ -19,7 +19,7 @@ function Navbar() {
                     <SiAboutDotMe />
                 </a>
             </Link>
-            <Link href='/tools' passHref>
+            <Link href='/stack' passHref>
                 <a>
                     <FaTools />
                 </a>
