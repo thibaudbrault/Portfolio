@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -11,6 +11,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
 const Main = styled.div`
+	position: relative;
 	background: ${({ theme }) => theme.main};
 	color: ${({ theme }) => theme.secondary};
 	font-family: 'Karla', sans-serif;
@@ -18,9 +19,9 @@ const Main = styled.div`
 `;
 
 function Layout({ children }) {
-	const [theme, setTheme] = useState('dark');
+	const [theme, setTheme] = useState<string>('dark');
 
-	const setMode = (mode) => {
+	const setMode = (mode: string) => {
 		window.localStorage.setItem('theme', mode);
 		setTheme(mode);
 	};

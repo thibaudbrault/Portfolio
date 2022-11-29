@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterSection = styled.footer`
-	position: fixed;
+	position: absolute;
 	bottom: 2rem;
 	left: 2rem;
 
