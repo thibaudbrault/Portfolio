@@ -1,8 +1,5 @@
 import React from 'react';
 
-import CgMoon from '@meronex/icons/cg/CgMoon';
-import CgSun from '@meronex/icons/cg/CgSun';
-
 import { TopbarButton, TopbarLogo, TopbarSection } from './Styled.Topbar';
 
 function Topbar({ themeToggler, theme }) {
@@ -14,7 +11,7 @@ function Topbar({ themeToggler, theme }) {
 				<a>{logo}</a>
 			</TopbarLogo>
 			<TopbarButton onClick={themeToggler} aria-label='Theme'>
-				{theme === 'dark' ? <CgSun /> : <CgMoon />}
+				{theme === 'dark' ? <img src="/assets/sun.svg" alt="Light" /> : <img src="/assets/evil-moon.svg" alt="Dark" />}
 			</TopbarButton>
 		</TopbarSection>
 	);

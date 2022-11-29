@@ -24,5 +24,10 @@ export const TopbarButton = styled.button`
 	background: none;
 	border: none;
 	color: ${({ theme }) => theme.gold};
-	font-size: 3rem;
+	font-size: 2rem;
+
+	& img {
+		width: 6rem;
+		height: 6rem;
+	}
 `;

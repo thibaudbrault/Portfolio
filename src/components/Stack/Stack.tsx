@@ -45,9 +45,18 @@ function Stack() {
                 <ul>
                     <li><LgExpress /><span>Express</span></li>
                     <li><LgMysql /><span>MySQL</span></li>
-                    <li>Next-Auth</li>
-                    <li>Prisma</li>
-                    <li>Planetscale</li>
+                    <li>
+                        <img src="/assets/nextauth.png" alt="" />
+                        <span>Next-Auth</span>
+                    </li>
+                    <li>
+                        <img src="/assets/prisma.svg" alt="" />
+                        <span>Prisma</span>
+                    </li>
+                    <li>
+                        <img src="/assets/planetscale.svg" alt="" />
+                        <span>Planetscale</span>
+                    </li>
                 </ul>
             </StackContainer>
             <StackContainer>

@@ -22,6 +22,11 @@ export const AboutTitle = styled.div`
         & img {
             width: 4rem;
             height: 4rem;
+
+            
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
         }
     }
 

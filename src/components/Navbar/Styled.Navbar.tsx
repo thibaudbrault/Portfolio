@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
     position: fixed;
-    bottom: 2rem;
+    bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -13,6 +13,7 @@ export const NavbarContainer = styled.nav`
     background-color: #c4c4c4;
     border: 1px solid #161616;
     border-radius: 25px;
+    z-index: 2;
 
     & a {
         display: flex;

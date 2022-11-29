@@ -12,7 +12,10 @@ import Footer from '../Footer/Footer';
 
 const Main = styled.div`
 	position: relative;
-	background: ${({ theme }) => theme.main};
+	background-image: url('/assets/gradienta-G084bO4wGDA-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	color: ${({ theme }) => theme.secondary};
 	font-family: 'Karla', sans-serif;
 	transition: 0.3s ease-in-out;

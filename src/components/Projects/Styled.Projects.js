@@ -18,6 +18,12 @@ export const ProjectsGrid = styled.div`
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     gap: 3rem;
+
+    
+    @media screen and (max-width: 650px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const ProjectsContainer = styled.div`
@@ -46,12 +52,6 @@ export const ProjectsContainer = styled.div`
         font-family: 'Merriweather';
     }
 
-    & p {
-        @media screen and (max-width: 650px) {
-            display: none;
-        }
-    }
-
     & ul {
         display: flex;
         align-items: center;
@@ -63,10 +63,6 @@ export const ProjectsContainer = styled.div`
             background: ${({ theme }) => theme.main};
             color: ${({ theme }) => theme.gold};
             border-radius: 25px;
-        }
-
-        @media screen and (max-width: 650px) {
-            display: none;
         }
     }
 `;

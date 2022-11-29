@@ -36,10 +36,12 @@ export const StackContainer = styled.div`
      }
 
      & ul {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 4rem;
 
         & li {
@@ -52,6 +54,11 @@ export const StackContainer = styled.div`
 
             & svg {
                 font-size: 3.5rem;
+            }
+
+            & img {
+                width: 3.5rem;
+                height: 3.5rem;
             }
         }
      }

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const HeaderSection = styled.section`
-	width: 100%;
+	width: 95%;
 	height: 90vh;
+	margin: 0 auto;
 `;
 
 export const HeaderContainer = styled(motion.div)`
@@ -22,7 +23,7 @@ export const HeaderTitle = styled.h1`
 
 export const HeaderSubtitle = styled.h2`
 	margin-top: 1rem;
-	font-size: 2.5rem;
+	font-size: 3rem;
 	color: ${({ theme }) => theme.gold};
 `;
 
@@ -34,7 +35,7 @@ export const HeaderSocials = styled.div`
 	margin-top: 2rem;
 	
 	& a {
-		font-size: 1.7rem;
+		font-size: 2.5rem;
 		border-bottom: 1px solid transparent;
 		transition: 0.3s ease-in-out;
 	
