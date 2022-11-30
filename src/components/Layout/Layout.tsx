@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -9,16 +9,37 @@ import Frame from '../Frame/Frame';
 import Topbar from '../Topbar/Topbar';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
+import Image from 'next/future/image';
 
-const Main = styled.div`
+export const Main = styled.div`
 	position: relative;
-	background-image: url('/assets/gradienta-G084bO4wGDA-unsplash.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	background-color: ${({ theme }) => theme.main};
 	color: ${({ theme }) => theme.secondary};
 	font-family: 'Karla', sans-serif;
 	transition: 0.3s ease-in-out;
+`;
+
+export const MainProject = styled.main`
+	position: relative;
+	width: 90%;
+	min-height: 90vh;
+	margin: 0 auto;
+`;
+
+const NinjaImg = styled.div`
+	position: absolute;
+	bottom: 40%;
+	left: 20%;
+	width: 4rem;
+	height: 4rem;
+`;
+
+const BottomImg = styled.div`
+	position: absolute;
+	bottom: 1rem;
+	right: 3rem;
+	width: 3rem;
+	height: 3rem;
 `;
 
 function Layout({ children }) {
@@ -50,6 +71,12 @@ function Layout({ children }) {
 					{children}
 					<Navbar />
 					<Footer />
+					<NinjaImg>
+						<Image src="/assets/running-ninja.svg" fill alt="" />
+					</NinjaImg>
+					<BottomImg>
+						<Image src="/assets/raise-skeleton.svg" fill alt="" />
+					</BottomImg>
 					<Frame />
 				</Main>
 			</ThemeProvider>

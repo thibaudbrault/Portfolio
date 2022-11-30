@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const HeaderSection = styled.section`
 	width: 95%;
-	height: 90vh;
+	height: 85vh;
 	margin: 0 auto;
 `;
 

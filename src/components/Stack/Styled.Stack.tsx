@@ -25,8 +25,9 @@ export const StackContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: ${({ theme }) => theme.secondary};
-    color: ${({ theme }) => theme.main};
+    background-color: #c4c4c4;
+    color: #161616;
+    border: 1px solid #161616;
     border-radius: 4px;
 
      & h3 {
