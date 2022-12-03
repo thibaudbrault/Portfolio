@@ -13,6 +13,10 @@ export const ProjectSubtitle = styled.p`
 	margin: 3rem 0 4rem;
 	text-align: center;
 	font-size: 2.5rem;
+
+	& small {
+		font-size: 1.5rem;
+	}
 `;
 
 export const ProjectLinks = styled.div`

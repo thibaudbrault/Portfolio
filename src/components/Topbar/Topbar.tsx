@@ -4,6 +4,11 @@ import Image from 'next/future/image';
 import { TopbarButton, TopbarImg, TopbarLogo, TopbarSection } from './Styled.Topbar';
 import Link from 'next/link';
 
+import GiOverlordHelm from '@meronex/icons/gi/GiOverlordHelm';
+import GiBrutalHelm from '@meronex/icons/gi/GiBrutalHelm';
+import GiSun from '@meronex/icons/gi/GiSun';
+import GiEvilMoon from '@meronex/icons/gi/GiEvilMoon';
+
 function Topbar({ themeToggler, theme }) {
 	const logo = '{TB}';
 
@@ -13,17 +18,17 @@ function Topbar({ themeToggler, theme }) {
 				<Link href={'/'}>{logo}</Link>
 				<TopbarImg>
 					{theme === 'dark' ? (
-						<Image src="/assets/overlord-helm.svg" fill alt="" />
+						<GiOverlordHelm />
 					) : (
-						<Image src="/assets/brutal-helm.svg" fill alt="" />
+						<GiBrutalHelm />
 					)}
 				</TopbarImg>
 			</TopbarLogo>
 			<TopbarButton onClick={themeToggler} aria-label='Theme'>
 				{theme === 'dark' ? (
-					<Image src="/assets/sun.svg" fill alt="Light" />
+					<GiSun />
 				) : (
-					<Image src="/assets/evil-moon.svg" fill alt="Dark" />
+					<GiEvilMoon />
 				)}
 			</TopbarButton>
 		</TopbarSection>

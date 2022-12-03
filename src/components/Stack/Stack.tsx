@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/future/image';
 import { StackContainer, StackSection } from './Styled.Stack';
 
 import LgReact from '@meronex/icons/lg/LgReact';
@@ -16,8 +17,7 @@ import LgMysql from '@meronex/icons/lg/LgMysql';
 
 import LgGitIcon from '@meronex/icons/lg/LgGitIcon';
 import MdcMicrosoftVisualStudioCode from '@meronex/icons/mdc/MdcMicrosoftVisualStudioCode';
-import LgMdx from '@meronex/icons/lg/LgMdx';
-import Image from 'next/future/image';
+import LgGoogleIcon from '@meronex/icons/lg/LgGoogleIcon';
 
 function Stack() {
     return (
@@ -65,7 +65,7 @@ function Stack() {
                 <ul>
                     <li><LgGitIcon /><span>Git</span></li>
                     <li><MdcMicrosoftVisualStudioCode /><span>VSCode</span></li>
-                    <li><LgMdx /><span>Markdown</span></li>
+                    <li><LgGoogleIcon /><span>Google :)</span></li>
                 </ul>
             </StackContainer>
         </StackSection>

@@ -22,9 +22,12 @@ export const NavbarContainer = styled.nav`
         font-size: 1.7rem;
         color: #161616;
 
-        & img {
-            width: 2.5rem;
-            height: 2.5rem;
+        & svg {
+            font-size: 2.5rem;
+            
+            & path {
+                fill: #161616;
+            }
         }
 
         & span {

@@ -19,11 +19,11 @@ export const AboutTitle = styled.div`
         font-family: 'Merriweather';
         gap: 1rem;
 
-        & img {
-            width: 4rem;
-            height: 4rem;
+        & svg {
+            & path {
+                fill: ${({ theme }) => theme.secondary};
+            }
 
-            
             @media screen and (max-width: 650px) {
                 display: none;
             }

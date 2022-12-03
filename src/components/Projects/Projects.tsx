@@ -17,6 +17,7 @@ function Projects() {
                     <ul>
                         <li>Next JS</li>
                         <li>Styled-Components</li>
+                        <li>Typescript</li>
                     </ul>
                     <ProjectsLinks>
                         <a href='https://github.com/thibaudbrault/PokeRef'>
@@ -33,17 +34,41 @@ function Projects() {
                     </ProjectsLinks>
                 </ProjectsContainer>
                 <ProjectsContainer>
-                    <h3>Portfolio</h3>
-                    <p>Le site qui me sert à présenter mes projets</p>
+                    <h3>Wild Movies</h3>
+                    <p>Le meilleur moteur de recherche de films ou séries</p>
+                    <ul>
+                        <li>Vite</li>
+                        <li>Sass</li>
+                    </ul>
+                    <ProjectsLinks>
+                        <a href='https://github.com/thibaudbrault/WildMovies'>
+                            <FaGithubAlt />
+                        </a>
+                        <a href='https://wild-movies.netlify.app/'>
+                            <FaEye />
+                        </a>
+                        <Link href='/wildmovies' passHref>
+                            <a>
+                                <FaPlus />
+                            </a>
+                        </Link>
+                    </ProjectsLinks>
+                </ProjectsContainer>
+                <ProjectsContainer>
+                    <h3>PRBN</h3>
+                    <p>Pokémon Radio Broadcasting Network</p>
                     <ul>
                         <li>Next JS</li>
                         <li>Styled-Components</li>
                     </ul>
                     <ProjectsLinks>
-                        <a href='https://github.com/thibaudbrault/Portfolio'>
+                        <a href='https://github.com/thibaudbrault/PRBN'>
                             <FaGithubAlt />
                         </a>
-                        <Link href='/' passHref>
+                        <a href='https://prbn.netlify.app/'>
+                            <FaEye />
+                        </a>
+                        <Link href='/prbn' passHref>
                             <a>
                                 <FaPlus />
                             </a>

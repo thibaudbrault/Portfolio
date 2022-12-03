@@ -15,10 +15,13 @@ export const TopbarLogo = styled.div`
 	justify-content: center;
 	font-weight: 700;
 	font-size: 4rem;
-	transition: 0.3s ease-in-out;
+	
+	& a {
+		transition: 0.3s ease-in-out;
 
-	&:hover {
-		color: ${({ theme }) => theme.gold};
+		&:hover {
+			color: ${({ theme }) => theme.gold};
+		}
 	}
 `;
 
@@ -27,15 +30,24 @@ export const TopbarImg = styled.div`
 	width: 4rem;
 	height: 4rem;
 	margin-left: 1rem;
+	
+	& svg {
+		& path {
+			fill: ${({ theme }) => theme.secondary};
+		}
+	}
 `;
 
 export const TopbarButton = styled.button`
-	width: 6rem;
-	height: 6rem;
 	position: fixed;
-	right: 2rem;
+	right: 5%;
 	background: none;
 	border: none;
-	color: ${({ theme }) => theme.gold};
-	font-size: 2rem;
+	font-size: 6rem;
+
+	& svg {
+		& path {
+			fill: ${({ theme }) => theme.gold};
+		}
+	}
 `;

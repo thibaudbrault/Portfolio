@@ -5,9 +5,10 @@ import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../BaseStyles/GlobalStyles';
 import { lightTheme, darkTheme } from '../BaseStyles/Themes';
 
+import GiRaiseZombie from '@meronex/icons/gi/GiRaiseZombie';
+
 import Frame from '../Frame/Frame';
 import Topbar from '../Topbar/Topbar';
-import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Image from 'next/future/image';
 
@@ -26,20 +27,17 @@ export const MainProject = styled.main`
 	margin: 0 auto;
 `;
 
-const NinjaImg = styled.div`
-	position: absolute;
-	bottom: 40%;
-	left: 20%;
-	width: 4rem;
-	height: 4rem;
-`;
-
 const BottomImg = styled.div`
 	position: absolute;
 	bottom: 1rem;
 	right: 3rem;
-	width: 3rem;
-	height: 3rem;
+	font-size: 3rem;
+
+	& svg {
+		& path {
+			fill: ${({ theme }) => theme.secondary};
+		}
+	}
 `;
 
 function Layout({ children }) {
@@ -69,13 +67,9 @@ function Layout({ children }) {
 				<Main>
 					<Topbar themeToggler={themeToggler} theme={theme} />
 					{children}
-					<Navbar />
 					<Footer />
-					<NinjaImg>
-						<Image src="/assets/running-ninja.svg" fill alt="" />
-					</NinjaImg>
 					<BottomImg>
-						<Image src="/assets/raise-skeleton.svg" fill alt="" />
+						<GiRaiseZombie />
 					</BottomImg>
 					<Frame />
 				</Main>

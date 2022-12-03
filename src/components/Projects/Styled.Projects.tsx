@@ -46,6 +46,10 @@ export const ProjectsContainer = styled.div`
         background-color: #557153;
     }
 
+    &:nth-of-type(3) {
+        background-color: #8d1a06;
+    }
+
     & h3 {
         font-size: 3rem;
         font-weight: 700;
