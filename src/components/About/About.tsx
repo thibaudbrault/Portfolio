@@ -14,7 +14,7 @@ function About() {
                 <br />
                 Passionné par le développement web depuis maintenant 1 an, je m'améliore chaque jour grâce à ma formation et à mon travail sur des projets personnels et aimerait en faire mon futur métier.
                 <br />
-                Curieux, autonome et patient j'aime créer des sites beaux, fonctionnels et responsive.
+                Curieux, autonome et patient j'aime créer des sites attrayants, fonctionnels, responsive et accessibles.
             </AboutText>
         </AboutSection>
     )
