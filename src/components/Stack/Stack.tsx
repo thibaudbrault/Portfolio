@@ -50,14 +50,6 @@ function Stack() {
                         <Image src="/assets/nextauth.png" width={35} height={35} alt="" />
                         <span>Next-Auth</span>
                     </li>
-                    <li>
-                        <Image src="/assets/prisma.svg" width={35} height={35} alt="" />
-                        <span>Prisma</span>
-                    </li>
-                    <li>
-                        <Image src="/assets/planetscale.svg" width={35} height={35} alt="" />
-                        <span>Planetscale</span>
-                    </li>
                 </ul>
             </StackContainer>
             <StackContainer>
