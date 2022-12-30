@@ -76,12 +76,11 @@ function PokerefProject() {
 							<BsMusicPlayerFill />
 						</span>
 						<p>
-							Plusiuers fonctions d'un lecteur de musique disponibles : lecture
+							Plusieurs fonctions d'un lecteur de musique disponibles : lecture
 							/ pause, suivant / précédent, avancer / reculer de 10 secondes,
 							musique au hasard et musique en boucle.
 							<br />
-							Affichage de la durée totale de la musique et de la progression de
-							la musique avec un timer et une barre de progression.
+							Affichage de la durée totale de la musique et de la progression avec un timer et une barre de progression.
 							<br />
 							Possibilité d'avancer ou de reculer dans la musique avec la barre
 							de progression.
@@ -115,7 +114,7 @@ function PokerefProject() {
 						</span>
 						<p>
 							La durée totale de la première musique affiche 0 lors du
-							charegement du site.
+							chargement du site.
 							<br />
 							Fonction loop qui ne joue pas automatiquement la musique
 							lorsqu'elle arrive à la fin.
