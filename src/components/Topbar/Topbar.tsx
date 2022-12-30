@@ -1,7 +1,12 @@
 import React from 'react';
 import Image from 'next/future/image';
 
-import { TopbarButton, TopbarImg, TopbarLogo, TopbarSection } from './Styled.Topbar';
+import {
+	TopbarButton,
+	TopbarImg,
+	TopbarLogo,
+	TopbarSection,
+} from './Styled.Topbar';
 import Link from 'next/link';
 
 import GiOverlordHelm from '@meronex/icons/gi/GiOverlordHelm';
@@ -17,19 +22,11 @@ function Topbar({ themeToggler, theme }) {
 			<TopbarLogo>
 				<Link href={'/'}>{logo}</Link>
 				<TopbarImg>
-					{theme === 'dark' ? (
-						<GiOverlordHelm />
-					) : (
-						<GiBrutalHelm />
-					)}
+					{theme === 'dark' ? <GiOverlordHelm /> : <GiBrutalHelm />}
 				</TopbarImg>
 			</TopbarLogo>
 			<TopbarButton onClick={themeToggler} aria-label='Theme'>
-				{theme === 'dark' ? (
-					<GiSun />
-				) : (
-					<GiEvilMoon />
-				)}
+				{theme === 'dark' ? <GiSun /> : <GiEvilMoon />}
 			</TopbarButton>
 		</TopbarSection>
 	);

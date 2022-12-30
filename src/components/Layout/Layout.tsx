@@ -10,9 +10,8 @@ import GiRaiseZombie from '@meronex/icons/gi/GiRaiseZombie';
 import Frame from '../Frame/Frame';
 import Topbar from '../Topbar/Topbar';
 import Footer from '../Footer/Footer';
-import Image from 'next/future/image';
 
-export const Main = styled.div`
+const Main = styled.div`
 	position: relative;
 	background-color: ${({ theme }) => theme.main};
 	color: ${({ theme }) => theme.secondary};

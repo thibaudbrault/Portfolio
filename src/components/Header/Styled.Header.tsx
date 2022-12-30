@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const HeaderSection = styled.section`
+export const HeaderSection = styled.header`
 	width: 95%;
 	height: 85vh;
 	margin: 0 auto;
+	max-width: 1500px;
 `;
 
 export const HeaderContainer = styled(motion.div)`
@@ -33,12 +34,12 @@ export const HeaderSocials = styled.div`
 	justify-content: center;
 	gap: 5rem;
 	margin-top: 2rem;
-	
+
 	& a {
 		font-size: 2.5rem;
 		border-bottom: 1px solid transparent;
 		transition: 0.3s ease-in-out;
-	
+
 		&:hover {
 			border-bottom: 1px solid ${({ theme }) => theme.gold};
 		}

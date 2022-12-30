@@ -15,7 +15,7 @@ export const TopbarLogo = styled.div`
 	justify-content: center;
 	font-weight: 700;
 	font-size: 4rem;
-	
+
 	& a {
 		transition: 0.3s ease-in-out;
 
@@ -30,7 +30,7 @@ export const TopbarImg = styled.div`
 	width: 4rem;
 	height: 4rem;
 	margin-left: 1rem;
-	
+
 	& svg {
 		& path {
 			fill: ${({ theme }) => theme.secondary};
