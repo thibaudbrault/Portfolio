@@ -144,7 +144,7 @@ function PokerefProject() {
 							Utilisation de la méthode Agile avec Jira et la création d'un
 							backlog avec plusieurs user stories.
 							<br />
-							Création de sprints hebdomadaire avec l'attribution, aux
+							Création de sprints hebdomadaires avec l'attribution, aux
 							développeurs, de différents tickets à réaliser durant le sprint.
 						</p>
 					</div>
