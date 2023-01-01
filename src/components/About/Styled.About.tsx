@@ -17,8 +17,9 @@ export const AboutTitle = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 4rem;
 		margin-bottom: 1rem;
+		font-size: 4rem;
+		font-weight: 700;
 		font-family: 'Merriweather';
 		gap: 1rem;
 

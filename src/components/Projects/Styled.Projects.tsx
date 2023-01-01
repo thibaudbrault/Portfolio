@@ -76,4 +76,11 @@ export const ProjectsLinks = styled.div`
 	align-items: center;
 	justify-content: flex-start;
 	gap: 2rem;
+
+	& svg {
+		font-size: 2.3rem;
+		& path {
+			fill: #c4c4c4;
+		}
+	}
 `;

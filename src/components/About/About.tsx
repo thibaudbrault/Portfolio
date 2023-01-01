@@ -13,7 +13,7 @@ function About() {
 				<h2>
 					Salut, je suis Thibaud <GiSeveredHand />
 				</h2>
-				<p>Développeur React JS junior</p>
+				<p>Développeur React JS</p>
 			</AboutTitle>
 			<AboutText>
 				Passionné par l'informatique et le design, c'est tout naturellement que

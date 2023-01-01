@@ -32,16 +32,32 @@ export const HeaderSocials = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 5rem;
-	margin-top: 2rem;
+	gap: 3rem;
+	margin-top: 5rem;
 
 	& a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		padding: 0.7rem 1.5rem;
 		font-size: 2.5rem;
-		border-bottom: 1px solid transparent;
+		background-color: ${({ theme }) => theme.secondary};
+		color: ${({ theme }) => theme.main};
+		border: 1px solid transparent;
+		border-radius: 25px;
 		transition: 0.3s ease-in-out;
 
 		&:hover {
-			border-bottom: 1px solid ${({ theme }) => theme.gold};
+			border: 1px solid ${({ theme }) => theme.secondary};
+			color: ${({ theme }) => theme.secondary};
+			background: transparent;
+		}
+
+		&:last-of-type {
+			border: 1px solid ${({ theme }) => theme.secondary};
+			color: ${({ theme }) => theme.secondary};
+			background: transparent;
 		}
 	}
 `;

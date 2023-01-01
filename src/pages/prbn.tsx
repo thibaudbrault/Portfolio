@@ -80,7 +80,8 @@ function PokerefProject() {
 							/ pause, suivant / précédent, avancer / reculer de 10 secondes,
 							musique au hasard et musique en boucle.
 							<br />
-							Affichage de la durée totale de la musique et de la progression avec un timer et une barre de progression.
+							Affichage de la durée totale de la musique et de la progression
+							avec un timer et une barre de progression.
 							<br />
 							Possibilité d'avancer ou de reculer dans la musique avec la barre
 							de progression.

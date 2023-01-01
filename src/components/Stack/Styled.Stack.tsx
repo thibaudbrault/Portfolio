@@ -19,6 +19,18 @@ export const StackSection = styled.section`
 	}
 `;
 
+export const StackGrid = styled.div`
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+
+	@media screen and (max-width: 650px) {
+		display: flex;
+		flex-direction: column;
+	}
+`;
+
 export const StackContainer = styled.div`
 	width: 100%;
 	padding: 2rem 0;
@@ -32,6 +44,10 @@ export const StackContainer = styled.div`
 	border-radius: 4px;
 
 	& h3 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
 		margin-bottom: 2rem;
 		font-size: 2.5rem;
 		font-weight: 700;
