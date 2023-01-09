@@ -18,7 +18,7 @@ function Projects() {
 			<ProjectsGrid>
 				<ProjectsContainer>
 					<h3>Pokéref</h3>
-					<p>La meilleure encyclopédie Pokémon</p>
+					<p>Une utilisation complète de PokéAPI</p>
 					<ul>
 						<li>Next JS</li>
 						<li>Styled-Components</li>
