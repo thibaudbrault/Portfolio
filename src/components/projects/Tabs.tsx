@@ -1,4 +1,4 @@
-import { TabsList, TabsTrigger } from "@/components/ui/Tabs";
+import { TabsList, TabsTrigger } from "@/components/ui";
 export const TabsComponent = () => {
   return (
     <TabsList className="text-lg font-redhat">
