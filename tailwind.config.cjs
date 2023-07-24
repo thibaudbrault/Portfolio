@@ -5,7 +5,6 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				bodoni: '"Bodoni Moda", serif',
 				raleway: '"Raleway", sans-serif',
 				redhat: '"Red Hat Mono", mono'
 			}
