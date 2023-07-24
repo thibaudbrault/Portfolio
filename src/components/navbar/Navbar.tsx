@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui";
+import { CenturionHelmetIcon } from "@/lib";
 import { useMemo } from "react";
 
 export const Navbar = () => {
@@ -20,7 +21,12 @@ export const Navbar = () => {
 
   return (
     <nav className="absolute top-8 left-12 right-12 mx-auto flex justify-between items-center">
-      <p className="text-5xl font-raleway">{logo}</p>
+      <p className="flex gap-3 text-5xl font-raleway">
+        {logo}{" "}
+        <span>
+          <CenturionHelmetIcon />
+        </span>
+      </p>
       <ul className="flex gap-12">
         {nav.map((element, i) => (
           <li key={i}>
