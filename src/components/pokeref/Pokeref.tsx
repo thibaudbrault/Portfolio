@@ -1,11 +1,39 @@
 import { useMemo } from "react";
-import { About, Features, Slider, Stack, TabsComponent, Title } from "..";
-import { Tabs, TabsContent } from "../ui/Tabs";
+import { About, Carousel, Features, Stack, TabsComponent, Title } from "..";
+import { Tabs, TabsContent } from "../ui";
 import { Links } from "../projects/Links";
+import {
+  NextIcon,
+  PlanetscaleIcon,
+  PrismaIcon,
+  SassIcon,
+  TypescriptIcon,
+} from "@/lib";
 
 export const Pokeref = () => {
   const tech = useMemo(
-    () => ["Next", "Typescript", "Scss", "Prisma", "Plantescale"],
+    () => [
+      {
+        icon: <NextIcon />,
+        name: "Next",
+      },
+      {
+        icon: <TypescriptIcon />,
+        name: "Typescript",
+      },
+      {
+        icon: <SassIcon />,
+        name: "Scss",
+      },
+      {
+        icon: <PrismaIcon />,
+        name: "Prisma",
+      },
+      {
+        icon: <PlanetscaleIcon />,
+        name: "Planetscale",
+      },
+    ],
     []
   );
 
@@ -14,6 +42,7 @@ export const Pokeref = () => {
       "Filtrage et recherche",
       "Données dynamiques",
       "Authentification",
+      "Sauvegarde des favoris",
       "PWA",
       "Changement de thème",
       "et bien plus",
@@ -26,15 +55,34 @@ export const Pokeref = () => {
   const images = useMemo(
     () => [
       {
+        id: 0,
         src: "https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690114665/pokeref/Pok%C3%A9Ref_-_Home_ixcxat.png",
         alt: "PokéRef - Home",
+      },
+      {
+        id: 1,
+        src: "https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690183906/pokeref/Pok%C3%A9Ref_-_Moves_pg2dhp.png",
+        alt: "PokéRef - Moves",
+      },
+      {
+        id: 2,
+        src: "https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690186955/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon_hzpsxt.png",
+        alt: "PokéRef - Pokémon",
+      },
+      {
+        id: 3,
+        src: "https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690189257/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon2_ydngon.png",
+        alt: "PokéRef - Pokémon (types et attaques)",
       },
     ],
     []
   );
 
   return (
-    <Tabs defaultValue="pres" className="flex flex-col items-center gap-12">
+    <Tabs
+      defaultValue="pres"
+      className="flex flex-col items-center gap-12 mb-24"
+    >
       <div className="flex flex-col gap-4">
         <Title text="PokéRef" />
         <TabsComponent />
@@ -48,7 +96,7 @@ export const Pokeref = () => {
           <Stack stack={tech} />
           <div className="lg:w-[700px]">
             <TabsContent value="pres">
-              <Slider images={images} />
+              <Carousel images={images} />
             </TabsContent>
             <TabsContent value="features">
               <Features features={features} />
