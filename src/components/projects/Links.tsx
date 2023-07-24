@@ -1,4 +1,4 @@
-import { Button } from "../ui/Button";
+import { Button } from "../ui";
 
 type Props = {
   github: string;
@@ -10,7 +10,7 @@ export const Links = ({ github, live }: Props) => {
     <ul className="flex justify-start gap-6 ">
       {github && (
         <li>
-          <Button variant="outline" size="medium" asChild>
+          <Button variant="primary" size="medium" asChild>
             <a href={github} target="_blank" rel="noopener noreferrer">
               Github
             </a>
@@ -19,9 +19,11 @@ export const Links = ({ github, live }: Props) => {
       )}
       {live && (
         <li>
-          <a href={live} target="_blank" rel="noopener noreferrer">
-            Live
-          </a>
+          <Button variant="secondary" size="medium" asChild>
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              Live
+            </a>
+          </Button>
         </li>
       )}
     </ul>
