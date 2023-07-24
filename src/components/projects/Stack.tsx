@@ -1,5 +1,8 @@
 type Props = {
-  stack: string[];
+  stack: {
+    icon: JSX.Element;
+    name: string;
+  }[];
 };
 
 export const Stack = ({ stack }: Props) => {
@@ -8,9 +11,10 @@ export const Stack = ({ stack }: Props) => {
       {stack.map((tech, i) => (
         <li
           key={i}
-          className="font-bold text-lg border-2 border-gray-700 rounded-md py-2 px-6 transition duration-300 ease-in-out hover:border-yellow-600"
+          className="flex gap-3 items-center font-bold text-lg border-2 border-gray-700 rounded-md py-2 px-6 transition duration-300 ease-in-out hover:border-yellow-600"
         >
-          {tech}
+          <span>{tech.icon}</span>
+          {tech.name}
         </li>
       ))}
     </ul>
