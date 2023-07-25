@@ -1,10 +1,6 @@
 import { useMemo } from 'react';
 
-import {
-    AstroIcon,
-    TailwindIcon,
-    TypescriptIcon
-} from '@/lib';
+import { AstroIcon, TailwindIcon, TypescriptIcon } from '@/lib';
 
 import About from '../projects/About';
 import Features from '../projects/Features';
@@ -34,10 +30,7 @@ export const Portfolio = () => {
   );
 
   const features = useMemo(
-    () => [
-      `Présentation de mes projets`,
-      `Carousel d'images`,
-    ],
+    () => [`Présentation de mes projets`, `Carousel d'images`],
     [],
   );
 
