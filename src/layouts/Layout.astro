@@ -8,7 +8,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Thibaud Brault, développeur front -end nantais">
@@ -20,7 +20,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-stone-900 text-stone-200 min-h-screen border-8 border-stone-200">
 		<slot />
 	</body>
 </html>
