@@ -4,16 +4,16 @@ import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title="Thibaud Brault">
-	<main class="pb-8 max-w-7xl mx-auto">
+	<main class="mx-auto max-w-7xl pb-8">
 		<Navbar />
 		<Hero />
-		<Separator className='bg-stone-200 w-2/3 mx-auto mb-24' />
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<Experiences />
-		<Separator className='bg-stone-200 w-2/3 mx-auto mb-24' />
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
 			<Pokeref client:visible />
 		</section>
-		<Separator className='bg-stone-200 w-2/3 mx-auto mb-24' />
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<Bio />
 	</main>
 </Layout>

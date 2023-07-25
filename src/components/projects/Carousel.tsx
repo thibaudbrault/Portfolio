@@ -1,5 +1,6 @@
-import clsx from "clsx";
-import { useEffect, useRef, useState } from "react";
+import clsx from 'clsx';
+import type { TouchEvent } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type Props = {
   images: {
@@ -9,22 +10,22 @@ type Props = {
   }[];
 };
 
-export const Carousel = ({ images }: Props) => {
+const Carousel = ({ images }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
 
   const imgRef = useRef<HTMLImageElement>(null);
-  let intervalRef = useRef<any>(null);
+  const intervalRef = useRef<any>(null);
   const minSwipeDistance = 50;
 
   useEffect(() => {
     intervalRef.current = setInterval(
       () =>
-        currentIndex == images.length - 1
+        currentIndex === images.length - 1
           ? setCurrentIndex(0)
           : setCurrentIndex(currentIndex + 1),
-      5000
+      5000,
     );
     return () => {
       clearInterval(intervalRef.current);
@@ -35,22 +36,29 @@ export const Carousel = ({ images }: Props) => {
     setTouchEnd(0);
     setTouchStart(e.targetTouches[0].clientX);
   };
-  const onTouchMove = (e: TouchEvent) =>
+
+  const onTouchMove = (e: TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
+  };
+
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
     if (isRightSwipe) {
-      currentIndex == 0
-        ? setCurrentIndex(images.length - 1)
-        : setCurrentIndex(currentIndex - 1);
+      if (currentIndex === 0) {
+        setCurrentIndex(images.length - 1);
+      } else {
+        setCurrentIndex(currentIndex - 1);
+      }
     }
     if (isLeftSwipe) {
-      currentIndex == images.length - 1
-        ? setCurrentIndex(0)
-        : setCurrentIndex(currentIndex + 1);
+      if (currentIndex === images.length - 1) {
+        setCurrentIndex(0);
+      } else {
+        setCurrentIndex(currentIndex + 1);
+      }
     }
   };
 
@@ -70,8 +78,8 @@ export const Carousel = ({ images }: Props) => {
           <button
             key={i}
             className={clsx(
-              "w-3 h-3 rounded-full bg-stone-200",
-              image.id === currentIndex && "bg-yellow-600"
+              `h-3 w-3 rounded-full bg-stone-200`,
+              image.id === currentIndex && `bg-yellow-600`,
             )}
             onClick={() => setCurrentIndex(i)}
           />
@@ -80,3 +88,5 @@ export const Carousel = ({ images }: Props) => {
     </div>
   );
 };
+
+export default Carousel;

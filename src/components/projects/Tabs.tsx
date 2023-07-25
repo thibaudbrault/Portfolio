@@ -1,10 +1,13 @@
-import { TabsList, TabsTrigger } from "@/components/ui";
-export const TabsComponent = () => {
+import { TabsList, TabsTrigger } from '@/components/ui';
+
+const TabsComponent = () => {
   return (
-    <TabsList className="text-lg font-redhat">
+    <TabsList className="font-redhat text-lg">
       <TabsTrigger value="pres">Images</TabsTrigger>
       <TabsTrigger value="features">Caractéristiques</TabsTrigger>
       <TabsTrigger value="about">A propos</TabsTrigger>
     </TabsList>
   );
 };
+
+export default TabsComponent;

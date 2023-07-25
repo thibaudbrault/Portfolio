@@ -2,7 +2,7 @@ type Props = {
   paragraphs: string[];
 };
 
-export const About = ({ paragraphs }: Props) => {
+const About = ({ paragraphs }: Props) => {
   return (
     <div>
       {paragraphs.map((paragraph, i) => (
@@ -11,3 +11,5 @@ export const About = ({ paragraphs }: Props) => {
     </div>
   );
 };
+
+export default About;

@@ -2,6 +2,8 @@ type Props = {
   text: string;
 };
 
-export const Title = ({ text }: Props) => {
-  return <h2 className="text-6xl text-center font-raleway">{text}</h2>;
+const Title = ({ text }: Props) => {
+  return <h2 className="text-center font-raleway text-6xl">{text}</h2>;
 };
+
+export default Title;

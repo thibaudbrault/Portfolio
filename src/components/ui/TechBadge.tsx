@@ -1,5 +1,6 @@
-import type { TStack } from "@/types";
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes } from 'react';
+
+import type { TStack } from '@/types';
 
 interface TechBadgeProps extends HTMLAttributes<HTMLLIElement> {
   tech: TStack;
@@ -14,7 +15,7 @@ export function TechBadge({
 }: TechBadgeProps) {
   return (
     <li
-      className="flex gap-3 items-center font-bold text-lg border-2 border-gray-700 rounded-md py-2 px-6 transition duration-300 ease-in-out hover:border-yellow-600"
+      className="flex items-center gap-3 rounded-md border-2 border-gray-700 px-6 py-2 text-lg font-bold transition duration-300 ease-in-out hover:border-yellow-600"
       key={index}
       {...props}
     >

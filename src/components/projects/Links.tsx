@@ -1,11 +1,11 @@
-import { Button } from "../ui";
+import { Button } from '../ui';
 
 type Props = {
   github: string;
   live: string;
 };
 
-export const Links = ({ github, live }: Props) => {
+const Links = ({ github, live }: Props) => {
   return (
     <ul className="flex justify-start gap-6 ">
       {github && (
@@ -29,3 +29,5 @@ export const Links = ({ github, live }: Props) => {
     </ul>
   );
 };
+
+export default Links;
