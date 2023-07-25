@@ -8,6 +8,10 @@ export const Navbar = () => {
   const nav = useMemo(
     () => [
       {
+        text: "Experiences",
+        link: "#experiences",
+      },
+      {
         text: "Projets",
         link: "#projects",
       },
