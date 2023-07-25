@@ -1,17 +1,49 @@
-import { NextIcon, TypescriptIcon } from "@/lib";
+import {
+  AstroIcon,
+  CssIcon,
+  GraphqlIcon,
+  HtmlIcon,
+  JavascriptIcon,
+  MysqlIcon,
+  NextIcon,
+  PrismaIcon,
+  ReactIcon,
+  SassIcon,
+  StyledIcon,
+  TailwindIcon,
+  TypescriptIcon,
+} from "@/lib";
+import type { TStack } from "@/types";
 import { Title } from "../projects";
+import { TechBadge } from "../ui";
 
 export const Bio = () => {
-  const stack: string[][] = [
-    ["HTML"],
-    ["CSS", "Sass", "Styled-Components", "Tailwind"],
-    ["Javascript", "Typescript"],
-    ["React", "Next", "Astro"],
-    ["Prisma", "MySQL"],
+  const stack: TStack[][] = [
+    [{ name: "HTML", icon: <HtmlIcon /> }],
+    [
+      { name: "CSS", icon: <CssIcon /> },
+      { name: "Sass", icon: <SassIcon /> },
+      { name: "Styled-Components", icon: <StyledIcon /> },
+      { name: "Tailwind", icon: <TailwindIcon /> },
+    ],
+    [
+      { name: "Javascript", icon: <JavascriptIcon /> },
+      { name: "Typescript", icon: <TypescriptIcon /> },
+    ],
+    [
+      { name: "React", icon: <ReactIcon /> },
+      { name: "Next", icon: <NextIcon /> },
+      { name: "Astro", icon: <AstroIcon /> },
+    ],
+    [
+      { name: "Prisma", icon: <PrismaIcon /> },
+      { name: "MySQL", icon: <MysqlIcon /> },
+      { name: "GraphQL", icon: <GraphqlIcon /> },
+    ],
   ];
 
   return (
-    <section className="flex flex-col gap-12">
+    <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <Title text="Bio" />
         <p className="text-2xl w-2/3 mx-auto font-raleway">
@@ -19,17 +51,15 @@ export const Bio = () => {
           eligendi dicta libero nam perspiciatis, impedit porro.
         </p>
       </div>
-      <ul className="flex justify-center gap-24">
+      <div className="flex justify-center gap-6">
         {stack.map((tech) => (
-          <li>
-            <ul className="flex flex-col gap-6">
-              {tech.map((t) => (
-                <li>{t}</li>
-              ))}
-            </ul>
-          </li>
+          <ul className="flex flex-col gap-6">
+            {tech.map((t, i) => (
+              <TechBadge tech={t} index={i} />
+            ))}
+          </ul>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
