@@ -1,5 +1,5 @@
 ---
-import { Bio, Experiences, Hero, Navbar, Pokeref, Separator } from '@/components';
+import { Bio, Experiences, Hero, Navbar, Pokeref, Portfolio, Separator } from '@/components';
 import Layout from '@/layouts/Layout.astro';
 ---
 
@@ -12,6 +12,7 @@ import Layout from '@/layouts/Layout.astro';
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
 			<Pokeref client:visible />
+			<Portfolio client:visible />
 		</section>
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<Bio />
