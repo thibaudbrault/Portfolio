@@ -92,7 +92,7 @@ export const Pokeref = () => {
     >
       <div className="flex flex-col gap-4">
         <Title text="PokéRef" />
-        <TabsComponent />
+        <TabsComponent images />
       </div>
       <div className="flex flex-col items-center gap-6">
         <Links
