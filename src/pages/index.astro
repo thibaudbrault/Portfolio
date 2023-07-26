@@ -1,10 +1,12 @@
 ---
-import { Bio, Experiences, Portfolio, Separator } from '@/components';
+import { Bio, Separator } from '@/components';
 import Navbar from '@/components/navbar/Navbar.astro';
 import Hero from '@/components/hero/Hero.astro';
 import Layout from '@/layouts/Layout.astro';
 import Footer from '@/components/footer/Footer.astro';
 import Pokeref from '@/components/pokeref/Pokeref.astro';
+import Experiences from '@/components/experiences/Experiences.astro';
+import Portfolio from '@/components/portfolio/Portfolio.astro';
 ---
 
 <Layout title="Thibaud Brault">
@@ -15,11 +17,11 @@ import Pokeref from '@/components/pokeref/Pokeref.astro';
 		<Experiences />
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
-			<Pokeref client:visible />
-			<Portfolio client:visible />
+			<Pokeref />
+			<!-- <Portfolio client:visible /> -->
 		</section>
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
-		<Bio />
+		<!-- <Bio /> -->
 		<Footer />
 	</main>
 </Layout>

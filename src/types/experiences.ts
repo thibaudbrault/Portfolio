@@ -1,5 +1,5 @@
 export type TStack = {
-  icon: JSX.Element;
+  icon: string;
   name: string;
 };
 

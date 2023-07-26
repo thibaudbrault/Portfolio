@@ -9,11 +9,10 @@ import {
 
 import About from "../projects/About.astro";
 import Carousel from "../projects/Carousel";
-import Features from "../projects/Features";
-import Links from "../projects/Links";
-import Stack from "../projects/Stack";
-import TabsComponent from "../projects/Tabs";
-import { Tabs, TabsContent } from "../ui";
+import Features from "../projects/Features.astro";
+import Links from "../projects/Links.astro";
+import Stack from "../projects/Stack.astro";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui";
 import Title from "../projects/Title.astro";
 
   // const tech = useMemo(
@@ -84,7 +83,11 @@ import Title from "../projects/Title.astro";
     >
       <div class="flex flex-col gap-4">
         <Title text="PokéRef" />
-        <TabsComponent images />
+        <TabsList className="font-redhat text-lg">
+          <TabsTrigger value="pres">Images</TabsTrigger>
+          <TabsTrigger value="features">Caractéristiques</TabsTrigger>
+          <TabsTrigger value="about">A propos</TabsTrigger>
+        </TabsList>
       </div>
       <div class="flex flex-col items-center gap-6">
         <Links

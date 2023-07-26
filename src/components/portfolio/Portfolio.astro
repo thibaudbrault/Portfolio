@@ -1,0 +1,56 @@
+---
+import About from "../projects/About.astro";
+import Features from "../projects/Features.astro";
+import Links from "../projects/Links.astro";
+import Stack from "../projects/Stack.astro";
+import Title from "../projects/Title.astro";
+import { TabsContent, Tabs, TabsList, TabsTrigger } from "../ui";
+
+  const tech = [
+      {
+        icon: "vscode-icons:file-type-astro",
+        name: `Astro`,
+      },
+      {
+        icon: "logos:typescript-icon",
+        name: `Typescript`,
+      },
+      {
+        icon: "logos:tailwindcss-icon",
+        name: `Tailwind`,
+      },
+    ]
+  const features = [`Présentation de mes projets`, `Carousel d'images`]
+
+  const about = [`Test paragrpah 1`, `Test paragrpah 2`]
+---
+
+    <Tabs
+      defaultValue="features"
+      className="mb-24 flex flex-col items-center gap-12"
+    >
+      <div class="flex flex-col gap-4">
+        <Title text="Portfolio" />
+        <TabsList className="font-redhat text-lg">
+          <TabsTrigger value="features">Caractéristiques</TabsTrigger>
+          <TabsTrigger value="about">A propos</TabsTrigger>
+        </TabsList>
+      </div>
+      <div class="flex flex-col items-center gap-6">
+        <Links
+          github="https://github.com/thibaudbrault/PokeRef"
+          live="https://pokeref.app"
+        />
+        <div class="flex gap-6">
+          <Stack stack={tech} />
+          <div class="lg:w-[700px]">
+            <TabsContent value="features">
+              <Features features={features} />
+            </TabsContent>
+            <TabsContent value="about">
+              <About paragraphs={about} />
+            </TabsContent>
+          </div>
+        </div>
+      </div>
+    </Tabs>

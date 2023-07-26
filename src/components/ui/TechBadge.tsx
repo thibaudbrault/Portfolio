@@ -1,6 +1,7 @@
-import type { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from "react";
 
-import type { TStack } from '@/types';
+import type { TStack } from "@/types";
+import { Icon } from "@iconify/react";
 
 interface TechBadgeProps extends HTMLAttributes<HTMLLIElement> {
   tech: TStack;
@@ -19,7 +20,7 @@ export function TechBadge({
       key={index}
       {...props}
     >
-      <span>{tech.icon}</span>
+      <Icon icon={tech.icon} />
       {tech.name}
     </li>
   );

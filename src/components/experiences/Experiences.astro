@@ -1,15 +1,12 @@
-import { Fragment, useMemo } from "react";
+---
+import { Fragment } from "react";
 
-import { PlaywrightIcon, ReactIcon } from "@/lib";
 import type { TExperiences } from "@/types";
 
-import { GraphqlIcon, PrismaIcon, ViteIcon } from "../../lib/icons";
 import Title from "../projects/Title.astro";
 import { TechBadge } from "../ui";
 
-export const Experiences = () => {
-  const experiences: TExperiences = useMemo(
-    () => [
+  const experiences: TExperiences = [
       {
         role: `Développeur full-stack JS`,
         company: `Zénika`,
@@ -30,40 +27,38 @@ export const Experiences = () => {
             stack: [
               {
                 name: `React`,
-                icon: <ReactIcon />,
+                icon: "logos:react",
               },
               {
                 name: `Playwright`,
-                icon: <PlaywrightIcon />,
+                icon: "logos:playwright",
               },
               {
                 name: `Vite`,
-                icon: <ViteIcon />,
+                icon: "logos:vitejs",
               },
               {
                 name: `Prisma`,
-                icon: <PrismaIcon />,
+                icon: "vscode-icons:file-type-prisma",
               },
               {
                 name: `Graphql`,
-                icon: <GraphqlIcon />,
+                icon: "logos:graphql",
               },
             ],
           },
         ],
       },
-    ],
-    []
-  );
+    ]
+  ---
 
-  return (
-    <section id="experiences" className="mb-24 flex flex-col gap-12">
+    <section id="experiences" class="mb-24 flex flex-col gap-12">
       <Title text="Expériences" />
-      <ul className="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
-        {experiences.map((experience, i) => (
-          <li key={i} className="flex flex-col gap-6">
+      <ul class="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
+        {experiences.map((experience) => (
+          <li class="flex flex-col gap-6">
             <div>
-              <h4 className="text-2xl font-bold text-yellow-600">
+              <h4 class="text-2xl font-bold text-yellow-600">
                 {experience.role}
               </h4>
               <p>
@@ -74,28 +69,24 @@ export const Experiences = () => {
                 <b>{experience.end}</b>
               </p>
             </div>
-            <div className="flex gap-12">
-              {experience.missions.map((mission, index) => (
-                <Fragment key={index}>
-                  <ul className="list-disc">
-                    <li className="list-none text-xl text-yellow-600">
+            <div class="flex gap-12">
+              {experience.missions.map((mission) => (
+                  <ul class="list-disc">
+                    <li class="list-none text-xl text-yellow-600">
                       <b>{mission.client}</b>
                     </li>
-                    {mission.details.map((detail, detailIndex) => (
-                      <li key={detailIndex}>{detail}</li>
+                    {mission.details.map((detail) => (
+                      <li>{detail}</li>
                     ))}
                   </ul>
-                  <ul className="flex flex-col gap-6">
+                  <ul class="flex flex-col gap-6">
                     {mission.stack.map((tech, techIndex) => (
                       <TechBadge tech={tech} index={techIndex} />
                     ))}
                   </ul>
-                </Fragment>
               ))}
             </div>
           </li>
         ))}
       </ul>
     </section>
-  );
-};
