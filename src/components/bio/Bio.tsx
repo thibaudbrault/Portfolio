@@ -12,11 +12,11 @@ import {
   StyledIcon,
   TailwindIcon,
   TypescriptIcon,
-} from "@/lib";
-import type { TStack } from "@/types";
+} from '@/lib';
+import type { TStack } from '@/types';
 
-import Title from "../projects/Title.astro";
-import { TechBadge } from "../ui";
+import Title from '../projects/Title.astro';
+import { TechBadge } from '../ui';
 
 export const Bio = () => {
   const stack: TStack[][] = [
@@ -47,7 +47,7 @@ export const Bio = () => {
     <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <Title text="Bio" />
-        <p className="mx-auto w-2/3 font-raleway text-2xl">
+        <p className="font-raleway mx-auto w-2/3 text-2xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et neque
           eligendi dicta libero nam perspiciatis, impedit porro.
         </p>

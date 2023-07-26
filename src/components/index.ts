@@ -1,2 +1,2 @@
-export * from "./bio";
-export * from "./ui";
+export * from './bio';
+export * from './ui';
