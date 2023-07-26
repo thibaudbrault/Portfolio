@@ -12,11 +12,11 @@ import {
   StyledIcon,
   TailwindIcon,
   TypescriptIcon,
-} from '@/lib';
-import type { TStack } from '@/types';
+} from "@/lib";
+import type { TStack } from "@/types";
 
-import Title from '../projects/Title';
-import { TechBadge } from '../ui';
+import Title from "../projects/Title.astro";
+import { TechBadge } from "../ui";
 
 export const Bio = () => {
   const stack: TStack[][] = [

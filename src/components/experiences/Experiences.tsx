@@ -1,11 +1,11 @@
-import { Fragment, useMemo } from 'react';
+import { Fragment, useMemo } from "react";
 
-import { PlaywrightIcon, ReactIcon } from '@/lib';
-import type { TExperiences } from '@/types';
+import { PlaywrightIcon, ReactIcon } from "@/lib";
+import type { TExperiences } from "@/types";
 
-import { GraphqlIcon, PrismaIcon, ViteIcon } from '../../lib/icons';
-import Title from '../projects/Title';
-import { TechBadge } from '../ui';
+import { GraphqlIcon, PrismaIcon, ViteIcon } from "../../lib/icons";
+import Title from "../projects/Title.astro";
+import { TechBadge } from "../ui";
 
 export const Experiences = () => {
   const experiences: TExperiences = useMemo(
@@ -53,7 +53,7 @@ export const Experiences = () => {
         ],
       },
     ],
-    [],
+    []
   );
 
   return (

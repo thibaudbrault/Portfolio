@@ -1,14 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import { AstroIcon, TailwindIcon, TypescriptIcon } from '@/lib';
+import { AstroIcon, TailwindIcon, TypescriptIcon } from "@/lib";
 
-import About from '../projects/About';
-import Features from '../projects/Features';
-import Links from '../projects/Links';
-import Stack from '../projects/Stack';
-import TabsComponent from '../projects/Tabs';
-import Title from '../projects/Title';
-import { Tabs, TabsContent } from '../ui';
+import About from "../projects/About.astro";
+import Features from "../projects/Features";
+import Links from "../projects/Links";
+import Stack from "../projects/Stack";
+import TabsComponent from "../projects/Tabs";
+import Title from "../projects/Title.astro";
+import { Tabs, TabsContent } from "../ui";
 
 export const Portfolio = () => {
   const tech = useMemo(
@@ -26,12 +26,12 @@ export const Portfolio = () => {
         name: `Tailwind`,
       },
     ],
-    [],
+    []
   );
 
   const features = useMemo(
     () => [`Présentation de mes projets`, `Carousel d'images`],
-    [],
+    []
   );
 
   const about = useMemo(() => [`Test paragrpah 1`, `Test paragrpah 2`], []);
