@@ -1,6 +1,5 @@
 import { useMemo } from "react";
-import { About, Features, Stack, TabsComponent, Title } from "../projects";
-import Carousel from "../projects/Carousel";
+import { About, Features, Stack, TabsComponent, Title, Carousel } from "../projects";
 import { Links } from "../projects/Links";
 import { Tabs, TabsContent } from "../ui";
 import type { TStack } from "@/types";

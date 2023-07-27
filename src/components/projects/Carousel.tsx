@@ -10,7 +10,7 @@ type Props = {
   }[];
 };
 
-const Carousel = ({ images }: Props) => {
+export const Carousel = ({ images }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
@@ -88,5 +88,3 @@ const Carousel = ({ images }: Props) => {
     </div>
   );
 };
-
-export default Carousel;

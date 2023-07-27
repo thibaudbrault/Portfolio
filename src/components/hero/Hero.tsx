@@ -38,4 +38,4 @@ export const Hero = () => {
       </ul>
     </header>
   )
-  }
+}
