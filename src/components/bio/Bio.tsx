@@ -36,14 +36,14 @@ export const Bio = () => {
     <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <Title text="Bio" />
-        <p className="mx-auto w-5/6 md:w-2/3 text-2xl text-center">
+        <p className="mx-auto w-5/6 text-xl md:w-2/3 md:text-2xl text-center">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et neque
           eligendi dicta libero nam perspiciatis, impedit porro.
         </p>
       </div>
-      <div className="flex flex-col w-5/6 mx-auto md:flex-row md:w-full justify-center gap-6">
+      <div className="flex flex-wrap flex-col w-11/12 mx-auto lg:flex lg:flex-row lg:w-full justify-center gap-6">
         {stack.map((tech, index) => (
-          <ul className="flex flex-col gap-6" key={index}>
+          <ul className="flex flex-col flex-wrap gap-6 md:flex-row lg:flex-col" key={index}>
             {tech.map((t, techIndex) => (
               <TechBadge tech={t} index={techIndex} key={techIndex} />
             ))}

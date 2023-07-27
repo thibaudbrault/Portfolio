@@ -1,8 +1,5 @@
 ---
-import { useMemo } from 'react';
-
 import { Button } from '@/components/ui';
-import { CenturionHelmetIcon } from '@/lib';
 
   const logo = `{TB}`;
 
@@ -22,15 +19,11 @@ import { CenturionHelmetIcon } from '@/lib';
     ]
 ---
 
-    <nav class="absolute inset-x-12 top-8 mx-auto flex items-center justify-between">
-      <p class="flex gap-3 font-raleway text-5xl">
+    <nav class="absolute inset-x-4 md:inset-x-12 top-8 mx-auto flex items-center justify-between">
+      <p class="font-raleway text-5xl">
         {logo}
-        {` `}
-        <span>
-          <CenturionHelmetIcon />
-        </span>
       </p>
-      <ul class="flex gap-12">
+      <ul class="hidden md:flex gap-12">
         {nav.map((element) => (
           <li>
             <Button variant="link" size="nav" asChild>

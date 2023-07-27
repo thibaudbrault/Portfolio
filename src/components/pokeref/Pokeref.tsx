@@ -92,9 +92,9 @@ export const Pokeref = () => {
       className="flex flex-col items-center gap-12 mb-24"
     >
       <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 mx-auto">
           <Title text="PokéRef" />
-          <Icon className="text-6xl" icon="gg:pokemon" />
+          <Icon className="text-4xl md:text-6xl" icon="gg:pokemon" />
         </div>
         <TabsComponent images />
       </div>
@@ -103,9 +103,9 @@ export const Pokeref = () => {
           github="https://github.com/thibaudbrault/PokeRef"
           live="https://pokeref.app"
         />
-        <div className="flex gap-6">
+        <div className="flex flex-col-reverse md:flex-row gap-6">
           <Stack stack={tech} />
-          <div className="lg:w-[700px]">
+          <div className="md:w-[500px]  lg:w-[700px]">
             <TabsContent value="pres">
               <Carousel images={images} />
             </TabsContent>

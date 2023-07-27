@@ -46,7 +46,7 @@ export const Portfolio = () => {
           github="https://github.com/thibaudbrault/PokeRef"
           live="https://pokeref.app"
         />
-        <div className="flex gap-6">
+        <div className="flex flex-col-reverse md:flex-row gap-6">
           <Stack stack={tech} />
           <div className="lg:w-[700px]">
             <TabsContent value="features">

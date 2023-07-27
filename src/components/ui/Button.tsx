@@ -15,7 +15,7 @@ const buttonVariants = cva(
         link: `rounded-none border-transparent hover:border-b-yellow-600 hover:text-yellow-600`,
       },
       size: {
-        medium: `px-4 py-2`,
+        medium: `px-2 py-1 md:px-4 md:py-2`,
         nav: `text-xl`,
       },
     },
