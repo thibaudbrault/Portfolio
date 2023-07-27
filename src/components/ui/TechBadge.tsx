@@ -1,7 +1,7 @@
-import { Icon } from "@iconify/react";
-import type { HTMLAttributes } from "react";
+import { Icon } from '@iconify/react';
+import type { HTMLAttributes } from 'react';
 
-import type { TStack } from "@/types";
+import type { TStack } from '@/types';
 
 interface Props extends HTMLAttributes<HTMLLIElement> {
   tech: TStack;

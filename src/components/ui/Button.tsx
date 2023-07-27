@@ -5,7 +5,7 @@ import * as React from 'react';
 import { cn } from '@/lib';
 
 const buttonVariants = cva(
-  `rounded-md font-semibold border transition duration-300 ease-in-out`,
+  `rounded-md border font-semibold transition duration-300 ease-in-out`,
   {
     variants: {
       variant: {

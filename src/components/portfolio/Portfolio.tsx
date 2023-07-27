@@ -1,35 +1,37 @@
-import type { TStack } from "@/types";
-import { useMemo } from "react";
-import { About, Features, Stack, TabsComponent, Title } from "../projects";
-import { Links } from "../projects/Links";
-import { Tabs, TabsContent } from "../ui";
+import { useMemo } from 'react';
+
+import type { TStack } from '@/types';
+
+import { About, Features, Stack, TabsComponent, Title } from '../projects';
+import { Links } from '../projects/Links';
+import { Tabs, TabsContent } from '../ui';
 
 export const Portfolio = () => {
   const tech: TStack[] = useMemo(
     () => [
       {
-        icon: "vscode-icons:file-type-astro",
+        icon: `vscode-icons:file-type-astro`,
         name: `Astro`,
       },
       {
-        icon: "logos:typescript-icon",
+        icon: `logos:typescript-icon`,
         name: `Typescript`,
       },
       {
-        icon: "logos:tailwindcss-icon",
+        icon: `logos:tailwindcss-icon`,
         name: `Tailwind`,
       },
     ],
-    []
+    [],
   );
   const features: string[] = useMemo(
     () => [`Présentation de mes projets`, `Carousel d'images`],
-    []
+    [],
   );
 
   const about: string[] = useMemo(
     () => [`Test paragrpah 1`, `Test paragrpah 2`],
-    []
+    [],
   );
 
   return (
@@ -46,7 +48,7 @@ export const Portfolio = () => {
           github="https://github.com/thibaudbrault/PokeRef"
           live="https://pokeref.app"
         />
-        <div className="flex flex-col-reverse md:flex-row gap-6">
+        <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} />
           <div className="lg:w-[700px]">
             <TabsContent value="features">

@@ -1,9 +1,9 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo } from 'react';
 
-import type { TExperiences } from "@/types";
+import type { TExperiences } from '@/types';
 
-import { TechBadge } from "../ui";
-import { Title } from "../projects";
+import { Title } from '../projects';
+import { TechBadge } from '../ui';
 
 export const Experiences = () => {
   const experiences: TExperiences[] = useMemo(
@@ -27,23 +27,23 @@ export const Experiences = () => {
             ],
             stack: [
               {
-                icon: "logos:react",
+                icon: `logos:react`,
                 name: `React`,
               },
               {
-                icon: "logos:playwright",
+                icon: `logos:playwright`,
                 name: `Playwright`,
               },
               {
-                icon: "logos:vitejs",
+                icon: `logos:vitejs`,
                 name: `Vite`,
               },
               {
-                icon: "vscode-icons:file-type-prisma",
+                icon: `vscode-icons:file-type-prisma`,
                 name: `Prisma`,
               },
               {
-                icon: "logos:graphql",
+                icon: `logos:graphql`,
                 name: `Graphql`,
               },
             ],
@@ -51,7 +51,7 @@ export const Experiences = () => {
         ],
       },
     ],
-    []
+    [],
   );
 
   return (
@@ -72,7 +72,7 @@ export const Experiences = () => {
                 <b>{experience.end}</b>
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-12">
+            <div className="flex flex-col gap-12 md:flex-row">
               {experience.missions.map((mission, missionIndex) => (
                 <Fragment key={missionIndex}>
                   <ul className="list-disc">
@@ -85,7 +85,11 @@ export const Experiences = () => {
                   </ul>
                   <ul className="flex flex-col gap-6">
                     {mission.stack.map((tech, techIndex) => (
-                      <TechBadge tech={tech} index={techIndex} key={techIndex} />
+                      <TechBadge
+                        tech={tech}
+                        index={techIndex}
+                        key={techIndex}
+                      />
                     ))}
                   </ul>
                 </Fragment>

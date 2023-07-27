@@ -63,7 +63,7 @@ export const Carousel = ({ images }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-3 w-11/12 mx-auto md:w-full">
+    <div className="mx-auto flex w-11/12 flex-col items-center gap-3 md:w-full">
       <img
         ref={imgRef}
         className="rounded-md border border-stone-200"
@@ -78,7 +78,7 @@ export const Carousel = ({ images }: Props) => {
           <button
             key={i}
             className={clsx(
-              `h-2 w-2 md:h-3 md:w-3 rounded-full bg-stone-200`,
+              `h-2 w-2 rounded-full bg-stone-200 md:h-3 md:w-3`,
               image.id === currentIndex && `bg-yellow-600`,
             )}
             onClick={() => setCurrentIndex(i)}
