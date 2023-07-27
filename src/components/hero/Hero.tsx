@@ -1,13 +1,13 @@
----
 import { Button } from '../ui';
----
 
-    <header class="flex h-screen flex-col items-center justify-center gap-12">
-      <div class="flex flex-col items-center gap-4">
-        <h1 class="font-raleway text-center text-6xl md:text-8xl">Thibaud Brault</h1>
-        <h3 class="text-xl md:text-2xl text-center">Développeur front-end nantais</h3>
+export const Hero = () => {
+  return (
+    <header className="flex h-screen flex-col items-center justify-center gap-12">
+      <div className="flex flex-col items-center gap-4">
+        <h1 className="font-raleway text-center text-6xl md:text-8xl">Thibaud Brault</h1>
+        <h3 className="text-xl text-yellow-600 md:text-2xl text-center">Développeur front-end nantais</h3>
       </div>
-      <ul class="flex gap-32 font-semibold text-stone-900">
+      <ul className="flex gap-32">
         <li>
           <Button variant="primary" size="medium" asChild>
             <a
@@ -32,8 +32,10 @@ import { Button } from '../ui';
         </li>
         <li>
           <Button variant="secondary" size="medium" asChild>
-            <a>CV</a>
+            <a href="/cv.pdf">CV</a>
           </Button>
         </li>
       </ul>
     </header>
+  )
+  }
