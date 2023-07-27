@@ -1,12 +1,13 @@
----
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
 
 import type { TExperiences } from "@/types";
 
-import Title from "../projects/Title.astro";
 import { TechBadge } from "../ui";
+import { Title } from "../projects";
 
-  const experiences: TExperiences = [
+export const Experiences = () => {
+  const experiences: TExperiences[] = useMemo(
+    () => [
       {
         role: `Développeur full-stack JS`,
         company: `Zénika`,
@@ -26,39 +27,41 @@ import { TechBadge } from "../ui";
             ],
             stack: [
               {
-                name: `React`,
                 icon: "logos:react",
+                name: `React`,
               },
               {
-                name: `Playwright`,
                 icon: "logos:playwright",
+                name: `Playwright`,
               },
               {
-                name: `Vite`,
                 icon: "logos:vitejs",
+                name: `Vite`,
               },
               {
-                name: `Prisma`,
                 icon: "vscode-icons:file-type-prisma",
+                name: `Prisma`,
               },
               {
-                name: `Graphql`,
                 icon: "logos:graphql",
+                name: `Graphql`,
               },
             ],
           },
         ],
       },
-    ]
-  ---
+    ],
+    []
+  );
 
-    <section id="experiences" class="mb-24 flex flex-col gap-12">
+  return (
+    <section id="experiences" className="mb-24 flex flex-col gap-12">
       <Title text="Expériences" />
-      <ul class="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
-        {experiences.map((experience) => (
-          <li class="flex flex-col gap-6">
+      <ul className="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
+        {experiences.map((experience, index) => (
+          <li className="flex flex-col gap-6" key={index}>
             <div>
-              <h4 class="text-2xl font-bold text-yellow-600">
+              <h4 className="text-2xl font-bold text-yellow-600">
                 {experience.role}
               </h4>
               <p>
@@ -69,24 +72,28 @@ import { TechBadge } from "../ui";
                 <b>{experience.end}</b>
               </p>
             </div>
-            <div class="flex gap-12">
-              {experience.missions.map((mission) => (
-                  <ul class="list-disc">
-                    <li class="list-none text-xl text-yellow-600">
+            <div className="flex flex-col md:flex-row gap-12">
+              {experience.missions.map((mission, missionIndex) => (
+                <Fragment key={missionIndex}>
+                  <ul className="list-disc">
+                    <li className="list-none text-xl text-yellow-600">
                       <b>{mission.client}</b>
                     </li>
-                    {mission.details.map((detail) => (
-                      <li>{detail}</li>
+                    {mission.details.map((detail, detailIndex) => (
+                      <li key={detailIndex}>{detail}</li>
                     ))}
                   </ul>
-                  <ul class="flex flex-col gap-6">
+                  <ul className="flex flex-col gap-6">
                     {mission.stack.map((tech, techIndex) => (
-                      <TechBadge tech={tech} index={techIndex} />
+                      <TechBadge tech={tech} index={techIndex} key={techIndex} />
                     ))}
                   </ul>
+                </Fragment>
               ))}
             </div>
           </li>
         ))}
       </ul>
     </section>
+  );
+};

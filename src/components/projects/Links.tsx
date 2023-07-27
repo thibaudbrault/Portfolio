@@ -1,14 +1,13 @@
----
-import { Button } from '../ui';
+import { Button } from "../ui";
 
 type Props = {
   github: string;
   live: string;
 };
-const {github, live}: Props = Astro.props
----
 
-    <ul class="flex justify-start gap-6 ">
+export const Links = ({ github, live }: Props) => {
+  return (
+    <ul className="flex justify-start gap-6 ">
       {github && (
         <li>
           <Button variant="primary" size="medium" asChild>
@@ -28,3 +27,5 @@ const {github, live}: Props = Astro.props
         </li>
       )}
     </ul>
+  );
+};
