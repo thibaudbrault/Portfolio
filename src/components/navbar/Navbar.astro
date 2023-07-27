@@ -26,9 +26,7 @@ import { Button } from '@/components/ui';
       <ul class="hidden md:flex gap-12">
         {nav.map((element) => (
           <li>
-            <Button variant="link" size="nav" asChild>
-              <a href={element.link}>{element.text}</a>
-            </Button>
+              <a class="text-xl border border-transparent transition duration-300 ease-in-out hover:border-b-yellow-600 hover:text-yellow-600" href={element.link}>{element.text}</a>
           </li>
         ))}
       </ul>
