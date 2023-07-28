@@ -1,9 +1,14 @@
-import { TabsList, TabsTrigger } from "@/components/ui/Tabs";
-export const TabsComponent = () => {
+import { TabsList, TabsTrigger } from '@/components/ui';
+
+type Props = {
+  images?: boolean;
+};
+
+export const TabsComponent = ({ images }: Props) => {
   return (
-    <TabsList className="text-lg font-redhat">
-      <TabsTrigger value="pres">Images</TabsTrigger>
-      <TabsTrigger value="features">Caractéristiques</TabsTrigger>
+    <TabsList className="font-redhat text-base md:text-lg">
+      {images && <TabsTrigger value="pres">Images</TabsTrigger>}
+      <TabsTrigger value="features">Contenu</TabsTrigger>
       <TabsTrigger value="about">A propos</TabsTrigger>
     </TabsList>
   );

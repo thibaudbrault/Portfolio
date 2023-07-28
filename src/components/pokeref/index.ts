@@ -1,1 +1,1 @@
-export * from "./Pokeref";
+export * from './Pokeref';

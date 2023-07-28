@@ -1,17 +1,16 @@
+import type { TStack } from '@/types';
+
+import { TechBadge } from '../ui';
+
 type Props = {
-  stack: string[];
+  stack: TStack[];
 };
 
 export const Stack = ({ stack }: Props) => {
   return (
-    <ul className="flex flex-col items-end gap-6 row-span-3 col-start-1 row-start-2">
-      {stack.map((tech, i) => (
-        <li
-          key={i}
-          className="font-bold text-lg border-2 border-gray-700 rounded-md py-2 px-6 transition duration-300 ease-in-out hover:border-yellow-600"
-        >
-          {tech}
-        </li>
+    <ul className="col-start-1 row-span-3 row-start-2 mx-auto flex w-2/3 flex-col items-center gap-6 md:w-fit md:items-end">
+      {stack.map((tech, index) => (
+        <TechBadge tech={tech} index={index} key={index} />
       ))}
     </ul>
   );

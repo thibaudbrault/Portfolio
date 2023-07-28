@@ -1,14 +1,23 @@
 ---
-import { Hero, Navbar, Pokeref } from '@/components';
+import Navbar from '@/components/navbar/Navbar.astro';
 import Layout from '@/layouts/Layout.astro';
+import Footer from '@/components/footer/Footer.astro';
+import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio } from '@/components';
 ---
 
 <Layout title="Thibaud Brault">
-	<main class="bg-stone-900 text-stone-200 min-h-screen border-8 border-stone-200 pb-8">
+	<main class="mx-auto max-w-7xl">
 		<Navbar />
 		<Hero />
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
+		<Experiences client:visible />
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
 			<Pokeref client:visible />
+			<Portfolio client:visible />
 		</section>
+		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
+		<Bio client:visible />
+		<Footer />
 	</main>
 </Layout>

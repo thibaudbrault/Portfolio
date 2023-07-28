@@ -4,10 +4,10 @@ type Props = {
 
 export const About = ({ paragraphs }: Props) => {
   return (
-    <div>
+    <ul className="mx-auto flex w-5/6 flex-col gap-3 font-raleway md:w-full">
       {paragraphs.map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
+        <li key={i}>{paragraph}</li>
       ))}
-    </div>
+    </ul>
   );
 };

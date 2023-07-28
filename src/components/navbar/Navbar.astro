@@ -1,0 +1,33 @@
+---
+import { Button } from '@/components/ui';
+
+  const logo = `{TB}`;
+
+  const nav = [
+      {
+        text: `Experiences`,
+        link: `#experiences`,
+      },
+      {
+        text: `Projets`,
+        link: `#projects`,
+      },
+      {
+        text: `Bio`,
+        link: `#bio`,
+      },
+    ]
+---
+
+    <nav class="absolute inset-x-4 md:inset-x-12 top-8 mx-auto flex items-center justify-between">
+      <p class="font-raleway text-5xl">
+        {logo}
+      </p>
+      <ul class="hidden md:flex gap-12">
+        {nav.map((element) => (
+          <li>
+              <a class="text-xl border border-transparent transition duration-300 ease-in-out hover:border-b-yellow-600 hover:text-yellow-600" href={element.link}>{element.text}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
