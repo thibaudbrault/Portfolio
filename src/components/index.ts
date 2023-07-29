@@ -5,3 +5,4 @@ export * from './pokeref';
 export * from './portfolio';
 export * from './projects';
 export * from './ui';
+export * from './unitConverter';

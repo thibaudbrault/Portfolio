@@ -2,7 +2,7 @@
 import Navbar from '@/components/navbar/Navbar.astro';
 import Layout from '@/layouts/Layout.astro';
 import Footer from '@/components/footer/Footer.astro';
-import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio } from '@/components';
+import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter } from '@/components';
 ---
 
 <Layout title="Thibaud Brault">
@@ -14,6 +14,7 @@ import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio } from '@/compone
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
 			<Pokeref client:visible />
+			<UnitConverter client:visible />
 			<Portfolio client:visible />
 		</section>
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
