@@ -11,7 +11,7 @@ export const Hero = () => {
           Développeur front-end nantais
         </h3>
       </div>
-      <ul className="flex gap-32">
+      <ul className="flex w-11/12 justify-between md:w-1/2">
         <li>
           <Button variant="primary" size="medium" asChild>
             <a
