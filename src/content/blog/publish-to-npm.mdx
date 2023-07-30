@@ -1,0 +1,168 @@
+---
+title: Publish a package to NPM
+date: 30/07/2023
+author: Thibaud Brault
+cover: /images/publish-to-npm.webp
+coverAlt: Publish to NPM
+description: Learn how to publish a package to NPM and how to handle versioning
+draft: true
+category: Tutorial
+---
+
+This article is a step-by-step guide on how to publish a package to NPM and how to handle versioning.  
+In this article, I will be using Github so some step may differ if you're using a different hosting service for your repositories.  
+I will also be using **Typescript** and **pnpm**. While it's entirely possible to follow along without them, I highly recommend using these tools for an enhanced development experience.
+
+## Prerequisites
+
+Before you start publishing your NPM package, make sure you have the following prerequisites in place:
+
+1. **Node.js and NPM**: Ensure you have Node.js installed on your system, as it comes bundled with NPM.
+
+2. **NPM account**: Create an account on the NPM website if you haven't done so already. You'll need this account to publish your package.
+
+## Step 1: Initialize a Git Repository
+
+Create a new project folder and initialize Git inside it by running the following command:
+```bash
+git init
+```
+On Github, create a new repository and add the copy the remote url of the newly created repository.  
+In your project, run the following command:
+```bash
+git remote add <remote name> <copied url>
+```
+This will allow you to commit and push changes to your repositiory.
+
+## Step 2: Initialize NPM
+
+In your new project, initialize your project with npm by running the following command:
+
+```bash
+npm init
+```
+
+This command will prompt you with a series of questions to create a `package.json` file.   
+Here's what you should have in your `package.json`:
+```json
+{
+  "name": "Awesome package", /*Name of your package. Need to be unique so look on NPM to see if the name is already taken*/
+  "version": "1.0.0",
+  "description": "This is an awesome package",
+  "main": "index.js", /*The path to your file with the content of your package is*/
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Awesome author",
+  "license": "MIT"
+}
+```
+Review the information and make any necessary changes.
+
+## Step 3: Prepare Your Package Files
+
+Ensure that your package files are organized correctly. At a minimum, your package directory should include the following files:
+
+- **index.ts**: The main entry point of your package, containing the logic you want to share.
+
+- **package.json**: This file holds essential metadata about your package, such as its name, version, dependencies, and more. Make sure the "main" field in package.json points to your index.js file.
+
+- **README.md**: Create a clear and concise README file that explains what your package does, how to use it, and any other relevant information.
+
+- **.gitignore**: In this file add `node_modules` and `dist` to prevent these folders from being added to your Github repository.
+
+## Step 4: Install Packages
+
+In this step we will add some packages that will be needed during the development of your package.
+All these packages will be installed as `devDependencies` so as to avoid bundling them with your package during the build step.
+Here are the packages that we will install:
+- **typescript**: A language built on top of Javascript that adds type safety. Do not install if you don't wantr to use it.
+- **tsup**: Bundle your Typescript files to CJS and ESM. Don't install if you haven't installed Typescript.
+- **@changesets/cli**: A CLI package that will greatly facilitate versioning and publishing your package.
+- **vitest**: Or any other testing library (Jest, Puppeteer, ...).  
+
+To install them, run:
+```bash
+pnpm add -D typescript tsup @changeset/cli vitest
+```
+
+## Step 5: Initialize Typescript
+
+Once you have installed all these dependencies, you need to initialize Typescript.
+To do so run the following command:
+```bash
+pnpm tsc --init
+```
+This command will create a `tsconfig.json` file in which you will find the following content:
+```json
+{
+  "compilerOptions": {
+    "target": "es2016", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs", /* Specify what module code is generated. */
+    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+    "strict": true, /* Enable all strict type-checking options. */
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+  }
+}
+```
+in this file you will need to add these two lines in `compilerOptions`:
+```json
+    "noUncheckedIndexedAccess": true, /*Will add undefined to any un-declared field in a type*/
+    "noEmit": true /*Will make tsc used only for type checking and not for compilation*/
+```
+
+## Step 6: Add Scripts
+
+You will now need to add scripts in your `package.json` to be able to use the various dependencies.  
+In your `package.json` add the following code:
+```json
+"scripts": {
+    "test": "vitest", /*Change if you're using a different tool or remove if you don't have tests setup*/
+    "build": "tsup src/index.ts --format cjs,esm --dts", /*Will convert you Typescript files into js and mjs files and will create the .d.ts files*/
+    "release": "pnpm build && changeset publish", /*Will be used in the CI to publish your code to NPM*/
+    "lint": "tsc", /*Is use to check the Typescript types for errors and warnings*/
+    "ci": "pnpm run lint && pnpm run test && pnpm run build" /*Will be used in the CI to ensure that the code is working*/
+},
+```
+Keep the command or change them according to the tools that you use.
+
+## Step 7: Add Information About Your Package
+
+Now you will need to add information about your package-to-be. You will need to add these lines in your `package.json`:
+```json
+"private": false, /*Must be added to have your package be published on NPM*/
+"main": "dist/index.js", /*The dist folder appear after running a build. This specifies where to find the compilled Typescript code. For CJS file*/
+"module": "dist/index.mjs", /*For ESM file*/
+"types": "dist/index.t.s", /*Where your types are stored so that Typescript users will be able to have access to the types. Skip if you aren't using Typescript*/
+"publishConfig": {
+    "access": "public"
+}, /*Must be added to have your file published on NPM*/
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/owner/repo.git"
+}, /*Url of your repository. Will be shown on a package page under 'Repository'*/
+"bugs": {
+    "url": "https://github.com/owner/repo/issues"
+}, /*Url to the page where users can submit issues or bugs*/
+"homepage": "https://github.com/repo/owner#readme", /*Url of the site (or Github repo) where the user can find documentation about your package*/
+```
+Some of these lines are optional but are recommended to add to facilitate the usage of your repo by developers (a package with documentation and easy to find information will be more used than one without)
+
+## Step 8: Initialize `changesets`
+
+Now that everything is setup, let's initialize changesets to make versioning and publishing easy and automatic.  
+First, you'll have to initialize it by runing this command:
+```bash
+pnpm changeset init
+```
+After running this command you will see a new folder called `.changeset`. In this folder you'll find a `config.json` file and a `README.md`.
+In the `config.json` you will have all the options to configure Changeset. For now you will only have to change `"access": "restricted"` to `"access": "public"`.
+
+## Step 9: Add CI with Guthub Actions
+
+## Conclusion
+
+Congratulations! You've successfully published your npm package, making it accessible to developers worldwide. By sharing your code with the community, you contribute to the open-source ecosystem and help others solve their problems more efficiently.
+
+Remember, maintaining an npm package comes with responsibilities. Stay responsive to user feedback, fix reported issues promptly, and keep your package up-to-date. Happy coding and contributing to the JavaScript community!

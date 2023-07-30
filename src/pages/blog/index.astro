@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import {getCollection} from 'astro:content'
+
+const allBlogPosts = await getCollection('blog')
+const title = "Thibaud Brault - Blog"
+const description = "Blog crée par Thibaud Brault"
+---
+<Layout {title} {description}>
+        <ul class="w-11/12 mx-auto mt-12 py-12 grid grid-cols-3 justify-items-center gap-12">
+            {allBlogPosts.map(post => (
+                <li class="flex flex-col gap-6 border border-stone-200 bg-stone-800 pb-8 rounded-md">
+                    <Image src={post.data.cover} alt={post.data.coverAlt} width="400" height="175" class="w-full rounded-t-md" />
+                    <div>
+                        <a href={post.slug}>
+                            <h2 class="text-3xl px-4 transition duration-300 ease-in-out hover:text-yellow-600">{post.data.title}</h2>
+                        </a>
+                        <small class="px-4">by <b>{post.data.author}</b> • {post.data.date}</small>
+                        <p class="px-4 mt-6">{post.data.description}</p>
+                    </div>
+                    <a class="ml-4 w-fit font-semibold bg-stone-200 text-stone-900 rounded-md px-4 py-2 transition duration-300 ease-in-out hover:bg-stone-300" href={post.slug}>Read Post</a>
+                </li>
+            ))}
+        </ul>
+</Layout>
