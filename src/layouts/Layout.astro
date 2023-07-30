@@ -1,27 +1,24 @@
 --- 
+import Footer from '@/components/footer/Footer.astro';
+import Navbar from '@/components/navbar/Navbar.astro';
 import '@/styles/base.css'
+import Head from './Head.astro';
 
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title }: Props = Astro.props;
+const { title, description }: Props = Astro.props;
 ---
 
-<!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Thibaud Brault, développeur front -end nantais">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
+	<Head {title} {description} />
 	<body class="min-h-screen border-8 border-stone-200 bg-stone-900 text-stone-200">
-		<slot />
+		<main>
+			<Navbar />
+			<slot />
+			<Footer />
+		</main>
 	</body>
 </html>

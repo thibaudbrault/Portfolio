@@ -1,13 +1,13 @@
 ---
-import Navbar from '@/components/navbar/Navbar.astro';
 import Layout from '@/layouts/Layout.astro';
-import Footer from '@/components/footer/Footer.astro';
 import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter } from '@/components';
+
+const title = "Thibaud Brault"
+const description = "Thibaud Brault, développeur front-end"
 ---
 
-<Layout title="Thibaud Brault">
-	<main class="mx-auto max-w-7xl">
-		<Navbar />
+<Layout {title} {description}>
+	<div class="mx-auto max-w-7xl">
 		<Hero />
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<Experiences client:visible />
@@ -19,6 +19,5 @@ import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter } 
 		</section>
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<Bio client:visible />
-		<Footer />
-	</main>
+	</div>
 </Layout>
