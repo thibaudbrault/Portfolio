@@ -4,6 +4,6 @@ type Props = {
 
 export const Title = ({ text }: Props) => {
   return (
-    <h2 className="text-center font-raleway text-4xl md:text-6xl">{text}</h2>
+    <h2 className="text-center font-atkinson text-4xl md:text-6xl">{text}</h2>
   );
 };

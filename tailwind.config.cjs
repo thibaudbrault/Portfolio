@@ -5,8 +5,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				raleway: '"Raleway", sans-serif',
-				redhat: '"Red Hat Mono", mono'
+				redhat: '"Red Hat Mono", mono',
+				atkinson: '"Atkinson Hyperlegible", sans-serif'
 			}
 		},
 	},
