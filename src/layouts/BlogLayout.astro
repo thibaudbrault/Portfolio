@@ -1,0 +1,26 @@
+--- 
+import Footer from '@/components/footer/Footer.astro';
+import Navbar from '@/components/navbar/Navbar.astro';
+import PostHeader from '@/components/blog/PostHeader.astro'
+import '@/styles/base.css'
+import Layout from './Layout.astro';
+
+interface Props {
+	   title: string;
+    date: string;
+    author: string
+    cover: string
+    coverAlt: string
+    description: string
+    category: string
+}
+
+const { title, description, date, author, cover, coverAlt, category }: Props = Astro.props;
+---
+
+<Layout {title} {description}>
+    <div class="min-h-screen mt-32">
+        <PostHeader {title} {date} {author} {cover} {coverAlt} {category} />
+        <slot />
+    </div>
+</Layout>

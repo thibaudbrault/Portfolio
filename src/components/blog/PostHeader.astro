@@ -1,0 +1,13 @@
+---
+import { Image } from "astro:assets";
+
+const {title, author, date, category, cover, coverAlt} = Astro.props
+---
+<header class="max-w-7xl mx-auto flex flex-col justify-center items-center gap-12">
+    <div class="text-center flex flex-col gap-6 items-center">
+        <p class="bg-stone-200 text-stone-900 px-4 py-2 font-semibold w-fit rounded-md">{category}</p>
+        <h1 class="text-5xl">{title}</h1>
+        <p>by <b class="underline">{author}</b> • {date}</p>
+    </div>
+    <Image src={cover} alt={coverAlt} width={1200} height={600} class="w-full max-h-[600px] rounded-md shadow-lg shadow-stone-800" />
+</header>
