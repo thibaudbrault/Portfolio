@@ -13,5 +13,8 @@ export default defineConfig({
   site: "https://thibaudbrault.dev",
   experimental: {
     assets: true
+  },
+  markdown: {
+    syntaxHighlight: 'prism'
   }
 });
