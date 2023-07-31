@@ -6,7 +6,7 @@ import '@/styles/base.css'
 import Layout from './Layout.astro';
 
 interface Props {
-	title: string;
+	   title: string;
     date: string;
     author: string
     cover: string
@@ -19,8 +19,8 @@ const { title, description, date, author, cover, coverAlt, category }: Props = A
 ---
 
 <Layout {title} {description}>
-    <div class="min-h-screen mt-24">
+    <div class="min-h-screen mt-32">
         <PostHeader {title} {date} {author} {cover} {coverAlt} {category} />
         <slot />
     </div>
-    </Layout>
+</Layout>
