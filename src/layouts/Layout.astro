@@ -1,12 +1,14 @@
 --- 
+import '@/styles/base.css';
+
 import Footer from '@/components/footer/Footer.astro';
 import Navbar from '@/components/navbar/Navbar.astro';
-import '@/styles/base.css'
+
 import Head from './Head.astro';
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description }: Props = Astro.props;
@@ -22,3 +24,11 @@ const { title, description }: Props = Astro.props;
 		</main>
 	</body>
 </html>
+
+<style>
+	body {
+	  background-image: radial-gradient(#404040 1px, transparent 0);
+	  background-size: 60px 60px;
+	  background-position: -19px -19px;
+	}
+</style>
