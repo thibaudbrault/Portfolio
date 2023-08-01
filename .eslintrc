@@ -103,8 +103,7 @@
             "js": "never",
             "jsx": "never",
             "ts": "never",
-            "tsx": "never",
-            "": "never"
+            "tsx": "never"
           }
         ],
         "import/no-unresolved": [
