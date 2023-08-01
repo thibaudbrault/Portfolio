@@ -87,11 +87,7 @@
         "tailwindcss",
         "simple-import-sort"
       ],
-      "extends": [
-        "plugin:tailwindcss/recommended",
-        "airbnb-typescript",
-        "plugin:prettier/recommended"
-      ],
+      "extends": ["plugin:tailwindcss/recommended", "airbnb-typescript"],
       "parser": "astro-eslint-parser",
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
@@ -99,13 +95,7 @@
         "extraFileExtensions": [".astro"]
       },
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "singleQuote": true,
-            "endOfLine": "auto"
-          }
-        ],
+        "prettier/prettier": 0,
         "import/extensions": [
           "error",
           "ignorePackages",
@@ -113,8 +103,7 @@
             "js": "never",
             "jsx": "never",
             "ts": "never",
-            "tsx": "never",
-            "": "never"
+            "tsx": "never"
           }
         ],
         "import/no-unresolved": [

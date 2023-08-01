@@ -53,9 +53,7 @@ export const UnitConverter = () => {
         <TabsComponent />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <Links
-          github="https://github.com/thibaudbrault/UnitConverter"
-        />
+        <Links github="https://github.com/thibaudbrault/UnitConverter" />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} />
           <div className="lg:w-[700px]">

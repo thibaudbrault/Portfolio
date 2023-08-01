@@ -25,12 +25,21 @@ export const Portfolio = () => {
     [],
   );
   const features: string[] = useMemo(
-    () => [`Présentation de mes projets`, `Carousel d'images`, `Création d'un blog avec Mdx`],
+    () => [
+      `Présentation de mes projets`,
+      `Carousel d'images`,
+      `Création d'un blog avec Mdx`,
+    ],
     [],
   );
 
   const about: string[] = useMemo(
-    () => [`Ce site me permet de présenter mes meilleurs projets.`, `Ce portfolio a un design volontairement minimaliste et épuré pour que les visiteurs puissent se focaliser sur les informations présentes.`, `J'ai utilisé Astro qui permet de créer des sites statiques performants ce qui est utile pour mon portfolio.`, `Crée avec en objectif principal la réusabilité des composants React afin de pouvoir facilement et rapidement ajouter des nouvelles informations.`],
+    () => [
+      `Ce site me permet de présenter mes meilleurs projets.`,
+      `Ce portfolio a un design volontairement minimaliste et épuré pour que les visiteurs puissent se focaliser sur les informations présentes.`,
+      `J'ai utilisé Astro qui permet de créer des sites statiques performants ce qui est utile pour mon portfolio.`,
+      `Crée avec en objectif principal la réusabilité des composants React afin de pouvoir facilement et rapidement ajouter des nouvelles informations.`,
+    ],
     [],
   );
 
@@ -44,9 +53,7 @@ export const Portfolio = () => {
         <TabsComponent />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <Links
-          github="https://github.com/thibaudbrault/Portfolio"
-        />
+        <Links github="https://github.com/thibaudbrault/Portfolio" />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} />
           <div className="lg:w-[700px]">
