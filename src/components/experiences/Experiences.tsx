@@ -24,6 +24,7 @@ export const Experiences = () => {
               `Améliorer l'expérience de développement en migrant le projet de 'Create-React-App' vers 'Vite', ce qui a entraîné une augmentation significative de la rapidité et de l'efficacité.`,
               `Effectuer la mise à jour de React et de React-Router vers les dernières versions, permettant ainsi de bénéficier des dernières avancées technologiques.`,
               `Effectuer la mise à jour des dépendances Apollo GraphQL pour permettre l'utilisation des hooks de React ainsi que la gestion des requêtes GraphQL grâce à une seule dépendance ce qui permet de supprimer plusieurs autres.`,
+               `Migration vers Tailwind afin de nettoyer le CSS actuel et unifier les styles déjà présents.`,
             ],
             stack: [
               {
@@ -37,6 +38,10 @@ export const Experiences = () => {
               {
                 icon: `logos:vitejs`,
                 name: `Vite`,
+              },
+              {
+                icon: `logos:tailwindcss-icon`, 
+                name: `Tailwind`,
               },
               {
                 icon: `vscode-icons:file-type-prisma`,
