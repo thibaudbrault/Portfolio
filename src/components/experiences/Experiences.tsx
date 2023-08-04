@@ -42,7 +42,7 @@ export const Experiences = () => {
               {
                 icon: `logos:tailwindcss-icon`, 
                 name: `Tailwind`,
-              }
+              },
               {
                 icon: `vscode-icons:file-type-prisma`,
                 name: `Prisma`,
