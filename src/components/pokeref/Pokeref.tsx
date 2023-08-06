@@ -101,8 +101,8 @@ export const Pokeref = () => {
     >
       <div className="flex flex-col gap-4">
         <div className="mx-auto flex items-center gap-3">
-          <Title text="PokéRef" />
-          <Icon className="text-4xl md:text-6xl" icon="gg:pokemon" />
+          <Title small text="PokéRef" />
+          <Icon className="text-2xl md:text-4xl" icon="gg:pokemon" />
         </div>
         <TabsComponent images />
       </div>

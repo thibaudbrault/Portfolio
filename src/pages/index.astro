@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter } from '@/components';
+import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter, Title } from '@/components';
 
 const title = "Thibaud Brault"
 const description = "Thibaud Brault, développeur front-end"
@@ -13,6 +13,7 @@ const description = "Thibaud Brault, développeur front-end"
 		<Experiences client:visible />
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
+			<Title className="mb-9 text-center" text='Projets' />
 			<Pokeref client:visible />
 			<UnitConverter client:visible />
 			<Portfolio client:visible />

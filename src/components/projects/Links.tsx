@@ -2,7 +2,7 @@ import { Button } from '../ui';
 
 type Props = {
   github: string;
-  live: string;
+  live?: string;
 };
 
 export const Links = ({ github, live }: Props) => {
