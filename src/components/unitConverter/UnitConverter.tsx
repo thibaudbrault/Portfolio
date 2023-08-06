@@ -49,7 +49,7 @@ export const UnitConverter = () => {
       className="mb-24 flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-4">
-        <Title text="Unit Converter" />
+        <Title small text="Unit Converter" />
         <TabsComponent />
       </div>
       <div className="flex flex-col items-center gap-6">
