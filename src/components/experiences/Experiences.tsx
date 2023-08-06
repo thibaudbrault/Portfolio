@@ -14,6 +14,7 @@ export const Experiences = () => {
         city: `Nantes`,
         start: `Février 2023`,
         end: `Septembre 2023`,
+        duration: `6 mois`,
         type: `Stage`,
         missions: [
           {
@@ -73,7 +74,7 @@ export const Experiences = () => {
                 <b>{experience.company}</b>, {experience.city}
               </p>
               <p>
-                {experience.type} de <b>{experience.start}</b> à{` `}
+                {experience.type} de <b>{experience.duration}</b> entre <b>{experience.start}</b> à{` `}
                 <b>{experience.end}</b>
               </p>
             </div>
