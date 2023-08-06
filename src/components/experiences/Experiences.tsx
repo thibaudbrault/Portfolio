@@ -19,12 +19,12 @@ export const Experiences = () => {
           {
             client: `FAQ - Zénika`,
             details: [
-              `Mis en place de tests e2e avec Playwright pour assurer la qualité et la stabilité du site.`,
+              `Mise en place de tests e2e avec Playwright pour assurer la qualité et la stabilité du site.`,
               `Ajout de nouvelles fonctionnalités, dont la création d'un statut de spécialiste pour la validation de questions et l'intégration de l'API Google Translate pour la traduction de contenu.`,
-              `Améliorer l'expérience de développement en migrant le projet de 'Create-React-App' vers 'Vite', ce qui a entraîné une augmentation significative de la rapidité et de l'efficacité.`,
-              `Effectuer la mise à jour de React et de React-Router vers les dernières versions, permettant ainsi de bénéficier des dernières avancées technologiques.`,
-              `Effectuer la mise à jour des dépendances Apollo GraphQL pour permettre l'utilisation des hooks de React ainsi que la gestion des requêtes GraphQL grâce à une seule dépendance ce qui permet de supprimer plusieurs autres.`,
-               `Migration vers Tailwind afin de nettoyer le CSS actuel et unifier les styles déjà présents.`,
+              `Amélioration de l'expérience de développement en migrant le projet de 'Create-React-App' vers 'Vite', ce qui a entraîné une augmentation significative de la rapidité et de l'efficacité.`,
+              `Mise à jour de React et de React-Router vers les dernières versions, permettant ainsi de bénéficier des dernières avancées technologiques.`,
+              `Mise à jour des dépendances Apollo GraphQL pour permettre l'utilisation des hooks de React ainsi que la gestion des requêtes GraphQL grâce à une seule dépendance ce qui permet de supprimer plusieurs autres.`,
+              `Migration vers Tailwind afin de nettoyer le CSS actuel et unifier les styles déjà présents.`,
             ],
             stack: [
               {
@@ -40,7 +40,7 @@ export const Experiences = () => {
                 name: `Vite`,
               },
               {
-                icon: `logos:tailwindcss-icon`, 
+                icon: `logos:tailwindcss-icon`,
                 name: `Tailwind`,
               },
               {
@@ -81,8 +81,11 @@ export const Experiences = () => {
               {experience.missions.map((mission, missionIndex) => (
                 <Fragment key={missionIndex}>
                   <ul className="list-disc">
-                    <li className="list-none text-xl text-yellow-600">
-                      <b>{mission.client}</b>
+                    <li className="list-none text-xl">
+                      <p>
+                        Mission:{` `}
+                        <b className="text-yellow-600">{mission.client}</b>
+                      </p>
                     </li>
                     {mission.details.map((detail, detailIndex) => (
                       <li key={detailIndex}>{detail}</li>
