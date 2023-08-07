@@ -9,6 +9,7 @@ export type TExperiences = {
   city: string;
   start: string;
   end: string;
+  duration: string;
   type: string;
   missions: {
     client: string;

@@ -4,12 +4,12 @@ import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter, T
 import { getLangFromUrl } from '@/i18n/utils';
 
 const title = "Thibaud Brault"
-const description = "Thibaud Brault, développeur front-end"
+const description = "Thibaud Brault, front-end developer"
 
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Layout {lang} {title} {description}>
+<Layout {title} {description}>
 	<div class="mx-auto max-w-7xl">
 		<Hero {lang} />
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />

@@ -1,0 +1,14 @@
+---
+import { languages } from '@/i18n/ui';
+
+interface Props {
+  lang: string;
+}
+
+const {lang}: Props = Astro.props
+
+const otherLanguage = lang === 'fr' ? 'en' : 'fr';
+const otherLanguageLabel = languages[otherLanguage];
+---
+
+<a class="fixed text-xl md:text-3xl bg-stone-200 w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-full bottom-6 right-6 md:right-12" href={otherLanguage === 'fr' ? `/` : `/${otherLanguage}/`}>{otherLanguageLabel}</a> 

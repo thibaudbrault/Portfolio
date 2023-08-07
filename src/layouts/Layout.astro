@@ -3,22 +3,25 @@ import '@/styles/base.css';
 
 import Footer from '@/components/footer/Footer.astro';
 import Navbar from '@/components/navbar/Navbar.astro';
+import LanguagePicker from '@/components/languagePicker/LanguagePicker.astro'
 
 import Head from './Head.astro';
 
 interface Props {
   title: string;
   description: string;
+  lang: string;
 }
 
-const { title, description }: Props = Astro.props;
+const { title, description, lang }: Props = Astro.props;
 ---
 
-<html lang="fr" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
 	<Head {title} {description} />
 	<body class="min-h-screen border-8 border-stone-200 bg-stone-900 text-stone-200">
 		<main>
 			<Navbar />
+			<LanguagePicker {lang} />
 			<slot />
 			<Footer />
 		</main>

@@ -1,0 +1,52 @@
+export const languages = {
+  en: `🇬🇧`,
+  fr: `🇫🇷`,
+};
+
+export const defaultLang = `fr`;
+
+export const ui = {
+  fr: {
+    'nav.experiences': `Expériences`,
+    'nav.projects': `Projets`,
+    'nav.bio': `Bio`,
+    'nav.blog': `Blog`,
+    'hero.title': `Thibaud Brault`,
+    'hero.subtitle': `Développeur front-end nantais`,
+    'experiences[0].role': `Développeur full-stack JS`,
+    'experiences[0].start': `Février 2023`,
+    'experiences[0].end': `Septembre 2023`,
+    'experiences[0].duration': `6 mois`,
+    'experiences[0].type': `Stage`,
+    'experiences[0].missions.client': `FAQ - Zénika (site interne)`,
+    'experiences[0].missions.details[0]': `Mise en place de tests e2e avec Playwright pour assurer la qualité et la stabilité du site.`,
+    'experiences[0].missions.details[1]': `Ajout de nouvelles fonctionnalités, dont la création d'un statut de spécialiste pour la validation de questions et l'intégration de l'API Google Translate pour la traduction de contenu.`,
+    'experiences[0].missions.details[2]': `Amélioration de l'expérience de développement en migrant le projet de 'Create-React-App' vers 'Vite', ce qui a entraîné une augmentation significative de la rapidité et de l'efficacité.`,
+    'experiences[0].missions.details[3]': `Mise à jour de React et de React-Router vers les dernières versions, permettant ainsi de bénéficier des dernières avancées technologiques.`,
+    'experiences[0].missions.details[4]': `Mise à jour des dépendances Apollo GraphQL pour permettre l'utilisation des hooks de React ainsi que la gestion des requêtes GraphQL grâce à une seule dépendance ce qui permet de supprimer plusieurs autres.`,
+    'experiences[0].missions.details[5]': `Migration vers Tailwind afin de nettoyer le CSS actuel et unifier les styles déjà présents.`,
+    'experiences.words.de': `de`,
+    'experiences.words.entre': `entre`,
+    'experiences.words.a': `à`,
+  },
+  en: {
+    'nav.experiences': `Experiences`,
+    'nav.projects': `Projects`,
+    'hero.subtitle': `Front-end developer based in Nantes`,
+    'experiences[0].role': `Fullstack JS developer`,
+    'experiences[0].start': `February 2023`,
+    'experiences[0].end': `September 2023`,
+    'experiences[0].duration': `6 months`,
+    'experiences[0].type': `Internship`,
+    'experiences[0].missions.client': `FAQ - Zénika (internal site)`,
+    'experiences[0].missions.details[0]': `Setting up e2e tests with Playwright to ensure the quality and stability of the website.`,
+    'experiences[0].missions.details[1]': `Adding new features, including the creation of a specialist status for question validation and the integration of the Google Translate API for content translation.`,
+    'experiences[0].missions.details[2]': `Improving the development experience by migrating the project from 'Create-React-App' to 'Vite,' resulting in a significant increase in speed and efficiency.`,
+    'experiences[0].missions.details[3]': `Updating React and React-Router to the latest versions, allowing to take advantage of the latest technological advancements.`,
+    'experiences[0].missions.details[4]': `Updating Apollo GraphQL dependencies to enable the use of React hooks and streamline GraphQL query management with a single dependency, resulting in the removal of several others.`,
+    'experiences[0].missions.details[5]': `Migrating to Tailwind to clean up the current CSS and unify the existing styles.`,
+    'experiences.words.de': `of`,
+    'experiences.words.entre': `between`,
+    'experiences.words.a': `and`,
+  },
+} as const;
