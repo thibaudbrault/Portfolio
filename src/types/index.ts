@@ -9,6 +9,7 @@ export type TExperiences = {
   city: string;
   start: string;
   end: string;
+  duration: string;
   type: string;
   missions: {
     client: string;
@@ -21,4 +22,8 @@ export type TImages = {
   id: number;
   src: string;
   alt: string;
+};
+
+export type Lang = {
+  lang: 'fr' | 'en';
 };

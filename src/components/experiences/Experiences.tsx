@@ -1,30 +1,34 @@
 import { Fragment, useMemo } from 'react';
 
-import type { TExperiences } from '@/types';
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TExperiences } from '@/types';
 
 import { Title } from '../projects';
 import { TechBadge } from '../ui';
 
-export const Experiences = () => {
+export const Experiences = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
+
   const experiences: TExperiences[] = useMemo(
     () => [
       {
-        role: `Développeur full-stack JS`,
+        role: t(`experiences[0].role`),
         company: `Zénika`,
         city: `Nantes`,
-        start: `Février 2023`,
-        end: `Septembre 2023`,
-        type: `Stage`,
+        start: t(`experiences[0].start`),
+        end: t(`experiences[0].end`),
+        duration: t(`experiences[0].duration`),
+        type: t(`experiences[0].type`),
         missions: [
           {
-            client: `FAQ - Zénika`,
+            client: t(`experiences[0].missions.client`),
             details: [
-              `Mise en place de tests e2e avec Playwright pour assurer la qualité et la stabilité du site.`,
-              `Ajout de nouvelles fonctionnalités, dont la création d'un statut de spécialiste pour la validation de questions et l'intégration de l'API Google Translate pour la traduction de contenu.`,
-              `Amélioration de l'expérience de développement en migrant le projet de 'Create-React-App' vers 'Vite', ce qui a entraîné une augmentation significative de la rapidité et de l'efficacité.`,
-              `Mise à jour de React et de React-Router vers les dernières versions, permettant ainsi de bénéficier des dernières avancées technologiques.`,
-              `Mise à jour des dépendances Apollo GraphQL pour permettre l'utilisation des hooks de React ainsi que la gestion des requêtes GraphQL grâce à une seule dépendance ce qui permet de supprimer plusieurs autres.`,
-              `Migration vers Tailwind afin de nettoyer le CSS actuel et unifier les styles déjà présents.`,
+              t(`experiences[0].missions.details[0]`),
+              t(`experiences[0].missions.details[1]`),
+              t(`experiences[0].missions.details[2]`),
+              t(`experiences[0].missions.details[3]`),
+              t(`experiences[0].missions.details[4]`),
+              t(`experiences[0].missions.details[5]`),
             ],
             stack: [
               {
@@ -61,7 +65,7 @@ export const Experiences = () => {
 
   return (
     <section id="experiences" className="mb-24 flex flex-col gap-12">
-      <Title text="Expériences" />
+      <Title text={t(`section.title[0]`)} />
       <ul className="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
         {experiences.map((experience, index) => (
           <li className="flex flex-col gap-6" key={index}>
@@ -73,7 +77,12 @@ export const Experiences = () => {
                 <b>{experience.company}</b>, {experience.city}
               </p>
               <p>
-                {experience.type} de <b>{experience.start}</b> à{` `}
+                {experience.type} {t(`experiences.words.de`)}
+                {` `}
+                <b>{experience.duration}</b> {t(`experiences.words.entre`)}
+                {` `}
+                <b>{experience.start}</b> {t(`experiences.words.a`)}
+                {` `}
                 <b>{experience.end}</b>
               </p>
             </div>
@@ -83,7 +92,7 @@ export const Experiences = () => {
                   <ul className="list-disc">
                     <li className="list-none text-xl">
                       <p>
-                        Mission:{` `}
+                        Client:{` `}
                         <b className="text-yellow-600">{mission.client}</b>
                       </p>
                     </li>

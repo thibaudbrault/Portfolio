@@ -1,14 +1,18 @@
+import { useTranslations } from '@/i18n/utils';
+import type { Lang } from '@/types';
+
 import { Button } from '../ui';
 
-export const Hero = () => {
+export const Hero = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
   return (
     <header className="flex h-screen flex-col items-center justify-center gap-12">
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-center font-atkinson text-6xl md:text-8xl">
-          Thibaud Brault
+          {t(`hero.title`)}
         </h1>
-        <h3 className="text-center text-xl text-yellow-600 md:text-2xl">
-          Développeur front-end nantais
+        <h3 className=" mx-auto w-11/12 text-center text-xl text-yellow-600 md:text-2xl">
+          {t(`hero.subtitle`)}
         </h3>
       </div>
       <ul className="flex w-5/6 justify-between md:w-1/2">

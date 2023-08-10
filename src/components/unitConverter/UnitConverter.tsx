@@ -1,12 +1,15 @@
 import { useMemo } from 'react';
 
-import type { TStack } from '@/types';
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TStack } from '@/types';
 
 import { About, Features, Stack, TabsComponent, Title } from '../projects';
 import { Links } from '../projects/Links';
 import { Tabs, TabsContent } from '../ui';
 
-export const UnitConverter = () => {
+export const UnitConverter = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
+
   const tech: TStack[] = useMemo(
     () => [
       {
@@ -22,23 +25,23 @@ export const UnitConverter = () => {
   );
   const features: string[] = useMemo(
     () => [
-      `Package NPM`,
-      `Utilise Typescript et supporte CJS et ESM`,
-      `Tests des fonctions avec Vitest`,
-      `Utilisation de Changesets pour le versioning`,
-      `CI / CD avec Github Actions et Changesets bot`,
-      `Documentation: installation et utilisation du package`,
+      t(`unit.features[0]`),
+      t(`unit.features[1]`),
+      t(`unit.features[2]`),
+      t(`unit.features[3]`),
+      t(`unit.features[4]`),
+      t(`unit.features[5]`),
     ],
     [],
   );
 
   const about: string[] = useMemo(
     () => [
-      `Package NPM dont le but est de fournir des fonctions permettant de convertir des unités de mesures vers d'autres unités (par exemple des mètres vers des pieds)`,
-      `Build qui supporte CJS ("require" et "module.exports") et ESM ("import" et "export") grâce à l'utilisation de tsup`,
-      `Ecriture de tests unitaires avec Vitest afin de s'assurer que toutes les fonctions soient toujours fonctionnelles et que les fonctions retournent bien le résultat souhaité`,
-      `Utilisation de Changesets comme outil de versioning afin de facilement changer le package de version et le publier`,
-      `Mise en place d'une CI / CD avec la création de deux workflows Github Actions qui permettent de lancer lint et Vitest lors de chaque commit et de publier la nouvelle version lors d'un merge sur la branche main`,
+      t(`unit.about[0]`),
+      t(`unit.about[1]`),
+      t(`unit.about[2]`),
+      t(`unit.about[3]`),
+      t(`unit.about[4]`),
     ],
     [],
   );
