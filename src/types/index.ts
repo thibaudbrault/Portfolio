@@ -25,5 +25,5 @@ export type TImages = {
 };
 
 export type Lang = {
-  lang: "fr" | "en";
+  lang: 'fr' | 'en';
 };

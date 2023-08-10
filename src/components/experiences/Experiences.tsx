@@ -1,10 +1,10 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo } from 'react';
 
-import { useTranslations } from "@/i18n/utils";
-import type { Lang, TExperiences } from "@/types";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TExperiences } from '@/types';
 
-import { Title } from "../projects";
-import { TechBadge } from "../ui";
+import { Title } from '../projects';
+import { TechBadge } from '../ui';
 
 export const Experiences = ({ lang }: Lang) => {
   const t = useTranslations(lang);
@@ -60,12 +60,12 @@ export const Experiences = ({ lang }: Lang) => {
         ],
       },
     ],
-    []
+    [],
   );
 
   return (
     <section id="experiences" className="mb-24 flex flex-col gap-12">
-      <Title text={t("section.title[0]")} />
+      <Title text={t(`section.title[0]`)} />
       <ul className="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
         {experiences.map((experience, index) => (
           <li className="flex flex-col gap-6" key={index}>

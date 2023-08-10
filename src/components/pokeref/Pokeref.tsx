@@ -1,7 +1,8 @@
-import { Icon } from "@iconify/react";
-import { useMemo } from "react";
+import { Icon } from '@iconify/react';
+import { useMemo } from 'react';
 
-import type { Lang, TStack } from "@/types";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TStack } from '@/types';
 
 import {
   About,
@@ -10,10 +11,9 @@ import {
   Stack,
   TabsComponent,
   Title,
-} from "../projects";
-import { Links } from "../projects/Links";
-import { Tabs, TabsContent } from "../ui";
-import { useTranslations } from "@/i18n/utils";
+} from '../projects';
+import { Links } from '../projects/Links';
+import { Tabs, TabsContent } from '../ui';
 
 export const Pokeref = ({ lang }: Lang) => {
   const t = useTranslations(lang);
@@ -41,34 +41,34 @@ export const Pokeref = ({ lang }: Lang) => {
         name: `Planetscale`,
       },
     ],
-    []
+    [],
   );
 
   const features: string[] = useMemo(
     () => [
-      t("pokeref.features[0]"),
-      t("pokeref.features[1]"),
-      t("pokeref.features[2]"),
-      t("pokeref.features[3]"),
-      t("pokeref.features[4]"),
-      t("pokeref.features[5]"),
-      t("pokeref.features[6]"),
-      t("pokeref.features[7]"),
-      t("pokeref.features[8]"),
+      t(`pokeref.features[0]`),
+      t(`pokeref.features[1]`),
+      t(`pokeref.features[2]`),
+      t(`pokeref.features[3]`),
+      t(`pokeref.features[4]`),
+      t(`pokeref.features[5]`),
+      t(`pokeref.features[6]`),
+      t(`pokeref.features[7]`),
+      t(`pokeref.features[8]`),
     ],
-    []
+    [],
   );
 
   const about: string[] = useMemo(
     () => [
-      t("pokeref.about[0]"),
-      t("pokeref.about[1]"),
-      t("pokeref.about[2]"),
-      t("pokeref.about[3]"),
-      t("pokeref.about[4]"),
-      t("pokeref.about[5]"),
+      t(`pokeref.about[0]`),
+      t(`pokeref.about[1]`),
+      t(`pokeref.about[2]`),
+      t(`pokeref.about[3]`),
+      t(`pokeref.about[4]`),
+      t(`pokeref.about[5]`),
     ],
-    []
+    [],
   );
 
   const images = useMemo(
@@ -94,7 +94,7 @@ export const Pokeref = ({ lang }: Lang) => {
         alt: `PokéRef - Pokémon (types et attaques)`,
       },
     ],
-    []
+    [],
   );
 
   return (

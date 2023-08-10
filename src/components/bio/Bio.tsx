@@ -1,10 +1,10 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
-import type { Lang, TStack } from "@/types";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TStack } from '@/types';
 
-import { Title } from "../projects";
-import { TechBadge } from "../ui";
-import { useTranslations } from "@/i18n/utils";
+import { Title } from '../projects';
+import { TechBadge } from '../ui';
 
 export const Bio = ({ lang }: Lang) => {
   const t = useTranslations(lang);
@@ -33,26 +33,26 @@ export const Bio = ({ lang }: Lang) => {
         { name: `GraphQL`, icon: `logos:graphql` },
       ],
     ],
-    []
+    [],
   );
 
   return (
     <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
-        <Title text={t("section.title[2]")} />
+        <Title text={t(`section.title[2]`)} />
         <div className="mx-auto w-5/6 text-center text-xl md:w-2/3">
-          <p>{t("bio.text[0]")}</p>
-          <p>{t("bio.text[1]")}</p>
+          <p>{t(`bio.text[0]`)}</p>
+          <p>{t(`bio.text[1]`)}</p>
         </div>
       </div>
       <div className="mx-auto flex w-11/12 flex-col flex-wrap justify-center gap-6 lg:flex lg:w-full lg:flex-row">
-        {stack.map((tech, index) => (
+        {stack.map((techs, index) => (
           <ul
             className="flex flex-col flex-wrap gap-6 md:flex-row lg:flex-col"
             key={index}
           >
-            {tech.map((t, techIndex) => (
-              <TechBadge tech={t} index={techIndex} key={techIndex} />
+            {techs.map((tech, techIndex) => (
+              <TechBadge tech={tech} index={techIndex} key={techIndex} />
             ))}
           </ul>
         ))}

@@ -1,7 +1,7 @@
-import { useTranslations } from "@/i18n/utils";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang } from '@/types';
 
-import { Button } from "../ui";
-import type { Lang } from "@/types";
+import { Button } from '../ui';
 
 export const Hero = ({ lang }: Lang) => {
   const t = useTranslations(lang);

@@ -1,11 +1,11 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
-import type { Lang, TStack } from "@/types";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TStack } from '@/types';
 
-import { About, Features, Stack, TabsComponent, Title } from "../projects";
-import { Links } from "../projects/Links";
-import { Tabs, TabsContent } from "../ui";
-import { useTranslations } from "@/i18n/utils";
+import { About, Features, Stack, TabsComponent, Title } from '../projects';
+import { Links } from '../projects/Links';
+import { Tabs, TabsContent } from '../ui';
 
 export const Portfolio = ({ lang }: Lang) => {
   const t = useTranslations(lang);
@@ -25,26 +25,26 @@ export const Portfolio = ({ lang }: Lang) => {
         name: `Tailwind`,
       },
     ],
-    []
+    [],
   );
   const features: string[] = useMemo(
     () => [
-      t("portfolio.features[0]"),
-      t("portfolio.features[1]"),
-      t("portfolio.features[2]"),
-      t("portfolio.features[3]"),
+      t(`portfolio.features[0]`),
+      t(`portfolio.features[1]`),
+      t(`portfolio.features[2]`),
+      t(`portfolio.features[3]`),
     ],
-    []
+    [],
   );
 
   const about: string[] = useMemo(
     () => [
-      t("portfolio.about[0]"),
-      t("portfolio.about[1]"),
-      t("portfolio.about[2]"),
-      t("portfolio.about[3]"),
+      t(`portfolio.about[0]`),
+      t(`portfolio.about[1]`),
+      t(`portfolio.about[2]`),
+      t(`portfolio.about[3]`),
     ],
-    []
+    [],
   );
 
   return (

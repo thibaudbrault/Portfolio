@@ -1,11 +1,11 @@
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
-import type { Lang, TStack } from "@/types";
+import { useTranslations } from '@/i18n/utils';
+import type { Lang, TStack } from '@/types';
 
-import { About, Features, Stack, TabsComponent, Title } from "../projects";
-import { Links } from "../projects/Links";
-import { Tabs, TabsContent } from "../ui";
-import { useTranslations } from "@/i18n/utils";
+import { About, Features, Stack, TabsComponent, Title } from '../projects';
+import { Links } from '../projects/Links';
+import { Tabs, TabsContent } from '../ui';
 
 export const UnitConverter = ({ lang }: Lang) => {
   const t = useTranslations(lang);
@@ -21,29 +21,29 @@ export const UnitConverter = ({ lang }: Lang) => {
         name: `Vitest`,
       },
     ],
-    []
+    [],
   );
   const features: string[] = useMemo(
     () => [
-      t("unit.features[0]"),
-      t("unit.features[1]"),
-      t("unit.features[2]"),
-      t("unit.features[3]"),
-      t("unit.features[4]"),
-      t("unit.features[5]"),
+      t(`unit.features[0]`),
+      t(`unit.features[1]`),
+      t(`unit.features[2]`),
+      t(`unit.features[3]`),
+      t(`unit.features[4]`),
+      t(`unit.features[5]`),
     ],
-    []
+    [],
   );
 
   const about: string[] = useMemo(
     () => [
-      t("unit.about[0]"),
-      t("unit.about[1]"),
-      t("unit.about[2]"),
-      t("unit.about[3]"),
-      t("unit.about[4]"),
+      t(`unit.about[0]`),
+      t(`unit.about[1]`),
+      t(`unit.about[2]`),
+      t(`unit.about[3]`),
+      t(`unit.about[4]`),
     ],
-    []
+    [],
   );
 
   return (
