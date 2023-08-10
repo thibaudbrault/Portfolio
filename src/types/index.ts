@@ -23,3 +23,7 @@ export type TImages = {
   src: string;
   alt: string;
 };
+
+export type Lang = {
+  lang: "fr" | "en";
+};

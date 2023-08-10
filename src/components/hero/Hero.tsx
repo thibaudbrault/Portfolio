@@ -1,8 +1,9 @@
-import { useTranslations } from '@/i18n/utils';
+import { useTranslations } from "@/i18n/utils";
 
-import { Button } from '../ui';
+import { Button } from "../ui";
+import type { Lang } from "@/types";
 
-export const Hero = ({ lang }) => {
+export const Hero = ({ lang }: Lang) => {
   const t = useTranslations(lang);
   return (
     <header className="flex h-screen flex-col items-center justify-center gap-12">

@@ -1,11 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import type { TStack } from '@/types';
+import type { Lang, TStack } from "@/types";
 
-import { Title } from '../projects';
-import { TechBadge } from '../ui';
+import { Title } from "../projects";
+import { TechBadge } from "../ui";
+import { useTranslations } from "@/i18n/utils";
 
-export const Bio = () => {
+export const Bio = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
+
   const stack: TStack[][] = useMemo(
     () => [
       [{ name: `HTML`, icon: `logos:html-5` }],
@@ -30,23 +33,16 @@ export const Bio = () => {
         { name: `GraphQL`, icon: `logos:graphql` },
       ],
     ],
-    [],
+    []
   );
 
   return (
     <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
-        <Title text="Bio" />
+        <Title text={t("section.title[2]")} />
         <div className="mx-auto w-5/6 text-center text-xl md:w-2/3">
-          <p>
-            Passionné par l'informatique et le design, c'est tout naturellement
-            que je me suis tourné vers la création de sites.
-          </p>
-          <p>
-            Adepte du clean code, je suis vigilant à l'accessibilité, au
-            responsive design, à l'amélioration des performances et au respect
-            des bonnes pratiques SEO.
-          </p>
+          <p>{t("bio.text[0]")}</p>
+          <p>{t("bio.text[1]")}</p>
         </div>
       </div>
       <div className="mx-auto flex w-11/12 flex-col flex-wrap justify-center gap-6 lg:flex lg:w-full lg:flex-row">

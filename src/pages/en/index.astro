@@ -1,12 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter, Title } from '@/components';
-import { getLangFromUrl } from '@/i18n/utils';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
 const title = "Thibaud Brault"
 const description = "Thibaud Brault, front-end developer"
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout {title} {description}>
@@ -16,7 +17,7 @@ const lang = getLangFromUrl(Astro.url);
 		<Experiences client:visible {lang} />
 		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
 		<section id="projects">
-			<Title className="mb-9 text-center" text='Projets' />
+			<Title className="mb-9 text-center" text={t("section.title[1]")} />
 			<Pokeref client:visible {lang} />
 			<UnitConverter client:visible {lang} />
 			<Portfolio client:visible {lang} />

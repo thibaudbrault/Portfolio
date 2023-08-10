@@ -1,7 +1,7 @@
-import { Icon } from '@iconify/react';
-import { useMemo } from 'react';
+import { Icon } from "@iconify/react";
+import { useMemo } from "react";
 
-import type { TStack } from '@/types';
+import type { Lang, TStack } from "@/types";
 
 import {
   About,
@@ -10,11 +10,14 @@ import {
   Stack,
   TabsComponent,
   Title,
-} from '../projects';
-import { Links } from '../projects/Links';
-import { Tabs, TabsContent } from '../ui';
+} from "../projects";
+import { Links } from "../projects/Links";
+import { Tabs, TabsContent } from "../ui";
+import { useTranslations } from "@/i18n/utils";
 
-export const Pokeref = () => {
+export const Pokeref = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
+
   const tech: TStack[] = useMemo(
     () => [
       {
@@ -38,34 +41,34 @@ export const Pokeref = () => {
         name: `Planetscale`,
       },
     ],
-    [],
+    []
   );
 
   const features: string[] = useMemo(
     () => [
-      `Filtrage et recherche`,
-      `Données dynamiques`,
-      `Authentification`,
-      `Sauvegarde des favoris`,
-      `EsLint, Prettier, Stylelint, Lint-Staged`,
-      `CI / CD avec Github Actions et Netlify`,
-      `PWA`,
-      `Changement de thème`,
-      `et bien plus`,
+      t("pokeref.features[0]"),
+      t("pokeref.features[1]"),
+      t("pokeref.features[2]"),
+      t("pokeref.features[3]"),
+      t("pokeref.features[4]"),
+      t("pokeref.features[5]"),
+      t("pokeref.features[6]"),
+      t("pokeref.features[7]"),
+      t("pokeref.features[8]"),
     ],
-    [],
+    []
   );
 
   const about: string[] = useMemo(
     () => [
-      `PokéRef est une encyclopédie Pokémon qui utilise les données de PokéAPI et Smogon`,
-      `Permet de retrouver toutes les informations sur les Pokémon, les attaques, les talents, les lieux, ...`,
-      `Permet de créer un compte afin de pouvoir mettre en favoris des Pokémon`,
-      `Ce projet est passé par beaucoup d'étapes et m'a permis d'apprendre plusieurs frameworks / langages tel que Typescript, Next, React-Query et l'utilisation d'API, Scss modules, ...`,
-      `Il m'a aussi permis d'apprendre à structurer une application ainsi que la modifier quand le projet s'agrandit, à mettre en place une CI/CD ainsi que du linting afin d'avoir un code propre et un site fonctionnel en permanence et à résoudre des problèmes créer lors de l'ajout de features, de refacto ou de migrations`,
-      `Il m'a aussi permis de faire du backend avec l'ajout de l'authentification par email / mot de passe ou avec des providers tel que Google ou encore Github, la sauvegarde des utilisateurs dans une base de donnée en utilisant Prisma et la modification de ces données`,
+      t("pokeref.about[0]"),
+      t("pokeref.about[1]"),
+      t("pokeref.about[2]"),
+      t("pokeref.about[3]"),
+      t("pokeref.about[4]"),
+      t("pokeref.about[5]"),
     ],
-    [],
+    []
   );
 
   const images = useMemo(
@@ -91,7 +94,7 @@ export const Pokeref = () => {
         alt: `PokéRef - Pokémon (types et attaques)`,
       },
     ],
-    [],
+    []
   );
 
   return (

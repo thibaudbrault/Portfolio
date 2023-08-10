@@ -1,12 +1,15 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
-import type { TStack } from '@/types';
+import type { Lang, TStack } from "@/types";
 
-import { About, Features, Stack, TabsComponent, Title } from '../projects';
-import { Links } from '../projects/Links';
-import { Tabs, TabsContent } from '../ui';
+import { About, Features, Stack, TabsComponent, Title } from "../projects";
+import { Links } from "../projects/Links";
+import { Tabs, TabsContent } from "../ui";
+import { useTranslations } from "@/i18n/utils";
 
-export const Portfolio = () => {
+export const Portfolio = ({ lang }: Lang) => {
+  const t = useTranslations(lang);
+
   const tech: TStack[] = useMemo(
     () => [
       {
@@ -22,25 +25,26 @@ export const Portfolio = () => {
         name: `Tailwind`,
       },
     ],
-    [],
+    []
   );
   const features: string[] = useMemo(
     () => [
-      `Présentation de mes projets`,
-      `Carousel d'images`,
-      `Création d'un blog avec Mdx`,
+      t("portfolio.features[0]"),
+      t("portfolio.features[1]"),
+      t("portfolio.features[2]"),
+      t("portfolio.features[3]"),
     ],
-    [],
+    []
   );
 
   const about: string[] = useMemo(
     () => [
-      `Ce site me permet de présenter mes meilleurs projets.`,
-      `Ce portfolio a un design volontairement minimaliste et épuré pour que les visiteurs puissent se focaliser sur les informations présentes.`,
-      `J'ai utilisé Astro qui permet de créer des sites statiques performants ce qui est utile pour mon portfolio.`,
-      `Crée avec en objectif principal la réusabilité des composants React afin de pouvoir facilement et rapidement ajouter des nouvelles informations.`,
+      t("portfolio.about[0]"),
+      t("portfolio.about[1]"),
+      t("portfolio.about[2]"),
+      t("portfolio.about[3]"),
     ],
-    [],
+    []
   );
 
   return (
