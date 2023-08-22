@@ -85,11 +85,26 @@ export const Pokeref = ({ lang }: Lang) => {
       },
       {
         id: 2,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1692718908/pokeref/Pok%C3%A9Ref_-_Types_tb7tea.png`,
+        alt: `PokéRef - Types`,
+      },
+      {
+        id: 3,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1692719049/pokeref/Pok%C3%A9Ref_-_Locations_k1nj6c.png`,
+        alt: `PokéRef - Locations`,
+      },
+      {
+        id: 4,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload//c_thumb,w_2543,h_1297,g_auto/v1692719113/pokeref/Pok%C3%A9Ref_-_Login_ywlt02.png`,
+        alt: `PokéRef - Login`,
+      },
+      {
+        id: 5,
         src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690186955/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon_hzpsxt.png`,
         alt: `PokéRef - Pokémon`,
       },
       {
-        id: 3,
+        id: 6,
         src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690189257/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon2_ydngon.png`,
         alt: `PokéRef - Pokémon (types et attaques)`,
       },
