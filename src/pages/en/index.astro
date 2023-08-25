@@ -25,6 +25,6 @@ const t = useTranslations(lang);
 		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<Bio client:visible {lang} />
 		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
-		<Articles client:visible />
+		<Articles client:visible {lang} />
 	</div>
 </Layout>
