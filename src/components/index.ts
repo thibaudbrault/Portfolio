@@ -2,6 +2,7 @@ export * from './articles';
 export * from './bio';
 export * from './experiences';
 export * from './hero';
+export * from './jobTrack';
 export * from './pokeref';
 export * from './portfolio';
 export * from './projects';
