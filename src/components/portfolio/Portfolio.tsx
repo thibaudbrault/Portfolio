@@ -32,7 +32,6 @@ export const Portfolio = ({ lang }: Lang) => {
       t(`portfolio.features[0]`),
       t(`portfolio.features[1]`),
       t(`portfolio.features[2]`),
-      t(`portfolio.features[3]`),
     ],
     [],
   );
@@ -48,10 +47,7 @@ export const Portfolio = ({ lang }: Lang) => {
   );
 
   return (
-    <Tabs
-      defaultValue="features"
-      className="mb-24 flex flex-col items-center gap-12"
-    >
+    <Tabs defaultValue="features" className="flex flex-col items-center gap-12">
       <div className="flex flex-col gap-4">
         <Title small text="Portfolio" />
         <TabsComponent />

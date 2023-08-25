@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter, Title } from '@/components';
+import { Hero, Separator, Experiences, Pokeref, Portfolio, Bio, UnitConverter, Title, Articles } from '@/components';
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
 const title = "Thibaud Brault"
@@ -10,19 +10,21 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout {title} {description}>
+<Layout {lang} {title} {description}>
 	<div class="mx-auto max-w-7xl">
 		<Hero {lang} />
-		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
+		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<Experiences client:visible {lang} />
-		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
+		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<section id="projects">
-			<Title className="mb-9 text-center" text={t("section.title[1]")} />
+			<Title className="mb-12 text-center" text={t("section.title[1]")} />
 			<Pokeref client:visible {lang} />
 			<UnitConverter client:visible {lang} />
 			<Portfolio client:visible {lang} />
 		</section>
-		<Separator className='mx-auto mb-24 w-2/3 bg-stone-200' />
+		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<Bio client:visible {lang} />
+		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
+		<Articles client:visible />
 	</div>
 </Layout>
