@@ -64,7 +64,7 @@ export const Experiences = ({ lang }: Lang) => {
   );
 
   return (
-    <section id="experiences" className="mb-24 flex flex-col gap-12">
+    <section id="experiences" className="flex flex-col gap-12">
       <Title text={t(`section.title[0]`)} />
       <ul className="mx-auto flex w-5/6 flex-col items-start gap-3 text-start">
         {experiences.map((experience, index) => (

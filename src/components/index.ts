@@ -1,3 +1,4 @@
+export * from './articles';
 export * from './bio';
 export * from './experiences';
 export * from './hero';
