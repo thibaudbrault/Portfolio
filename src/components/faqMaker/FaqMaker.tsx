@@ -14,14 +14,18 @@ import {
 import { Links } from '../projects/Links';
 import { Tabs, TabsContent } from '../ui';
 
-export const JobTrack = ({ lang }: Lang) => {
+export const FaqMaker = ({ lang }: Lang) => {
   const t = useTranslations(lang);
 
   const tech: TStack[] = useMemo(
     () => [
       {
-        icon: `logos:vitejs`,
-        name: `Vite`,
+        icon: `logos:react`,
+        name: `React`,
+      },
+      {
+        icon: `logos:nextjs-icon`,
+        name: `Next`,
       },
       {
         icon: `logos:typescript-icon`,
@@ -32,8 +36,16 @@ export const JobTrack = ({ lang }: Lang) => {
         name: `Tailwind`,
       },
       {
-        icon: `logos:supabase-icon`,
-        name: `Supabase`,
+        icon: `vscode-icons:file-type-prisma`,
+        name: `Prisma`,
+      },
+      {
+        icon: `simple-icons:railway`,
+        name: `Railway`,
+      },
+      {
+        icon: `logos:stripe`,
+        name: `Stripe`,
       },
     ],
     [],
@@ -41,32 +53,39 @@ export const JobTrack = ({ lang }: Lang) => {
 
   const features: string[] = useMemo(
     () => [
-      t(`dashboard.features[0]`),
-      t(`dashboard.features[1]`),
-      t(`dashboard.features[2]`),
-      t(`dashboard.features[3]`),
+      t(`faqmaker.features[0]`),
+      t(`faqmaker.features[1]`),
+      t(`faqmaker.features[2]`),
+      t(`faqmaker.features[3]`),
+      t(`faqmaker.features[4]`),
+      t(`faqmaker.features[5]`),
+      t(`faqmaker.features[6]`),
+      t(`faqmaker.features[7]`),
+      t(`faqmaker.features[8]`),
     ],
     [],
   );
 
-  const about: string[] = useMemo(() => [t(`dashboard.about[0]`)], []);
+  const about: string[] = useMemo(
+    () => [
+      t(`faqmaker.about[0]`),
+      t(`faqmaker.about[1]`),
+      t(`faqmaker.about[2]`),
+    ],
+    [],
+  );
 
   const images = useMemo(
     () => [
       {
         id: 0,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1692979413/jobTrack/JobTrack_-_Home_quc6nk.png`,
-        alt: `JobTrack - Home`,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1696151902/faqmaker/FAQMaker_-_Landing_-_Home_e2o4sk.png`,
+        alt: `FAQMaker - Landing - Home`,
       },
       {
         id: 1,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1692979505/jobTrack/JobTrack_-_List_bz9fdf.png`,
-        alt: `JobTrack - List`,
-      },
-      {
-        id: 2,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1692979438/jobTrack/JobTrack_-_Form_ln1g33.png`,
-        alt: `JobTrack - Form`,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1696151997/faqmaker/FAQMaker_-_Landing_-_Pricing_q1iegt.png`,
+        alt: `FAQMaker - Landing - Pricing`,
       },
     ],
     [],
@@ -78,11 +97,16 @@ export const JobTrack = ({ lang }: Lang) => {
       className="mb-24 flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-4">
-        <Title small text="Jobs Tracker" />
+        <div className="mx-auto flex items-center gap-3">
+          <Title small text="FAQMaker" />
+        </div>
         <TabsComponent images />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <Links github="https://github.com/thibaudbrault/WorkDashboard" />
+        <Links
+          github="https://github.com/thibaudbrault/FAQMaker"
+          live="https://faqmaker.co"
+        />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} />
           <div className="md:w-[500px]  lg:w-[700px]">

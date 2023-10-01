@@ -21,6 +21,10 @@ export const Pokeref = ({ lang }: Lang) => {
   const tech: TStack[] = useMemo(
     () => [
       {
+        icon: `logos:react`,
+        name: `React`,
+      },
+      {
         icon: `logos:nextjs-icon`,
         name: `Next`,
       },
