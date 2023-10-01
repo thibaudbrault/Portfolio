@@ -49,17 +49,7 @@ export const JobTrack = ({ lang }: Lang) => {
     [],
   );
 
-  const about: string[] = useMemo(
-    () => [
-      t(`dashboard.about[0]`),
-      t(`dashboard.about[1]`),
-      t(`dashboard.about[2]`),
-      t(`dashboard.about[3]`),
-      t(`dashboard.about[4]`),
-      t(`dashboard.about[5]`),
-    ],
-    [],
-  );
+  const about: string[] = useMemo(() => [t(`dashboard.about[0]`)], []);
 
   const images = useMemo(
     () => [
