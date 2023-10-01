@@ -30,6 +30,7 @@ export const Bio = ({ lang }: Lang) => {
       [
         { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
         { name: `MySQL`, icon: `logos:mysql-icon` },
+        { name: `PostgreSQL`, icon: `logos:postgresql` },
         { name: `GraphQL`, icon: `logos:graphql` },
       ],
     ],
