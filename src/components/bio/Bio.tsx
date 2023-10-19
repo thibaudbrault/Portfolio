@@ -21,6 +21,7 @@ export const Bio = ({ lang }: Lang) => {
       [
         { name: `Javascript`, icon: `logos:javascript` },
         { name: `Typescript`, icon: `logos:typescript-icon` },
+        { name: `Zod`, icon: `logos:zod` },
       ],
       [
         { name: `React`, icon: `logos:react` },
@@ -33,6 +34,13 @@ export const Bio = ({ lang }: Lang) => {
         { name: `PostgreSQL`, icon: `logos:postgresql` },
         { name: `GraphQL`, icon: `logos:graphql` },
       ],
+      [
+        { name: `Git`, icon: `mdi:git` },
+        { name: `GitHub Actions`, icon: `logos:github-actions` },
+        { name: `CircleCI`, icon: `gg:circleci` },
+        { name: `Railway`, icon: `simple-icons:railway` },
+        { name: `Planetscale`, icon: `simple-icons:planetscale` },
+      ],
     ],
     [],
   );
@@ -41,7 +49,7 @@ export const Bio = ({ lang }: Lang) => {
     <section id="bio" className="flex flex-col gap-12">
       <div className="flex flex-col gap-3">
         <Title text={t(`section.title[2]`)} />
-        <div className="mx-auto w-5/6 text-center text-xl md:w-2/3">
+        <div className="mx-auto w-5/6 text-center text-xl">
           <p>{t(`bio.text[0]`)}</p>
           <p>{t(`bio.text[1]`)}</p>
         </div>

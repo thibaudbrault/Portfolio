@@ -19,7 +19,7 @@ export const Stack = ({ stack, text }: Props) => {
       </ul>
       {hiddenStack.length > 0 && (
         <details className="w-full">
-          <summary className="mb-6 cursor-pointer border-stone-200 bg-transparent text-center font-semibold text-stone-200 marker:content-['']">
+          <summary className="mb-6 cursor-pointer bg-transparent text-center font-semibold text-stone-200 marker:content-['']">
             {text}
           </summary>
           <ul className="flex flex-col items-center gap-6">
