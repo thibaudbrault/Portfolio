@@ -134,7 +134,7 @@ export const Pokeref = ({ lang }: Lang) => {
           live="https://pokeref.app"
         />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
-          <Stack stack={tech} />
+          <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">
             <TabsContent value="pres">
               <Carousel images={images} />

@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import { useMemo } from 'react';
 
 import { useTranslations } from '@/i18n/utils';
@@ -42,6 +43,10 @@ export const FaqMaker = ({ lang }: Lang) => {
       {
         icon: `simple-icons:railway`,
         name: `Railway`,
+      },
+      {
+        icon: `logos:zod`,
+        name: `Zod`,
       },
       {
         icon: `logos:stripe`,
@@ -99,6 +104,10 @@ export const FaqMaker = ({ lang }: Lang) => {
       <div className="flex flex-col gap-4">
         <div className="mx-auto flex items-center gap-3">
           <Title small text="FAQMaker" />
+          <Icon
+            className="text-2xl md:text-4xl"
+            icon="streamline:interface-help-question-circle-circle-faq-frame-help-info-mark-more-query-question"
+          />
         </div>
         <TabsComponent images />
       </div>
@@ -108,7 +117,7 @@ export const FaqMaker = ({ lang }: Lang) => {
           live="https://faqmaker.co"
         />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
-          <Stack stack={tech} />
+          <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">
             <TabsContent value="pres">
               <Carousel images={images} />

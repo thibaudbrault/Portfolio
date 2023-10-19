@@ -55,6 +55,10 @@ export const Experiences = ({ lang }: Lang) => {
                 icon: `logos:graphql`,
                 name: `Graphql`,
               },
+              {
+                icon: `gg:circleci`,
+                name: `CircleCI`,
+              },
             ],
           },
         ],

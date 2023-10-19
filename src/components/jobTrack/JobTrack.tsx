@@ -84,7 +84,7 @@ export const JobTrack = ({ lang }: Lang) => {
       <div className="flex flex-col items-center gap-6">
         <Links github="https://github.com/thibaudbrault/WorkDashboard" />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
-          <Stack stack={tech} />
+          <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">
             <TabsContent value="pres">
               <Carousel images={images} />
