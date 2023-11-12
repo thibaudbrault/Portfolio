@@ -1,3 +1,5 @@
+import { Icon } from '@iconify/react';
+
 import type { TStack } from '@/types';
 
 import { TechBadge } from '../ui';
@@ -18,9 +20,14 @@ export const Stack = ({ stack, text }: Props) => {
         ))}
       </ul>
       {hiddenStack.length > 0 && (
-        <details className="w-full">
-          <summary className="mb-6 cursor-pointer bg-transparent text-center font-semibold text-stone-200 marker:content-['']">
-            {text}
+        <details className="w-full [&_.detailsIcon]:open:-rotate-180">
+          <summary className="mb-6 cursor-pointer list-none bg-transparent text-center font-semibold text-stone-200">
+            <div className="flex items-center justify-center rounded-md border-2 border-gray-700">
+              <Icon
+                className="detailsIcon h-8 w-8"
+                icon="ic:outline-keyboard-arrow-down"
+              />
+            </div>
           </summary>
           <ul className="flex flex-col items-center gap-6">
             {hiddenStack.map((tech, index) => (
