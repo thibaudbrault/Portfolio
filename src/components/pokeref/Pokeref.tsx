@@ -41,8 +41,8 @@ export const Pokeref = ({ lang }: Lang) => {
         name: `Prisma`,
       },
       {
-        icon: `simple-icons:planetscale`,
-        name: `Planetscale`,
+        icon: `simple-icons:railway`,
+        name: `Railway`,
       },
     ],
     [],
