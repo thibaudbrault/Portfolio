@@ -124,7 +124,10 @@ export const Pokeref = ({ lang }: Lang) => {
       <div className="flex flex-col gap-4">
         <div className="mx-auto flex items-center gap-3">
           <Title small text="PokéRef" />
-          <Icon className="text-2xl md:text-4xl" icon="gg:pokemon" />
+          <Icon
+            className="text-2xl text-red-700 md:text-4xl"
+            icon="gg:pokemon"
+          />
         </div>
         <TabsComponent images />
       </div>

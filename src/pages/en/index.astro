@@ -1,5 +1,5 @@
 ---
-import { Articles, Bio, Experiences, FaqMaker, Hero, JobTrack, Pokeref, Portfolio, Separator, Title } from '@/components';
+import { Bio, Experiences, FaqMaker, Hero, Pokeref, Portfolio, Separator, SiteStats, Title } from '@/components';
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import Layout from '@/layouts/Layout.astro';
 
@@ -18,14 +18,12 @@ const t = useTranslations(lang);
 		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<section id="projects">
 			<Title className="mb-12 text-center" text={t("section.title[1]")} />
+			<SiteStats client:visible {lang} />
 			<FaqMaker client:visible {lang} />
 			<Pokeref client:visible {lang} />
-			<JobTrack client:visible {lang} />
 			<Portfolio client:visible {lang} />
 		</section>
 		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
 		<Bio client:visible {lang} />
-		<Separator className='mx-auto my-24 w-2/3 bg-stone-200' />
-		<Articles client:visible {lang} />
 	</div>
 </Layout>

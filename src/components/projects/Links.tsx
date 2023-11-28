@@ -12,7 +12,7 @@ export const Links = ({ github, live }: Props) => {
         <li>
           <Button variant="primary" size="medium" asChild>
             <a href={github} target="_blank" rel="noopener noreferrer">
-              Github
+              GitHub
             </a>
           </Button>
         </li>

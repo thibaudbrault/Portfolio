@@ -105,7 +105,7 @@ export const FaqMaker = ({ lang }: Lang) => {
         <div className="mx-auto flex items-center gap-3">
           <Title small text="FAQMaker" />
           <Icon
-            className="text-2xl md:text-4xl"
+            className="text-2xl text-teal-700 md:text-4xl"
             icon="streamline:interface-help-question-circle-circle-faq-frame-help-info-mark-more-query-question"
           />
         </div>
