@@ -8,11 +8,11 @@ import {
   About,
   Carousel,
   Features,
+  Links,
   Stack,
   TabsComponent,
   Title,
 } from '../projects';
-import { Links } from '../projects/Links';
 import { Tabs, TabsContent } from '../ui';
 
 export const Pokeref = ({ lang }: Lang) => {

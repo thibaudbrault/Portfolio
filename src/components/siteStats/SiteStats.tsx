@@ -4,8 +4,7 @@ import { useMemo } from 'react';
 import { useTranslations } from '@/i18n/utils';
 import type { Lang, TStack } from '@/types';
 
-import { Stack, Title } from '../projects';
-import { Links } from '../projects/Links';
+import { Links, Stack, Title } from '../projects';
 
 export const SiteStats = ({ lang }: Lang) => {
   const t = useTranslations(lang);
