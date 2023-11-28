@@ -31,7 +31,7 @@ export const Bio = ({ lang }: Lang) => {
           <p>{t(`bio.text[1]`)}</p>
         </div>
       </div>
-      <div className="flex w-11/12 flex-wrap justify-center gap-6">
+      <div className="flex w-11/12 flex-wrap mx-auto justify-center gap-6">
         {stack.map((tech, index) => (
           <TechBadge tech={tech} index={index} key={index} />
         ))}
