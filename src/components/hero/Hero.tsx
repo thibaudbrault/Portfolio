@@ -23,7 +23,7 @@ export const Hero = ({ lang }: Lang) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              GitHub
             </a>
           </Button>
         </li>

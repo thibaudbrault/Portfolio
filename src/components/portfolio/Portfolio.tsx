@@ -3,8 +3,14 @@ import { useMemo } from 'react';
 import { useTranslations } from '@/i18n/utils';
 import type { Lang, TStack } from '@/types';
 
-import { About, Features, Stack, TabsComponent, Title } from '../projects';
-import { Links } from '../projects/Links';
+import {
+  About,
+  Features,
+  Links,
+  Stack,
+  TabsComponent,
+  Title,
+} from '../projects';
 import { Tabs, TabsContent } from '../ui';
 
 export const Portfolio = ({ lang }: Lang) => {

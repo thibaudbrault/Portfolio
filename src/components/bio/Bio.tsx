@@ -9,38 +9,15 @@ import { TechBadge } from '../ui';
 export const Bio = ({ lang }: Lang) => {
   const t = useTranslations(lang);
 
-  const stack: TStack[][] = useMemo(
+  const stack: TStack[] = useMemo(
     () => [
-      [{ name: `HTML`, icon: `logos:html-5` }],
-      [
-        { name: `CSS`, icon: `logos:css-3` },
-        { name: `Sass`, icon: `logos:sass` },
-        { name: `Styled-Components`, icon: `vscode-icons:file-type-styled` },
-        { name: `Tailwind`, icon: `logos:tailwindcss-icon` },
-      ],
-      [
-        { name: `Javascript`, icon: `logos:javascript` },
-        { name: `Typescript`, icon: `logos:typescript-icon` },
-        { name: `Zod`, icon: `logos:zod` },
-      ],
-      [
-        { name: `React`, icon: `logos:react` },
-        { name: `Next`, icon: `logos:nextjs-icon` },
-        { name: `Astro`, icon: `vscode-icons:file-type-astro` },
-      ],
-      [
-        { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
-        { name: `MySQL`, icon: `logos:mysql-icon` },
-        { name: `PostgreSQL`, icon: `logos:postgresql` },
-        { name: `GraphQL`, icon: `logos:graphql` },
-      ],
-      [
-        { name: `Git`, icon: `mdi:git` },
-        { name: `GitHub Actions`, icon: `logos:github-actions` },
-        { name: `CircleCI`, icon: `gg:circleci` },
-        { name: `Railway`, icon: `simple-icons:railway` },
-        { name: `Planetscale`, icon: `simple-icons:planetscale` },
-      ],
+      { name: `React`, icon: `logos:react` },
+      { name: `Next`, icon: `logos:nextjs-icon` },
+      { name: `Typescript`, icon: `logos:typescript-icon` },
+      { name: `Sass`, icon: `logos:sass` },
+      { name: `Tailwind`, icon: `logos:tailwindcss-icon` },
+      { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
+      { name: `Zod`, icon: `logos:zod` },
     ],
     [],
   );
@@ -54,16 +31,9 @@ export const Bio = ({ lang }: Lang) => {
           <p>{t(`bio.text[1]`)}</p>
         </div>
       </div>
-      <div className="mx-auto flex w-11/12 flex-col flex-wrap justify-center gap-6 lg:flex lg:w-full lg:flex-row">
-        {stack.map((techs, index) => (
-          <ul
-            className="flex flex-col flex-wrap gap-6 md:flex-row lg:flex-col"
-            key={index}
-          >
-            {techs.map((tech, techIndex) => (
-              <TechBadge tech={tech} index={techIndex} key={techIndex} />
-            ))}
-          </ul>
+      <div className="flex w-11/12 flex-wrap mx-auto justify-center gap-6">
+        {stack.map((tech, index) => (
+          <TechBadge tech={tech} index={index} key={index} />
         ))}
       </div>
     </section>
