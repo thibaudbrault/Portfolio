@@ -17,7 +17,7 @@ export const Bio = ({ lang }: Lang) => {
       { name: `Sass`, icon: `logos:sass` },
       { name: `Tailwind`, icon: `logos:tailwindcss-icon` },
       { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
-      { name: `Zod`, icon: `logos:zod` },
+      { name: `Playwright`, icon: `logos:playwright` }
     ],
     [],
   );

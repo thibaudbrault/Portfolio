@@ -37,6 +37,10 @@ export const FaqMaker = ({ lang }: Lang) => {
         name: `Tailwind`,
       },
       {
+        icon: `logos:playwright`,
+        name: `Playwright`,
+      },
+      {
         icon: `vscode-icons:file-type-prisma`,
         name: `Prisma`,
       },
