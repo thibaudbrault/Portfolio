@@ -20,10 +20,6 @@ export const SiteStats = ({ lang }: Lang) => {
         name: `Nuxt`,
       },
       {
-        icon: `logos:pinia`,
-        name: `Pinia`,
-      },
-      {
         icon: `logos:typescript-icon`,
         name: `Typescript`,
       },

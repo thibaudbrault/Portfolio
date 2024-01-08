@@ -35,15 +35,7 @@ export const Pokeref = ({ lang }: Lang) => {
       {
         icon: `logos:sass`,
         name: `Scss`,
-      },
-      {
-        icon: `vscode-icons:file-type-prisma`,
-        name: `Prisma`,
-      },
-      {
-        icon: `simple-icons:railway`,
-        name: `Railway`,
-      },
+      }
     ],
     [],
   );
@@ -99,16 +91,11 @@ export const Pokeref = ({ lang }: Lang) => {
       },
       {
         id: 4,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload//c_thumb,w_2543,h_1297,g_auto/v1692719113/pokeref/Pok%C3%A9Ref_-_Login_ywlt02.png`,
-        alt: `PokéRef - Login`,
-      },
-      {
-        id: 5,
         src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690186955/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon_hzpsxt.png`,
         alt: `PokéRef - Pokémon`,
       },
       {
-        id: 6,
+        id: 5,
         src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1690189257/pokeref/Pok%C3%A9Ref_-_Pok%C3%A9mon2_ydngon.png`,
         alt: `PokéRef - Pokémon (types et attaques)`,
       },
