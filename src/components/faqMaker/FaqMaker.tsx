@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import { useMemo } from 'react';
 
 import { useTranslations } from '@/i18n/utils';
@@ -106,14 +105,8 @@ export const FaqMaker = ({ lang }: Lang) => {
       className="mb-24 flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-4">
-        <div className="mx-auto flex items-center gap-3">
-          <Title small text="FAQMaker" />
-          <Icon
-            className="text-2xl text-teal-700 md:text-4xl"
-            icon="streamline:interface-help-question-circle-circle-faq-frame-help-info-mark-more-query-question"
-          />
-        </div>
-        <TabsComponent images />
+        <Title small text="SaaS" />
+        <TabsComponent images lang={lang} />
       </div>
       <div className="flex flex-col items-center gap-6">
         <Links
