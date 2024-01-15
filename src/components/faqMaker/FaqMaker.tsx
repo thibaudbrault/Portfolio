@@ -101,12 +101,12 @@ export const FaqMaker = ({ lang }: Lang) => {
 
   return (
     <Tabs
-      defaultValue="pres"
+      defaultValue="features"
       className="mb-24 flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-4">
         <Title small text="SaaS" />
-        <TabsComponent images lang={lang} />
+        <TabsComponent lang={lang} />
       </div>
       <div className="flex flex-col items-center gap-6">
         <Links
@@ -116,9 +116,9 @@ export const FaqMaker = ({ lang }: Lang) => {
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">
-            <TabsContent value="pres">
+            {/* <TabsContent value="pres">
               <Carousel images={images} />
-            </TabsContent>
+            </TabsContent> */}
             <TabsContent value="features">
               <Features features={features} />
             </TabsContent>
