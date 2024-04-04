@@ -1,5 +1,5 @@
 ---
-import { Bio, Experiences, FaqMaker, Landing, Hero, Pokeref, Portfolio, Separator, Title } from '@/components';
+import { Bio, Experiences, FaqMaker, Landing, GameMusic, Hero, Pokeref, Portfolio, Separator, Title } from '@/components';
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import Layout from '@/layouts/Layout.astro';
 
@@ -23,6 +23,7 @@ const t = useTranslations(lang);
 				<FaqMaker client:visible {lang} />
 				<Landing client:visible {lang} />
 			</div>
+			<GameMusic client:visible {lang} />
 			<Pokeref client:visible {lang} />
 			<Portfolio client:visible {lang} />
 		</section>
