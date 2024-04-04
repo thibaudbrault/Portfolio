@@ -49,8 +49,6 @@ export const Pokeref = ({ lang }: Lang) => {
       t(`pokeref.features[4]`),
       t(`pokeref.features[5]`),
       t(`pokeref.features[6]`),
-      t(`pokeref.features[7]`),
-      t(`pokeref.features[8]`),
     ],
     [],
   );
@@ -108,13 +106,7 @@ export const Pokeref = ({ lang }: Lang) => {
       className="mb-24 flex flex-col items-center gap-12"
     >
       <div className="flex flex-col gap-4">
-        <div className="mx-auto flex items-center gap-3">
-          <Title small text="PokéRef" />
-          <Icon
-            className="text-2xl text-red-700 md:text-4xl"
-            icon="gg:pokemon"
-          />
-        </div>
+        <Title small text="PokéRef" />
         <TabsComponent images lang={lang} />
       </div>
       <div className="flex flex-col items-center gap-6">
