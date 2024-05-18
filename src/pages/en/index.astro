@@ -19,7 +19,7 @@ const t = useTranslations(lang);
 		<section id="projects">
 			<Title className="mb-12 text-center" text={t("section.title[1]")} />
 			<div class="relative mb-24 border-4 border-yellow-600 rounded-md pt-16 pb-10">
-				<p class="absolute font-bold overflow-hidden bg-yellow-600 top-0 left-0 font-bold text-xl py-2 right-0 text-center">FAQMaker</p>
+				<p class="absolute overflow-hidden bg-yellow-600 top-0 left-0 font-bold text-xl py-2 right-0 text-center">FAQMaker</p>
 				<FaqMaker client:visible {lang} />
 				<Landing client:visible {lang} />
 			</div>
