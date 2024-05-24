@@ -76,10 +76,7 @@ export const GameMusic = ({ lang }: Lang) => {
         <TabsComponent lang={lang} />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <Links
-          github="https://github.com/thibaudbrault/GameMusic"
-          live=""
-        />
+        <Links github="https://github.com/thibaudbrault/GameMusic" live="" />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">

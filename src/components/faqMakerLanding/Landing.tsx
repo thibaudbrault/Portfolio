@@ -74,10 +74,7 @@ export const Landing = ({ lang }: Lang) => {
   );
 
   return (
-    <Tabs
-      defaultValue="pres"
-      className="flex flex-col items-center gap-12"
-    >
+    <Tabs defaultValue="pres" className="flex flex-col items-center gap-12">
       <div className="flex flex-col gap-4">
         <Title small text="Landing page" />
         <TabsComponent images lang={lang} />

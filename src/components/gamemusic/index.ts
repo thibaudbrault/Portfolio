@@ -1,1 +1,1 @@
-export * from './GameMusic'
+export * from './GameMusic';

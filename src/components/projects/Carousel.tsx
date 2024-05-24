@@ -78,7 +78,7 @@ export const Carousel = ({ images }: Props) => {
           <button
             key={i}
             className={clsx(
-              `h-2 w-2 rounded-full bg-stone-200 md:h-3 md:w-3`,
+              `size-2 rounded-full bg-stone-200 md:size-3`,
               image.id === currentIndex && `bg-yellow-600`,
             )}
             onClick={() => setCurrentIndex(i)}
