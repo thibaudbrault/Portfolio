@@ -11,7 +11,6 @@ export const ui = {
     'nav.projects': `Projets`,
     'nav.bio': `Bio`,
     'nav.blog': `Blog`,
-    'nav.articles': `Articles`,
     'hero.title': `Thibaud Brault`,
     'hero.subtitle': `Développeur front-end nantais`,
     'section.title[0]': `Expériences`,
