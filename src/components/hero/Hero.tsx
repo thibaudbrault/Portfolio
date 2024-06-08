@@ -15,7 +15,7 @@ export const Hero = ({ lang }: Lang) => {
           {t(`hero.subtitle`)}
         </h3>
       </div>
-      <ul className="flex w-5/6 justify-between md:w-1/2">
+      <ul className="flex w-5/6 justify-center gap-8 md:w-1/2">
         <li>
           <Button variant="primary" size="medium" asChild>
             <a

@@ -111,7 +111,7 @@ export const FaqMaker = ({ lang }: Lang) => {
       <div className="flex flex-col items-center gap-6">
         <Links
           github="https://github.com/thibaudbrault/FAQMaker"
-          live="https://faqmaker.co"
+          live="https://app.faqmaker.co"
         />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} text={t(`summary.more`)} />

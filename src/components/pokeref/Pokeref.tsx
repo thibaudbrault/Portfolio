@@ -35,7 +35,7 @@ export const Pokeref = ({ lang }: Lang) => {
       {
         icon: `logos:sass`,
         name: `Scss`,
-      }
+      },
     ],
     [],
   );
@@ -59,7 +59,6 @@ export const Pokeref = ({ lang }: Lang) => {
       t(`pokeref.about[1]`),
       t(`pokeref.about[2]`),
       t(`pokeref.about[3]`),
-      t(`pokeref.about[4]`),
     ],
     [],
   );

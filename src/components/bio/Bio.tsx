@@ -12,12 +12,16 @@ export const Bio = ({ lang }: Lang) => {
   const stack: TStack[] = useMemo(
     () => [
       { name: `React`, icon: `logos:react` },
+      { name: `Svelte`, icon: `logos:svelte-icon` },
       { name: `Next`, icon: `logos:nextjs-icon` },
       { name: `Typescript`, icon: `logos:typescript-icon` },
-      { name: `Sass`, icon: `logos:sass` },
       { name: `Tailwind`, icon: `logos:tailwindcss-icon` },
+      { name: `Sass`, icon: `logos:sass` },
+      { name: `PostgreSQL`, icon: `logos:postgresql` },
       { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
-      { name: `Playwright`, icon: `logos:playwright` }
+      { name: `Drizzle`, icon: `simple-icons:drizzle` },
+      { name: `Playwright`, icon: `logos:playwright` },
+      { name: `Github Actions`, icon: `logos:github-actions` },
     ],
     [],
   );
@@ -31,7 +35,7 @@ export const Bio = ({ lang }: Lang) => {
           <p>{t(`bio.text[1]`)}</p>
         </div>
       </div>
-      <div className="flex w-11/12 flex-wrap mx-auto justify-center gap-6">
+      <div className="mx-auto flex w-11/12 flex-wrap justify-center gap-6">
         {stack.map((tech, index) => (
           <TechBadge tech={tech} index={index} key={index} />
         ))}

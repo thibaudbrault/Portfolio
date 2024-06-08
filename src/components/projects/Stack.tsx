@@ -24,7 +24,7 @@ export const Stack = ({ stack, text }: Props) => {
           <summary className="mb-6 cursor-pointer list-none bg-transparent text-center font-semibold text-stone-200">
             <div className="flex items-center justify-center rounded-md border-2 border-gray-700">
               <Icon
-                className="detailsIcon h-8 w-8"
+                className="detailsIcon size-8"
                 icon="ic:outline-keyboard-arrow-down"
               />
             </div>

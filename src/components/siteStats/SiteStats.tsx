@@ -47,7 +47,7 @@ export const SiteStats = ({ lang }: Lang) => {
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} text={t(`summary.more`)} />
           <div className="flex items-center justify-center md:w-[500px]  lg:w-[700px]">
-            <p className="text-5xl font-bold text-center">Coming soon!</p>
+            <p className="text-center text-5xl font-bold">Coming soon!</p>
           </div>
         </div>
       </div>
