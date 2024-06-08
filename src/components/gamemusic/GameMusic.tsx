@@ -53,15 +53,16 @@ export const GameMusic = ({ lang }: Lang) => {
       t(`gamemusic.features[1]`),
       t(`gamemusic.features[2]`),
       t(`gamemusic.features[3]`),
+      t(`gamemusic.features[4]`),
     ],
     [],
   );
 
   const about: string[] = useMemo(
     () => [
-      t(`faqmaker.about[0]`),
-      t(`faqmaker.about[1]`),
-      t(`faqmaker.about[2]`),
+      t(`gamemusic.about[0]`),
+      t(`gamemusic.about[1]`),
+      t(`gamemusic.about[2]`),
     ],
     [],
   );
@@ -76,7 +77,10 @@ export const GameMusic = ({ lang }: Lang) => {
         <TabsComponent lang={lang} />
       </div>
       <div className="flex flex-col items-center gap-6">
-        <Links github="https://github.com/thibaudbrault/GameMusic" live="" />
+        <Links
+          github="https://github.com/thibaudbrault/GameMusic"
+          live="https://gamemusic.app"
+        />
         <div className="flex flex-col-reverse gap-6 md:flex-row">
           <Stack stack={tech} text={t(`summary.more`)} />
           <div className="md:w-[500px]  lg:w-[700px]">

@@ -12,12 +12,16 @@ export const Bio = ({ lang }: Lang) => {
   const stack: TStack[] = useMemo(
     () => [
       { name: `React`, icon: `logos:react` },
+      { name: `Svelte`, icon: `logos:svelte-icon` },
       { name: `Next`, icon: `logos:nextjs-icon` },
       { name: `Typescript`, icon: `logos:typescript-icon` },
-      { name: `Sass`, icon: `logos:sass` },
       { name: `Tailwind`, icon: `logos:tailwindcss-icon` },
+      { name: `Sass`, icon: `logos:sass` },
+      { name: `PostgreSQL`, icon: `logos:postgresql` },
       { name: `Prisma`, icon: `vscode-icons:file-type-prisma` },
+      { name: `Drizzle`, icon: `simple-icons:drizzle` },
       { name: `Playwright`, icon: `logos:playwright` },
+      { name: `Github Actions`, icon: `logos:github-actions` },
     ],
     [],
   );

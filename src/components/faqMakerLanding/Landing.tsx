@@ -61,13 +61,23 @@ export const Landing = ({ lang }: Lang) => {
     () => [
       {
         id: 0,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1696151902/faqmaker/FAQMaker_-_Landing_-_Home_e2o4sk.png`,
-        alt: `FAQMaker - Landing - Home`,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1717870657/FAQMaker_-_Landing_-_Home.png`,
+        alt: `FAQMaker - Home`,
       },
       {
         id: 1,
-        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1696151997/faqmaker/FAQMaker_-_Landing_-_Pricing_q1iegt.png`,
-        alt: `FAQMaker - Landing - Pricing`,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1717870724/FAQMaker_-_Landing_-_Features.png`,
+        alt: `FAQMaker - Features`,
+      },
+      {
+        id: 2,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1717870777/FAQMaker_-_Landing_-_Pricing.png`,
+        alt: `FAQMaker - Pricing`,
+      },
+      {
+        id: 3,
+        src: `https://res.cloudinary.com/dpgnjpsiy/image/upload/v1717870993/FAQMaker_-_Landing_-_FAQ.png`,
+        alt: `FAQMaker - FAQ`,
       },
     ],
     [],
