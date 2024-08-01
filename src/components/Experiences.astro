@@ -1,9 +1,28 @@
+---
+import { Circleci, Graphql, Prisma, React, Tailwindcss, Vite } from 'simple-icons-astro'
+---
+
 <section id="experiences" class="min-h-screen px-2 flex flex-col items-start justify-center gap-4">
     <h2 class="text-4xl font-bold text-yellow-700">Experiences</h2>
-    <ul class="grid grid-cols-2 gap-4">
-        <li>
-            <h3 class="text-yellow-700 font-bold">Zenika</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A autem obcaecati dolores unde in, dolor voluptates eaque. Nisi praesentium, voluptatibus repellat facere maxime omnis soluta doloribus quas a, dolores rerum?</p>
-        </li>
-    </ul>
+    <div class="p-6 rounded-md bg-stone-400/20">
+        <h3 class="text-yellow-700 font-bold">Fullstack JS developer</h3>
+        <p><span class="font-bold">Zénika</span>, Nantes</p>
+        <p>Internship of 6 months between <span class="font-bold">February 2023</span> and <span class="font-bold">September 2023</span></p>
+        <ul class="list-disc my-2">
+            <li>Setting up e2e tests with Playwright to ensure the quality and stability of the website.</li>
+            <li>Adding new features, including the creation of a specialist status for question validation and the integration of the Google Translate API for content translation.</li>
+            <li>Improving the development experience by migrating the project from 'Create-React-App' to 'Vite,' resulting in a significant increase in speed and efficiency.</li>
+            <li>Updating React and React-Router to the latest versions, allowing to take advantage of the latest technological advancements.</li>
+            <li>Updating Apollo GraphQL dependencies to enable the use of React hooks and streamline GraphQL query management with a single dependency, resulting in the removal of several others.</li>
+            <li>Migrating to Tailwind to clean up the current CSS and unify the existing styles.</li>
+        </ul>
+        <div class="flex gap-2 items-center">
+            <React />
+            <Vite />
+            <Tailwindcss />
+            <Graphql />
+            <Prisma />
+            <Circleci />
+        </div>
+    </div>
 </section>
