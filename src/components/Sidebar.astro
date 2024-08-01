@@ -1,15 +1,18 @@
+---
+const links = ["home", "projects", "experiences", "contact"]
+---
+
 <nav class="min-h-screen px-2 min-w-[210px]">
     <div class="sticky top-56 flex flex-col items-end gap-4 justify-center text-xl font-bold">
-        <a href="#home" data-section="home" class="nav px-2 py-1">Home</a>
-        <a href="#projects" data-section="projects" class="nav px-2 py-1">Projects</a>
-        <a href="#experiences" data-section="experiences" class="nav px-2 py-1">Experiences</a>
-        <a href="#contact" data-section="contact" class="nav px-2 py-1">Contact</a>
+        {links.map(link => (
+            <a href={`#${link}`} data-section={link} class="nav px-2 py-1 hover:bg-stone-400/20 text-right rounded-md w-full capitalize">{link}</a>
+        ))}
     </div>
 </nav>
 
 <style>
     .active {
-        @apply bg-yellow-200 text-stone-900 rounded-md w-full text-right;
+        @apply bg-yellow-200 text-stone-900;
     }
 </style>
 
