@@ -1,5 +1,5 @@
 ---
-import { Typescript, React, Nextdotjs, Tailwindcss, Prisma, Svelte, Drizzle, Supabase, Amazonwebservices, Googlecloud, Railway, Astro as Astrojs } from 'simple-icons-astro'
+import { Typescript, React, Nextdotjs, Tailwindcss, Prisma, Svelte, Drizzle, Supabase, Amazonwebservices, Googlecloud, Railway, Astro as Astrojs, Sass } from 'simple-icons-astro'
 
 const projects = [
     {
@@ -12,8 +12,8 @@ const projects = [
     },
     {
         name: 'GameMusic',
-        desc: "",
-        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
+        desc: "Music player app to listen to your favorite games soundtracks.",
+        img: "",
         stack: [Svelte, Typescript, Tailwindcss, Drizzle, Amazonwebservices, Supabase],
         live: "https://gamemusic.app",
         source: "https://github.com/thibaudbrault/GameMusic"
@@ -27,9 +27,17 @@ const projects = [
         source: "https://github.com/thibaudbrault/FAQMaker-Landing"
     },
     {
-        name: 'GameMusic',
-        desc: "Site used to show my projects and my experiences",
-        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
+        name: 'Pokeref',
+        desc: "Pokémon encyclopedia fetching data from multiple APIs. Find all the information on every Pokémon, moves, abilities, items, ...",
+        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/pokeref.app.png",
+        stack: [React, Nextdotjs, Typescript, Sass],
+        live: "https://pokeref.app",
+        source: "https://github.com/thibaudbrault/PokeRef"
+    },
+    {
+        name: 'Portfolio',
+        desc: "Site used to show my projects and experiences.",
+        img: "",
         stack: [Astrojs, Typescript, Tailwindcss],
         live: "https://thibaudbrault.dev",
         source: "https://github.com/thibaudbrault/Portfolio"
@@ -41,7 +49,7 @@ const projects = [
     <h2 class="text-4xl font-bold text-yellow-700">Projects</h2>
     <ul class="grid grid-cols-2 gap-8">
         {projects.map(project => (
-            <li class="space-y-6">
+            <li class="space-y-6 p-6 rounded-md bg-stone-400/20 flex flex-col justify-between">
                 <div class="space-y-1">
                     <h3 class="text-yellow-700 font-bold text-lg">{project.name}</h3>
                     <div class="group overflow-hidden w-full relative aspect-video">
@@ -62,24 +70,6 @@ const projects = [
                 </div>
             </li>
         ))}
-        <li class="space-y-1">
-            <h3 class="text-yellow-700 font-bold">FAQMaker - Landing</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, veniam eaque ut, saepe numquam amet quia natus ex beatae laudantium incidunt consequuntur sit voluptate, explicabo possimus? Facilis ratione accusantium itaque?</p>
-            <div class="flex items-center gap-2">
-                <Astrojs />
-                <Typescript />
-                <Tailwindcss />
-            </div>
-        </li>
-        <li class="space-y-1">
-            <h3 class="text-yellow-700 font-bold">Portfolio</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, veniam eaque ut, saepe numquam amet quia natus ex beatae laudantium incidunt consequuntur sit voluptate, explicabo possimus? Facilis ratione accusantium itaque?</p>
-            <div class="flex items-center gap-2">
-                <Astrojs />
-                <Typescript />
-                <Tailwindcss />
-            </div>
-        </li>
     </ul>
 </section>
 
