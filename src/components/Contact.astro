@@ -1,0 +1,20 @@
+<section id="contact" class="flex min-h-screen flex-col items-start justify-center gap-4 px-2">
+    <h2 class="text-4xl font-bold text-yellow-700">Contact</h2>
+    <form class="w-full space-y-4">
+        <fieldset class="space-y-4">
+            <div class="flex flex-col gap-1">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required placeholder="Enter your name" class="w-full rounded-md border border-stone-200 bg-stone-200/10 px-2 py-1 outline-none focus:border-yellow-700" />
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Enter your email" class="w-full rounded-md border border-stone-200 bg-stone-200/10 px-2 py-1 outline-none focus:border-yellow-700" />
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" required placeholder="Enter your message" class="h-44 w-full rounded-md border border-stone-200 bg-stone-200/10 px-2 py-1 outline-none focus:border-yellow-700" />
+            </div>
+        </fieldset>
+        <button type="submit" class="w-full rounded-md bg-stone-200 px-2 py-1 text-xl font-bold text-stone-900 transition-all duration-300 ease-in-out hover:bg-stone-300">Send</button>
+    </form>
+</section>

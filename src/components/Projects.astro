@@ -1,0 +1,96 @@
+---
+import { Typescript, React, Nextdotjs, Tailwindcss, Prisma, Svelte, Drizzle, Supabase, Amazonwebservices, Googlecloud, Railway, Astro as Astrojs, Sass } from 'simple-icons-astro'
+
+const projects = [
+    {
+        name: 'FAQMaker - SaaS',
+        desc: "This app lets employees connect by asking and answering questions about the company, making it easier for everyone to stay informed and engaged.",
+        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
+        stack: [React, Nextdotjs, Typescript, Tailwindcss, Prisma, Googlecloud, Railway],
+        live: "https://faqmaker.co",
+        source: "https://github.com/thibaudbrault/FAQMaker",
+        star: true
+    },
+    {
+        name: 'GameMusic',
+        desc: "Music player app to listen to your favorite games soundtracks.",
+        img: "",
+        stack: [Svelte, Typescript, Tailwindcss, Drizzle, Amazonwebservices, Supabase],
+        live: "https://gamemusic.app",
+        source: "https://github.com/thibaudbrault/GameMusic",
+        star: false
+    },
+    {
+        name: 'FAQMaker - Landing',
+        desc: "Landing page to present FAQMaker and make the user want to subscribe to FAQMaker.",
+        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
+        stack: [Astrojs, Typescript, Tailwindcss],
+        live: "https://faqmaker.co",
+        source: "https://github.com/thibaudbrault/FAQMaker-Landing",
+        star: false
+    },
+    {
+        name: 'Pokeref',
+        desc: "Pokémon encyclopedia fetching data from multiple APIs. Find all the information on every Pokémon, moves, abilities, items, ...",
+        img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/pokeref.app.png",
+        stack: [React, Nextdotjs, Typescript, Sass],
+        live: "https://pokeref.app",
+        source: "https://github.com/thibaudbrault/PokeRef",
+        star: false
+    },
+    {
+        name: 'Portfolio',
+        desc: "Site used to show my projects and experiences.",
+        img: "",
+        stack: [Astrojs, Typescript, Tailwindcss],
+        live: "https://thibaudbrault.dev",
+        source: "https://github.com/thibaudbrault/Portfolio",
+        star: false
+    },
+]
+---
+
+<section id="projects" class="flex min-h-screen flex-col items-start justify-center gap-4 px-2">
+    <h2 class="text-4xl font-bold text-yellow-700">Projects</h2>
+    <ul class="grid grid-cols-2 gap-8">
+        {projects.map(project => (
+            <li class={`flex flex-col justify-between space-y-6 rounded-md border bg-stone-400/20 p-6 ${project.star ? 'border-yellow-700' : 'border-transparent'}`}>
+                <div class="space-y-1">
+                    <h3 class="text-lg font-bold text-yellow-700">{project.name}</h3>
+                    <div class="group relative aspect-video w-full overflow-hidden">
+                        {project.img && (
+                            <img src={project.img} alt={project.name} class="absolute size-full rounded-md border border-stone-600 object-cover object-top transition-all duration-[3000ms] ease-linear group-hover:object-bottom" />
+                        )}
+                    </div>
+                    <p>{project.desc}</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        {project.stack.map((Tech, index) => (
+                            <Tech key={index} />
+                        ))}
+                    </div>
+                    <div class="space-x-2">
+                        <a href={project.live} class="rounded-md bg-stone-200 px-2 py-1 text-stone-900 transition-colors duration-300 ease-in-out hover:bg-yellow-700 hover:text-stone-200">Live</a>
+                        <a href={project.source} class="rounded-md bg-stone-200 px-2 py-1 text-stone-900 transition-colors duration-300 ease-in-out hover:bg-yellow-700 hover:text-stone-200">Source</a>
+                    </div>
+                </div>
+            </li>
+        ))}
+    </ul>
+</section>
+
+<style>
+    @keyframes scrollBackground {
+    0% {
+      background-position: center top;
+    }
+    100% {
+      background-position: center bottom;
+    }
+  }
+
+  .animate-scroll-bg {
+    animation: scrollBackground 5s linear infinite;
+  }
+</style>

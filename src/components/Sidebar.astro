@@ -1,0 +1,37 @@
+---
+const links = ["home", "projects", "experiences", "contact"]
+---
+
+<nav class="min-h-screen min-w-[210px] px-2">
+    <div class="sticky top-56 flex flex-col items-end justify-center gap-4 text-xl font-bold">
+        {links.map(link => (
+            <a href={`#${link}`} data-section={link} class="nav w-full rounded-md px-2 py-1 text-right capitalize hover:bg-stone-400/20">{link}</a>
+        ))}
+    </div>
+</nav>
+
+<style>
+    .active {
+        @apply bg-yellow-200 text-stone-900;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('.nav');
+        const sections = document.querySelectorAll('section');
+
+        function setActiveLink() {
+            let index = sections.length;
+
+            while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+
+            links.forEach((link) => link.classList.remove('active'));
+            links[index].classList.add('active');
+        }
+
+        setActiveLink();
+        window.addEventListener('scroll', setActiveLink);
+    });
+
+</script>
