@@ -8,7 +8,8 @@ const projects = [
         img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
         stack: [React, Nextdotjs, Typescript, Tailwindcss, Prisma, Googlecloud, Railway],
         live: "https://faqmaker.co",
-        source: "https://github.com/thibaudbrault/FAQMaker"
+        source: "https://github.com/thibaudbrault/FAQMaker",
+        star: true
     },
     {
         name: 'GameMusic',
@@ -16,7 +17,8 @@ const projects = [
         img: "",
         stack: [Svelte, Typescript, Tailwindcss, Drizzle, Amazonwebservices, Supabase],
         live: "https://gamemusic.app",
-        source: "https://github.com/thibaudbrault/GameMusic"
+        source: "https://github.com/thibaudbrault/GameMusic",
+        star: false
     },
     {
         name: 'FAQMaker - Landing',
@@ -24,7 +26,8 @@ const projects = [
         img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/faqmaker.co.png",
         stack: [Astrojs, Typescript, Tailwindcss],
         live: "https://faqmaker.co",
-        source: "https://github.com/thibaudbrault/FAQMaker-Landing"
+        source: "https://github.com/thibaudbrault/FAQMaker-Landing",
+        star: false
     },
     {
         name: 'Pokeref',
@@ -32,7 +35,8 @@ const projects = [
         img: "https://thibaud-brault-portfolio.s3.us-west-2.amazonaws.com/screenshots/pokeref.app.png",
         stack: [React, Nextdotjs, Typescript, Sass],
         live: "https://pokeref.app",
-        source: "https://github.com/thibaudbrault/PokeRef"
+        source: "https://github.com/thibaudbrault/PokeRef",
+        star: false
     },
     {
         name: 'Portfolio',
@@ -40,7 +44,8 @@ const projects = [
         img: "",
         stack: [Astrojs, Typescript, Tailwindcss],
         live: "https://thibaudbrault.dev",
-        source: "https://github.com/thibaudbrault/Portfolio"
+        source: "https://github.com/thibaudbrault/Portfolio",
+        star: false
     },
 ]
 ---
@@ -49,7 +54,7 @@ const projects = [
     <h2 class="text-4xl font-bold text-yellow-700">Projects</h2>
     <ul class="grid grid-cols-2 gap-8">
         {projects.map(project => (
-            <li class="space-y-6 p-6 rounded-md bg-stone-400/20 flex flex-col justify-between">
+            <li class={`space-y-6 p-6 rounded-md bg-stone-400/20 flex flex-col justify-between border ${project.star ? 'border-yellow-700' : 'border-transparent'}`}>
                 <div class="space-y-1">
                     <h3 class="text-yellow-700 font-bold text-lg">{project.name}</h3>
                     <div class="group overflow-hidden w-full relative aspect-video">
