@@ -50,10 +50,6 @@
             "ignore": ["@/*"]
           }
         ],
-        "react/jsx-filename-extension": [1, { "extensions": [".astro"] }],
-        "react/destructuring-assignment": "off",
-        "react/require-default-props": "off",
-        "react/jsx-props-no-spreading": "off",
         "@typescript-eslint/comma-dangle": "off",
         "@typescript-eslint/consistent-type-imports": "error",
         "import/prefer-default-export": "off",
