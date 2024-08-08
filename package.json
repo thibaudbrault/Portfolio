@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/ts-plugin": "^1.9.1",
     "astro": "^4.5.15",
     "astro-font": "^0.0.81",
     "simple-icons-astro": "^13.3.0"
@@ -40,7 +41,7 @@
     "typescript": "^5.4.3"
   },
   "lint-staged": {
-    "./src/**/*.{ts,tsx}": [
+    "./src/**/*.{astro}": [
       "pnpm lint:fix"
     ]
   }

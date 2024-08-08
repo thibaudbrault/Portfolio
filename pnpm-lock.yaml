@@ -11,6 +11,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.1.2
         version: 3.1.2
+      '@astrojs/ts-plugin':
+        specifier: ^1.9.1
+        version: 1.9.1
       astro:
         specifier: ^4.5.15
         version: 4.5.15(@types/node@20.12.4)(typescript@5.4.3)
@@ -90,6 +93,9 @@ packages:
     resolution: {integrity: sha512-lFMjJTrFL3j7L9yBxwYfCq2k6qqwHyzuUl/XBnif78PWTJYyL/dfowQHWE3sp6U6ZzqWiiIZnpTMO96zhkjwtg==}
     engines: {node: '>=6.0.0'}
 
+  '@astrojs/compiler@2.10.2':
+    resolution: {integrity: sha512-bvH+v8AirwpRWCkYJEyWYdc5Cs/BjG2ZTxIJzttHilXgfKJAdW2496KsUQKzf5j2tOHtaHXKKn9hb9WZiBGpEg==}
+
   '@astrojs/compiler@2.3.0':
     resolution: {integrity: sha512-pxYRAaRdMS6XUll8lbFM+Lr0DI1HKIDT+VpiC+S+9di5H/nmm3znZOgdMlLiMxADot+56eps+M1BvtKfQremXA==}
 
@@ -118,6 +124,9 @@ packages:
   '@astrojs/telemetry@3.0.4':
     resolution: {integrity: sha512-A+0c7k/Xy293xx6odsYZuXiaHO0PL+bnDoXOc47sGDF5ffIKdKQGRPFl2NMlCF4L0NqN4Ynbgnaip+pPF0s7pQ==}
     engines: {node: '>=18.14.1'}
+
+  '@astrojs/ts-plugin@1.9.1':
+    resolution: {integrity: sha512-Rijik6fzJAIAqK9+4iNm+b4TFk82HwEVtK+U5z3XJQJKet8vRQI8V2L27D4jXLjSpsKHvV+rmGlqQOOyXaucgg==}
 
   '@babel/code-frame@7.22.13':
     resolution: {integrity: sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==}
@@ -816,6 +825,15 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@volar/language-core@2.4.0-alpha.18':
+    resolution: {integrity: sha512-JAYeJvYQQROmVRtSBIczaPjP3DX4QW1fOqW1Ebs0d3Y3EwSNRglz03dSv0Dm61dzd0Yx3WgTW3hndDnTQqgmyg==}
+
+  '@volar/source-map@2.4.0-alpha.18':
+    resolution: {integrity: sha512-MTeCV9MUwwsH0sNFiZwKtFrrVZUK6p8ioZs3xFzHc2cvDXHWlYN3bChdQtwKX+FY2HG6H3CfAu1pKijolzIQ8g==}
+
+  '@volar/typescript@2.4.0-alpha.18':
+    resolution: {integrity: sha512-sXh5Y8sqGUkgxpMWUGvRXggxYHAVxg0Pa1C42lQZuPDrW6vHJPR0VCK8Sr7WJsAW530HuNQT/ZIskmXtxjybMQ==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2421,6 +2439,9 @@ packages:
   parse5@7.1.2:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
 
+  path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
+
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
@@ -3156,6 +3177,12 @@ packages:
       vite:
         optional: true
 
+  vscode-languageserver-textdocument@1.0.12:
+    resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
+
+  vscode-uri@3.0.8:
+    resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
+
   web-namespaces@2.0.1:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==}
 
@@ -3250,6 +3277,8 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.18
 
+  '@astrojs/compiler@2.10.2': {}
+
   '@astrojs/compiler@2.3.0': {}
 
   '@astrojs/compiler@2.7.1': {}
@@ -3309,6 +3338,15 @@ snapshots:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+
+  '@astrojs/ts-plugin@1.9.1':
+    dependencies:
+      '@astrojs/compiler': 2.10.2
+      '@jridgewell/sourcemap-codec': 1.4.15
+      '@volar/language-core': 2.4.0-alpha.18
+      '@volar/typescript': 2.4.0-alpha.18
+      semver: 7.5.4
+      vscode-languageserver-textdocument: 1.0.12
 
   '@babel/code-frame@7.22.13':
     dependencies:
@@ -3940,6 +3978,18 @@ snapshots:
       eslint-visitor-keys: 3.4.1
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@volar/language-core@2.4.0-alpha.18':
+    dependencies:
+      '@volar/source-map': 2.4.0-alpha.18
+
+  '@volar/source-map@2.4.0-alpha.18': {}
+
+  '@volar/typescript@2.4.0-alpha.18':
+    dependencies:
+      '@volar/language-core': 2.4.0-alpha.18
+      path-browserify: 1.0.1
+      vscode-uri: 3.0.8
 
   acorn-jsx@5.3.2(acorn@8.10.0):
     dependencies:
@@ -6029,6 +6079,8 @@ snapshots:
     dependencies:
       entities: 4.5.0
 
+  path-browserify@1.0.1: {}
+
   path-exists@4.0.0: {}
 
   path-is-absolute@1.0.1: {}
@@ -6939,6 +6991,10 @@ snapshots:
   vitefu@0.2.5(vite@5.2.8(@types/node@20.12.4)):
     optionalDependencies:
       vite: 5.2.8(@types/node@20.12.4)
+
+  vscode-languageserver-textdocument@1.0.12: {}
+
+  vscode-uri@3.0.8: {}
 
   web-namespaces@2.0.1: {}
 
