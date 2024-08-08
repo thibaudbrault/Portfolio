@@ -50,15 +50,17 @@ const projects = [
 ]
 ---
 
-<section id="projects" class="min-h-screen px-2 flex flex-col items-start justify-center gap-4">
+<section id="projects" class="flex min-h-screen flex-col items-start justify-center gap-4 px-2">
     <h2 class="text-4xl font-bold text-yellow-700">Projects</h2>
     <ul class="grid grid-cols-2 gap-8">
         {projects.map(project => (
-            <li class={`space-y-6 p-6 rounded-md bg-stone-400/20 flex flex-col justify-between border ${project.star ? 'border-yellow-700' : 'border-transparent'}`}>
+            <li class={`flex flex-col justify-between space-y-6 rounded-md border bg-stone-400/20 p-6 ${project.star ? 'border-yellow-700' : 'border-transparent'}`}>
                 <div class="space-y-1">
-                    <h3 class="text-yellow-700 font-bold text-lg">{project.name}</h3>
-                    <div class="group overflow-hidden w-full relative aspect-video">
-                        <img src={project.img} alt={project.name} class="group-hover:object-bottom border border-stone-600 w-full h-full absolute rounded-md object-cover object-top duration-[3000ms] ease-linear transition-all" />
+                    <h3 class="text-lg font-bold text-yellow-700">{project.name}</h3>
+                    <div class="group relative aspect-video w-full overflow-hidden">
+                        {project.img && (
+                            <img src={project.img} alt={project.name} class="absolute size-full rounded-md border border-stone-600 object-cover object-top transition-all duration-[3000ms] ease-linear group-hover:object-bottom" />
+                        )}
                     </div>
                     <p>{project.desc}</p>
                 </div>
@@ -69,8 +71,8 @@ const projects = [
                         ))}
                     </div>
                     <div class="space-x-2">
-                        <a href={project.live} class="px-2 py-1 bg-stone-200 text-stone-900 rounded-md hover:bg-yellow-700 hover:text-stone-200 duration-300 ease-in-out transition-colors">Live</a>
-                        <a href={project.source} class="px-2 py-1 bg-stone-200 text-stone-900 rounded-md hover:bg-yellow-700 hover:text-stone-200 duration-300 ease-in-out transition-colors">Source</a>
+                        <a href={project.live} class="rounded-md bg-stone-200 px-2 py-1 text-stone-900 transition-colors duration-300 ease-in-out hover:bg-yellow-700 hover:text-stone-200">Live</a>
+                        <a href={project.source} class="rounded-md bg-stone-200 px-2 py-1 text-stone-900 transition-colors duration-300 ease-in-out hover:bg-yellow-700 hover:text-stone-200">Source</a>
                     </div>
                 </div>
             </li>
