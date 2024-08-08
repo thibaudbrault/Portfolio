@@ -37,7 +37,7 @@
     "typescript": "^5.4.3"
   },
   "lint-staged": {
-    "./src/**/*.{astro}": [
+    "./src/**/*.astro": [
       "pnpm lint:fix"
     ]
   }
