@@ -10,11 +10,8 @@ export default [
   eslintConfigPrettier,
   {
     ignores: [
-        '.DS_STore',
         'node_modules/**',
-        'build/**',
-        '.svelte-kit/**',
-        'migrations/**',
+        '.astro/**',
         'package/**',
         '.env',
         '.env.*',
